@@ -3,6 +3,19 @@ __pycache__/
 *.pyc
 .venv/
 
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Editor / local settings
+.vscode/
+.idea/
+
+# Secrets and local config
+.env
+.env.*
+
 # Notebooks
 .ipynb_checkpoints/
 
