@@ -1,0 +1,54 @@
+# Statistics course and statistics-advisor skill
+
+This repository holds two things that work together but can be used separately:
+
+| Folder | What it is | Who it is for |
+|---|---|---|
+| [`course/`](./course) | A simple statistics course aimed to life-science master's students: explainers, hands-on how-to guides in Python, notebooks, and guides to setting up a computer, organizing a project and working with an AI agent. In English ([`course/en/`](./course/en)), with a full Spanish translation ([`course/es/`](./course/es)). | People |
+| [`statistics-advisor/`](./statistics-advisor) | An [Agent Skills](https://agentskills.io) folder (`SKILL.md`, references, helper scripts) that makes an AI agent answer statistics questions with the same approach as the course: triage first, assumptions checked, estimates with intervals, sources cited. | AI agents |
+| [`tools/`](./tools) | Scripts to install the skill into an agent tool, and to package it for web chats. | Students and maintainers |
+
+## Quick start for students
+
+1. **Read the course.** Open `course/index.html` in a browser (no server or internet needed) and pick a language, or open `course/en/index.html` directly. Start with "Set up your computer" if you want to run the code.
+2. **Optionally, add the skill to your AI agent.** The course page "Work with an AI agent" explains the details.
+
+**¿Prefieres español?** Abre `course/index.html` y elige "Español", abre `course/es/index.html`, o pulsa "Español" (con su bandera) en la barra lateral de cualquier página.
+
+The skill does not need the course and the course does not need the skill.
+
+## For maintainers
+
+Everything below runs from this folder. The scripts need only Python, except the course's snippet and notebook tests, which need the scientific Python stack (see the course page "Set up your computer", or `course/en/markdown/notebooks/requirements.txt`; those tests skip themselves when it is missing).
+
+| Task | Command |
+|---|---|
+| Rebuild the HTML course after editing `course/<lang>/markdown/` (needs [pandoc](https://pandoc.org/)) | `cd course/scripts && python3 build_explainers_html.py` |
+| Regenerate the explanatory figures in `course/<lang>/markdown/figures/` after changing `make_figures.py` (needs the scientific Python stack), then rebuild the HTML | `cd course/scripts && python3 make_figures.py` |
+| Test the course (links, pages, diagram, topic-list drift, snippets, notebooks) | `cd course/scripts && python3 -m unittest test_build_explainers_html test_howto_snippets` |
+| Test the skill packaging and installer | `cd tools && python3 -m unittest test_skill_package test_install_skill` |
+| Build the Claude web-app zip and the single-file version for other chats | `python3 tools/package_skill.py` (writes `dist/`) |
+
+### Languages
+
+English is the reference version. Each language has the same layout inside `course/<lang>/`: the markdown sources in `markdown/`, and the generated HTML next to them (`index.html` and `pages/`).
+
+| Language | Sources | Generated HTML (open this) |
+|---|---|---|
+| English | `course/en/markdown/` | `course/en/index.html` |
+| Spanish | `course/es/markdown/` | `course/es/index.html` |
+
+The scripts are shared and pick the language with `--lang` (or the `COURSE_LANG` environment variable); the default is English. UI texts and page titles of each language live in `course/scripts/course_i18n.py`, with the flag shown next to the language name in the language switch.
+
+- Rebuild Spanish: `cd course/scripts && python3 build_explainers_html.py --lang es`
+- Spanish figures: `python3 make_figures.py --lang es` (Spanish texts are in `figure_strings_es.py`)
+- Test Spanish: `COURSE_LANG=es python3 -m unittest test_build_explainers_html test_howto_snippets`. Besides the usual checks, this verifies that the translation mirrors the English pages: same files, same code blocks and notebook code cells, same headings, links and tables.
+- Translate only the wording: code (including comments) stays in English. Keep the English file names and link targets, and the labels the builder looks for ("Para saber más", "Hazlo tú mismo", "Anterior"/"Siguiente"). When you change an English page, update its Spanish counterpart.
+- Adding another language: add it to `course_i18n.py`, translate `markdown/`, the notebooks and `figure_strings_*.py`, and build.
+
+### Keeping the two in sync
+
+- The skill must stay **self-contained**: no links from `statistics-advisor/` to the course (a test enforces it), because the installed skill is only that folder.
+- `statistics-advisor/references/course-topics.md` lists the course's pages, so the agent can name real pages. When you add, rename or remove a course page, update that list; the course test suite fails if they differ.
+- The generated HTML (`index.html` and `pages/` in each `course/<lang>/`) is committed so students need no tooling. Rebuild before committing; it is never edited by hand.
+- Figures in the markdown pages are generated by `course/scripts/make_figures.py` (PNG, committed). Add one by writing a function there, then put `![alt text](../figures/name.png)` followed directly by an italic caption line in the page; the build and its tests fail on a missing file, alt text or caption. Keep figures to concepts that are hard to convey in words; data plots belong in the notebooks.

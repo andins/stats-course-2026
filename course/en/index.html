@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Statistics Explainers</title>
+<script>
+const legacyPages = {"setup-environment": "pages/setup-environment.html", "project-structure": "pages/project-structure.html", "use-an-agent": "pages/use-an-agent.html", "workflow": "pages/workflow.html", "m1": "pages/m1.html", "m1-sample-size-and-power": "pages/m1-sample-size-and-power.html", "m1-effect-size": "pages/m1-effect-size.html", "m1-design-considerations": "pages/m1-design-considerations.html", "m1-howto-plan-a-sample-size": "pages/m1-howto-plan-a-sample-size.html", "m2": "pages/m2.html", "m2-exploratory-vs-confirmatory": "pages/m2-exploratory-vs-confirmatory.html", "m2-eda-basics": "pages/m2-eda-basics.html", "m2-missing-data": "pages/m2-missing-data.html", "m2-howto-explore-a-dataset": "pages/m2-howto-explore-a-dataset.html", "m3": "pages/m3.html", "m3-p-values-and-significance": "pages/m3-p-values-and-significance.html", "m3-common-tests": "pages/m3-common-tests.html", "m3-checking-assumptions": "pages/m3-checking-assumptions.html", "m3-multiple-comparisons": "pages/m3-multiple-comparisons.html", "m3-howto-run-a-common-test": "pages/m3-howto-run-a-common-test.html", "m3-howto-check-test-assumptions": "pages/m3-howto-check-test-assumptions.html", "m4": "pages/m4.html", "m4-what-is-regression": "pages/m4-what-is-regression.html", "m4-tests-as-regressions": "pages/m4-tests-as-regressions.html", "m4-generalized-linear-models": "pages/m4-generalized-linear-models.html", "m4-howto-run-a-test-as-a-regression": "pages/m4-howto-run-a-test-as-a-regression.html", "m5": "pages/m5.html", "m5-prediction-vs-explanation": "pages/m5-prediction-vs-explanation.html", "m5-experiments-vs-observational-data": "pages/m5-experiments-vs-observational-data.html", "m5-causal-diagrams": "pages/m5-causal-diagrams.html", "m5-howto-draw-and-use-a-causal-diagram": "pages/m5-howto-draw-and-use-a-causal-diagram.html", "m6": "pages/m6.html", "m6-overfitting-and-regularization": "pages/m6-overfitting-and-regularization.html", "m6-cross-validation-and-model-checking": "pages/m6-cross-validation-and-model-checking.html", "m6-multicollinearity": "pages/m6-multicollinearity.html", "m6-measurement-error": "pages/m6-measurement-error.html", "m6-howto-validate-a-predictive-model": "pages/m6-howto-validate-a-predictive-model.html", "m6-howto-check-multicollinearity": "pages/m6-howto-check-multicollinearity.html", "m6-howto-handle-measurement-error": "pages/m6-howto-handle-measurement-error.html", "m7": "pages/m7.html", "m7-clustered-and-hierarchical-data": "pages/m7-clustered-and-hierarchical-data.html", "m7-time-series-data": "pages/m7-time-series-data.html", "m7-meta-analysis": "pages/m7-meta-analysis.html", "m7-meta-analysis-pitfalls": "pages/m7-meta-analysis-pitfalls.html", "m7-bayesian-methods": "pages/m7-bayesian-methods.html", "m7-howto-analyze-clustered-data": "pages/m7-howto-analyze-clustered-data.html", "m7-howto-run-a-meta-analysis": "pages/m7-howto-run-a-meta-analysis.html", "glossary": "pages/glossary.html"};
+const redirectLegacyPage = () => {
+  const legacyHash = location.hash.slice(1);
+  const legacyPage = legacyPages[legacyHash.split('--')[0]];
+  if (legacyPage) location.replace(legacyPage + location.hash);
+};
+window.addEventListener('hashchange', redirectLegacyPage);
+redirectLegacyPage();
+</script>
+<link rel="stylesheet" href="pages/course.css">
+<script src="pages/course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../es/index.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="index.html" class="toc-link toc-top active" aria-current="page">Home</a></li>
+<li><a href="pages/setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="pages/project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="pages/use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="pages/workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="pages/m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="pages/m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="pages/m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="pages/m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="pages/m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="pages/m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="pages/m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="pages/m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="pages/m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="pages/m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="pages/m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="pages/m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="pages/m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="pages/m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="pages/m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="pages/m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="pages/m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="pages/m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="pages/m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="pages/m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="pages/m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="pages/m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="pages/m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="pages/m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="pages/m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="pages/m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="pages/m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="pages/m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="pages/m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="pages/m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="pages/m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="pages/m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="pages/m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="pages/m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="pages/m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="pages/m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="pages/m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="pages/glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="home" class="page"><h1 id="home--statistics-course-for-life-scientists">Statistics Course for Life Scientists</h1>
+<p>A practical statistics course for master's students in the life sciences.</p>
+<p>Each topic is a short, self-contained page. You don't need to follow the order in the side bar. Actually the best way to navigate the course is probably to go straight to the <a href="pages/workflow.html">Workflow cheatsheet</a>, following the decision tree choose the topics that are more relevant to you. You can also just search any topic in the search bar and then follow the links to learn about connected topics. There's also a <a href="pages/glossary.html">Glossary</a> for any term you don't recognize. Also follow the setup instructions in <a href="pages/setup-environment.html">Set up your computer</a> to get everything installed and ready for the course. And if you want create a project folder for your analyses, see <a href="pages/project-structure.html">Organize your project</a>. The course comes with a specialized AI assistant to help you with the analyses. If you want to use it, see <a href="pages/use-an-agent.html">Work with an AI agent</a>.</p>
+<p>Throughout, we'll follow two running examples:</p>
+<ul>
+<li><strong>Mia</strong>, a clinical-genetics student studying whether a variant in a cholesterol gene (LDLR) is linked to LDL cholesterol.</li>
+<li><strong>Theo</strong>, who is testing whether a new drug lowers blood pressure.</li>
+</ul>
+<p>Their stories get more specific as the modules go on, so the same concepts keep showing up in a familiar setting.</p>
+<blockquote>
+<p><strong>Suggestion</strong> See the <a href="pages/workflow.html">Workflow cheatsheet</a> for a one-page decision-tree view of the whole process before diving into individual modules.</p>
+</blockquote>
+<h2 id="home--apply-what-you-learn">Apply what you learn</h2>
+<p>The topic pages explain <em>why</em>. Where there is a practical recipe, the page ends with a <strong>Do it yourself</strong> box linking to a short how-to guide (steps, copy-paste Python, how to read the output, what to do if it goes wrong) and sometimes to a notebook for exploring the idea hands-on. The how-to guides contain the procedures to follow while the notebooks showcase them in action with example data. You may want to follow the guide and the notebook together as they complement each other (and of course also go back to the topic pages to refresh the concepts). The how-to guides are also listed on each module's home page. They currently cover:</p>
+<ul>
+<li><a href="pages/m1-howto-plan-a-sample-size.html">Planning a sample size</a></li>
+<li><a href="pages/m2-howto-explore-a-dataset.html">Exploring a dataset</a></li>
+<li><a href="pages/m3-howto-run-a-common-test.html">Running a common test</a> and <a href="pages/m3-howto-check-test-assumptions.html">checking its assumptions</a></li>
+<li><a href="pages/m4-howto-run-a-test-as-a-regression.html">Running a test as a regression</a></li>
+<li><a href="pages/m5-howto-draw-and-use-a-causal-diagram.html">Drawing and using a causal diagram</a></li>
+<li><a href="pages/m6-howto-validate-a-predictive-model.html">Validating a predictive model</a>, <a href="pages/m6-howto-check-multicollinearity.html">checking multicollinearity</a> and <a href="pages/m6-howto-handle-measurement-error.html">correcting measurement error</a></li>
+<li><a href="pages/m7-howto-analyze-clustered-data.html">Analyzing clustered data</a> and <a href="pages/m7-howto-run-a-meta-analysis.html">running a meta-analysis</a></li>
+</ul>
+<p>Code is Python (<code>pandas</code>, <code>statsmodels</code>, <code>scikit-learn</code>, <code>matplotlib</code>). New to running it? <a href="pages/setup-environment.html">Set up your computer</a> walks you through installing everything on Windows, macOS or Linux, and <a href="pages/project-structure.html">Organize your project</a> suggests how to structure an analysis. To use an AI assistant (and the statistics-advisor skill) with it, see <a href="pages/use-an-agent.html">Work with an AI agent</a>. Notebooks live in notebooks/; download one and open it in Jupyter, VS Code or Google Colab.</p>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo: ejecutar una prueba como regresión | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m4-howto-run-a-test-as-a-regression.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto active" aria-current="page">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m4-howto-run-a-test-as-a-regression" class="page"><h1 id="m4-howto-run-a-test-as-a-regression--cómo-ejecutar-una-prueba-clásica-como-regresión">Cómo: ejecutar una prueba clásica como regresión</h1>
+<p><strong>Úsalo cuando:</strong> quieras una estimación con intervalo de confianza a partir de una prueba con nombre <em>y</em> la libertad de añadir una covariable, relajar un supuesto o gestionar datos agrupados sin cambiar de herramienta. La idea está en la página <a href="m4-tests-as-regressions.html">Pruebas como regresiones</a>; las recetas clásicas están en <a href="m3-howto-run-a-common-test.html">Cómo: ejecutar una prueba habitual</a>.</p>
+<h2 id="m4-howto-run-a-test-as-a-regression--pasos">Pasos</h2>
+<ol type="1">
+<li><strong>Escribe la comparación como una fórmula</strong>: <code>outcome ~ predictor</code>. Un sí/no o una categoría en el lado derecho se convierte automáticamente en variables ficticias (<em>dummy</em>).</li>
+<li><strong>Ajústala</strong> con <code>statsmodels</code> y lee el coeficiente de interés junto con su intervalo de confianza.</li>
+<li><strong>Comprueba que coincide con la prueba clásica</strong> (una sola vez, para ganar confianza). Los números de abajo coinciden.</li>
+<li><strong>Amplíala:</strong> añade covariables, pide errores estándar robustos o agrupa por clústeres; la ampliación es un argumento más, no un procedimiento nuevo.</li>
+</ol>
+<h2 id="m4-howto-run-a-test-as-a-regression--dos-grupos-la-prueba-t-como-regresión">Dos grupos: la prueba t como regresión</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>).dropna(subset<span class="op">=</span>[<span class="st">&quot;ldl_mmol&quot;</span>])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;carrier&quot;</span>] <span class="op">=</span> (df[<span class="st">&quot;carrier_status&quot;</span>] <span class="op">==</span> <span class="st">&quot;carrier&quot;</span>).astype(<span class="bu">int</span>)   <span class="co"># 0/1 group indicator (carrier = 1)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ols <span class="op">=</span> smf.ols(<span class="st">&quot;ldl_mmol ~ carrier&quot;</span>, data<span class="op">=</span>df).fit()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ols.summary().tables[<span class="dv">1</span>])        <span class="co"># the &#39;carrier&#39; row IS the difference in means, with its 95% CI</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Same thing as Student&#39;s t-test (equal variances assumed):</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> df.loc[df[<span class="st">&quot;carrier&quot;</span>] <span class="op">==</span> <span class="dv">1</span>, <span class="st">&quot;ldl_mmol&quot;</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> df.loc[df[<span class="st">&quot;carrier&quot;</span>] <span class="op">==</span> <span class="dv">0</span>, <span class="st">&quot;ldl_mmol&quot;</span>]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Student p:&quot;</span>, <span class="bu">round</span>(stats.ttest_ind(a, b).pvalue, <span class="dv">4</span>), <span class="st">&quot;| regression p:&quot;</span>, <span class="bu">round</span>(ols.pvalues[<span class="st">&quot;carrier&quot;</span>], <span class="dv">4</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Close to Welch&#39;s t-test (unequal variances allowed): robust standard errors</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>robust <span class="op">=</span> smf.ols(<span class="st">&quot;ldl_mmol ~ carrier&quot;</span>, data<span class="op">=</span>df).fit(cov_type<span class="op">=</span><span class="st">&quot;HC3&quot;</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Welch p:  &quot;</span>, <span class="bu">round</span>(stats.ttest_ind(a, b, equal_var<span class="op">=</span><span class="va">False</span>).pvalue, <span class="dv">4</span>), <span class="st">&quot;| robust regression p:&quot;</span>, <span class="bu">round</span>(robust.pvalues[<span class="st">&quot;carrier&quot;</span>], <span class="dv">4</span>))</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(robust.conf_int().loc[<span class="st">&quot;carrier&quot;</span>].<span class="bu">round</span>(<span class="dv">2</span>).tolist(), <span class="st">&quot;&lt;- 95% CI for the difference&quot;</span>)</span></code></pre></div>
+<h2 id="m4-howto-run-a-test-as-a-regression--tres-o-más-grupos-el-anova-como-regresión">Tres o más grupos: el ANOVA como regresión</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>anova_model <span class="op">=</span> smf.ols(<span class="st">&quot;ldl_mmol ~ C(genotype)&quot;</span>, data<span class="op">=</span>df).fit()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sm.stats.anova_lm(anova_model, typ<span class="op">=</span><span class="dv">2</span>))                  <span class="co"># the F-test of classical one-way ANOVA</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;scipy F:&quot;</span>, stats.f_oneway(<span class="op">*</span>[g <span class="cf">for</span> _, g <span class="kw">in</span> df.groupby(<span class="st">&quot;genotype&quot;</span>)[<span class="st">&quot;ldl_mmol&quot;</span>]]).statistic.<span class="bu">round</span>(<span class="dv">3</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(anova_model.params.<span class="bu">round</span>(<span class="dv">2</span>))                            <span class="co"># differences from the reference genotype</span></span></code></pre></div>
+<h2 id="m4-howto-run-a-test-as-a-regression--añadir-una-covariable-lo-que-una-prueba-simple-no-puede-hacer">Añadir una covariable (lo que una prueba simple no puede hacer)</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>adjusted <span class="op">=</span> smf.ols(<span class="st">&quot;ldl_mmol ~ carrier + age&quot;</span>, data<span class="op">=</span>df).fit(cov_type<span class="op">=</span><span class="st">&quot;HC3&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adjusted.params.<span class="bu">round</span>(<span class="dv">3</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adjusted.conf_int().<span class="bu">round</span>(<span class="dv">3</span>))</span></code></pre></div>
+<p>El coeficiente de <code>carrier</code> es ahora la diferencia entre grupos <em>a la misma edad</em>. Ajustar por una covariable medida antes de que se asignara la exposición o el tratamiento suele estrechar el intervalo (esto es lo que se llama «ANCOVA»). Para decidir <em>qué</em> covariables incluir cuando la exposición no fue aleatorizada, consulta <a href="m5-howto-draw-and-use-a-causal-diagram.html">Cómo: dibujar un diagrama causal</a>.</p>
+<h2 id="m4-howto-run-a-test-as-a-regression--dos-categorías-chi-cuadrado-como-regresión-logística">Dos categorías: chi-cuadrado como regresión logística</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&quot;sick&quot;</span>] <span class="op">=</span> (df[<span class="st">&quot;disease&quot;</span>] <span class="op">==</span> <span class="st">&quot;yes&quot;</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>logit <span class="op">=</span> smf.logit(<span class="st">&quot;sick ~ C(treatment)&quot;</span>, data<span class="op">=</span>df).fit(disp<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;odds ratios:</span><span class="ch">\n</span><span class="st">&quot;</span>, np.exp(logit.params).<span class="bu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;95% CI for the odds ratios:</span><span class="ch">\n</span><span class="st">&quot;</span>, np.exp(logit.conf_int()).<span class="bu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;likelihood-ratio p:&quot;</span>, <span class="bu">round</span>(logit.llr_pvalue, <span class="dv">4</span>))</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>chi2_p <span class="op">=</span> stats.chi2_contingency(pd.crosstab(df[<span class="st">&quot;treatment&quot;</span>], df[<span class="st">&quot;disease&quot;</span>]), correction<span class="op">=</span><span class="va">False</span>)[<span class="dv">1</span>]</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;chi-squared p:&quot;</span>, <span class="bu">round</span>(chi2_p, <span class="dv">4</span>))</span></code></pre></div>
+<h2 id="m4-howto-run-a-test-as-a-regression--dos-números-la-correlación-como-pendiente">Dos números: la correlación como pendiente</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>slope <span class="op">=</span> smf.ols(<span class="st">&quot;ldl_mmol ~ age&quot;</span>, data<span class="op">=</span>df).fit()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(slope.summary().tables[<span class="dv">1</span>])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;slope p:&quot;</span>, <span class="bu">round</span>(slope.pvalues[<span class="st">&quot;age&quot;</span>], <span class="dv">4</span>), <span class="st">&quot;| Pearson p:&quot;</span>, <span class="bu">round</span>(stats.pearsonr(df[<span class="st">&quot;age&quot;</span>], df[<span class="st">&quot;ldl_mmol&quot;</span>]).pvalue, <span class="dv">4</span>))</span></code></pre></div>
+<p>El valor p de la pendiente es el mismo que el de la prueba de correlación. La pendiente tiene además la ventaja de venir en unidades útiles (mmol/L por año de edad).</p>
+<h2 id="m4-howto-run-a-test-as-a-regression--cómo-leer-los-resultados">Cómo leer los resultados</h2>
+<table>
+<thead>
+<tr>
+<th>Prueba clásica</th>
+<th>Fórmula de regresión</th>
+<th>Cantidad que hay que leer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prueba t de dos muestras</td>
+<td><code>y ~ group</code></td>
+<td>el coeficiente del grupo: la diferencia de medias</td>
+</tr>
+<tr>
+<td>Prueba t pareada</td>
+<td><code>diff ~ 1</code></td>
+<td>la ordenada en el origen: el cambio medio</td>
+</tr>
+<tr>
+<td>ANOVA de una vía</td>
+<td><code>y ~ C(group)</code></td>
+<td>la prueba F de <code>anova_lm</code>; los coeficientes son diferencias respecto al grupo de referencia</td>
+</tr>
+<tr>
+<td>Chi-cuadrado (2 categorías)</td>
+<td><code>smf.logit("outcome01 ~ C(group)")</code></td>
+<td>los odds ratios y el valor p de la razón de verosimilitudes</td>
+</tr>
+<tr>
+<td>Correlación</td>
+<td><code>y ~ x</code></td>
+<td>la pendiente (estandariza ambas variables para obtener r)</td>
+</tr>
+</tbody>
+</table>
+<p>Los valores p coinciden hasta los dígitos impresos en el caso de Student, el ANOVA y la correlación. Los valores p de chi-cuadrado y de la regresión logística son asintóticamente equivalentes, así que son próximos pero no idénticos, y la versión robusta (HC3) se parece a la de Welch pero no es el mismo cálculo.</p>
+<h2 id="m4-howto-run-a-test-as-a-regression--si-algo-sale-mal">Si algo sale mal</h2>
+<ul>
+<li><strong>¿Qué coeficiente es la «diferencia»?</strong> La codificación con variables ficticias compara cada grupo con una referencia; con un indicador 0/1 controlas la dirección. Para una columna de texto, <code>C(group, Treatment(reference="non-carrier"))</code> elige la referencia.</li>
+<li><strong>Los residuos tienen mala pinta:</strong> los gráficos de <a href="m3-howto-check-test-assumptions.html">Cómo: comprobar los supuestos de una prueba</a> se aplican a los residuos de la regresión. Los errores estándar robustos corrigen las varianzas desiguales, no una forma funcional equivocada.</li>
+<li><strong>Las observaciones no son independientes</strong> (varios familiares por familia, visitas repetidas): añade <code>cov_type="cluster", cov_kwds={"groups": df["family"]}</code>, o consulta <a href="m7-howto-analyze-clustered-data.html">Cómo: analizar datos agrupados</a>.</li>
+<li><strong>Un coeficiente solo es una afirmación causal si el diseño la respalda.</strong> Una regresión no convierte una asociación observacional en un efecto.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

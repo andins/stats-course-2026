@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clustered and hierarchical data | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m7-clustered-and-hierarchical-data.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link  active" aria-current="page">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-clustered-and-hierarchical-data" class="page"><h1 id="m7-clustered-and-hierarchical-data--clustered-and-hierarchical-data">Clustered and Hierarchical Data</h1>
+<p><strong>In plain terms:</strong> when your observations come in natural groups — relatives within families, patients within hospitals, repeated measurements on the same person — observations within a group tend to be more similar to each other than to observations in a different group. Standard tests that assume every observation is independent get <em>overconfident</em> if you ignore this.</p>
+<h2 id="m7-clustered-and-hierarchical-data--why-it-matters-an-intuition-not-just-a-rule">Why it matters: an intuition, not just a rule</h2>
+<p>Suppose Mia's 300 patients are 20 relatives each from 15 different families, and families differ in diet, environment and shared genetic background. Treating this as "300 independent data points" overstates how much independent information is available — relatives share genes and household, so they tend to resemble each other, and the data is closer to "15 independent pieces of information about families," each refined by 20 relatives. Ignoring this makes confidence intervals too narrow and p-values too optimistic. (This holds even when genotype differs between relatives of the same family: they are still not independent, which is why genetics studies of relatives use family-aware, multilevel models.)</p>
+<figure><img src="figures/clustered_families.png" alt="Left: 300 LDL values drawn as one cloud of independent patients. Right: the same kind of data grouped into 15 families of 20 relatives; each family&#39;s values sit close to its own average, and the family averages differ widely from each other." loading="lazy"><figcaption>Simulated data. Relatives resemble each other, so 300 patients from 15 families carry much less independent information than 300 unrelated people.</figcaption></figure>
+<h2 id="m7-clustered-and-hierarchical-data--three-strategies-in-increasing-order-of-complexity">Three strategies, in increasing order of complexity</h2>
+<ul>
+<li><strong>Complete pooling</strong> — ignore the grouping entirely, fit one model on all the data. Simplest. Reasonable when you don't care about differences between groups and just want the overall relationship — but you should still use "cluster-robust" standard errors, which correct the overconfidence problem above without needing a different model.</li>
+<li><strong>No pooling</strong> — fit a model with a separate effect for every group (equivalent to giving each group its own intercept). Best when there are only a handful of groups, and the groups themselves are what you care about (e.g. comparing these specific 4 clinics, not clinics in general). Downside: groups with little data get noisy, poorly-estimated effects, and this approach can't say anything about a brand-new group you haven't seen.</li>
+<li><strong>Partial pooling / multilevel model</strong> — estimates for each group are pulled ("shrunk") toward the overall average, with small/noisy groups pulled more than large, well-measured ones. This is usually the best choice when there are many groups of uneven size, or when you want to generalize to new groups beyond the ones you measured. It is also the most complex to fit and explain, so use it deliberately rather than by default.</li>
+</ul>
+<figure><img src="figures/partial_pooling.png" alt="Dot plot of eight groups of different sizes. Each group&#39;s own average (hollow circle with an error bar) is joined by an arrow to its partially pooled estimate (filled circle), which lies closer to the vertical line of the overall average. The smallest, noisiest groups move the furthest; the group of 100 patients hardly moves." loading="lazy"><figcaption>The three strategies on the same made-up data: one overall average (complete pooling), each group's own average (no pooling), and in between (partial pooling).</figcaption></figure>
+<h2 id="m7-clustered-and-hierarchical-data--a-practical-rule-of-thumb">A practical rule of thumb</h2>
+<p>Default to <strong>complete pooling with cluster-robust standard errors</strong> if the grouping is a nuisance you need to account for, or <strong>no pooling</strong> if there are only a few groups that are themselves the point of interest. Reach for a full <strong>multilevel model</strong> when you specifically want to generalize beyond the groups you have, or have many unevenly-sized groups — it is reasonable to request one specifically, since it will not necessarily be suggested by default.</p>
+<p>The same structure appears when the "groups" are studies: a <a href="m7-meta-analysis.html">meta-analysis</a> with random effects is a multilevel model whose observations are one estimate per study.</p>
+<aside class="do-it-yourself" aria-label="Hands-on guide"><p class="do-it-yourself-title">Do it yourself</p><ul>
+<li><a href="m7-howto-analyze-clustered-data.html">How to: analyze clustered data</a> — measure how much clustering matters and fit the honest default.</li>
+<li><a href="notebooks/clustered-data-overconfidence.ipynb" download>Notebook: clustered data and overconfidence</a> — simulate how often each analysis is wrong, and watch partial pooling at work.</li>
+</ul>
+</aside>
+<aside class="learn-more" aria-label="Further reading"><p class="learn-more-title">Learn more</p><ul>
+<li>Gelman &amp; Hill (2007), <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>, Ch. 12 "Multilevel linear models: the basics", §12.2 "Partial pooling" — complete, no and partial pooling side by side.</li>
+<li>Cameron &amp; Miller (2015), "A practitioner's guide to cluster-robust inference," <em>Journal of Human Resources</em> 50(2), 317–372 — when and how to use cluster-robust standard errors.</li>
+<li>McElreath (2020), <em>Statistical Rethinking</em> (2nd ed.), Ch. 13 "Models With Memory" — multilevel models and shrinkage, built up intuitively.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploratorio vs. confirmatorio | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m2-exploratory-vs-confirmatory.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link  active" aria-current="page">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m2-exploratory-vs-confirmatory" class="page"><h1 id="m2-exploratory-vs-confirmatory--análisis-exploratorio-vs-confirmatorio">Análisis exploratorio vs. confirmatorio</h1>
+<p><strong>En pocas palabras:</strong> el análisis confirmatorio contrasta una idea concreta a la que te comprometiste <em>antes</em> de ver los datos, idealmente en un experimento bien diseñado. El análisis exploratorio consiste en rastrear los datos en busca de patrones que no habías especificado de antemano. Las garantías que promete un valor p (<em>p-value</em>) solo se cumplen en el primer caso: no es cuestión de fiarte más o menos de él, sino de si es siquiera la herramienta adecuada para aprender de los datos.</p>
+<h2 id="m2-exploratory-vs-confirmatory--el-ejemplo-de-mia-de-dos-maneras">El ejemplo de Mia, de dos maneras</h2>
+<ul>
+<li><strong>Confirmatorio</strong>: Mia diseñó un estudio de cohortes específicamente para comparar el colesterol LDL entre portadores y no portadores de una variante del gen LDLR (un "portador" tiene al menos una copia de la variante), decidió de antemano esa única comparación y ahora analiza los resultados. Este es el escenario de manual para el que se crearon las pruebas de hipótesis clásicas, aunque incluso aquí, presentar la diferencia de LDL con un intervalo de confianza enseña más que un veredicto de significativo/no significativo por sí solo.</li>
+<li><strong>Exploratorio</strong>: Mia tiene una gran hoja de cálculo con datos de la clínica —edad, sexo, IMC, puntuación de dieta, genotipos de muchas variantes, LDL y una docena de columnas más— y quiere saber "¿qué se asocia con un LDL más alto?" sin ninguna comparación decidida de antemano.</li>
+</ul>
+<p>Ambas son formas legítimas de trabajar con datos. El error es tratar la segunda como si fuera la primera.</p>
+<h2 id="m2-exploratory-vs-confirmatory--por-qué-importa-el-jardín-de-los-senderos-que-se-bifurcan">Por qué importa: el "jardín de los senderos que se bifurcan"</h2>
+<p>Si miras un conjunto de datos con 10 variables y contrastas todas las relaciones entre pares, es muy probable que encuentres algo que parezca "significativo" solo por azar, aunque nada en los datos esté relacionado con nada. El peligro no es solo elegir a propósito tu resultado favorito (<em>p-hacking</em>); es que <em>cualquier</em> investigador, de buena fe, toma decenas de pequeñas decisiones sin registrar mientras explora (qué valores atípicos excluir, qué agrupación usar, en qué subgrupo centrarse) y cada una puede empujar un resultado hacia lo "significativo". A esto se le llama a veces el <strong>jardín de los senderos que se bifurcan</strong> (<em>garden of forking paths</em>): incluso sin intención de hacer trampa, los muchos caminos que no tomaste siguen inflando la frecuencia con la que tropezarás con un patrón falso.</p>
+<h2 id="m2-exploratory-vs-confirmatory--qué-hacer-en-su-lugar-si-estás-explorando">Qué hacer en su lugar, si estás explorando</h2>
+<ul>
+<li>No presentes un valor p de una pasada exploratoria como si zanjara la cuestión. Llámalo por lo que es: una hipótesis que habrá que contrastar bien más adelante, no un hallazgo confirmado.</li>
+<li>Apóyate primero en la visualización (véase <a href="m2-eda-basics.html">Fundamentos del EDA</a>) en lugar de en una batería de pruebas.</li>
+<li>Si un patrón parece prometedor, el siguiente paso apropiado es recoger datos nuevos e independientes (o reservar una parte de los datos de antemano) para contrastarlo como es debido; eso es lo que convierte un hallazgo exploratorio en uno confirmatorio.</li>
+</ul>
+<h2 id="m2-exploratory-vs-confirmatory--una-forma-rápida-de-saber-cuál-de-los-dos-estás-haciendo">Una forma rápida de saber cuál de los dos estás haciendo</h2>
+<p>Pregúntate: <strong>¿se decidió esta comparación concreta antes de que viera estos datos?</strong> Si la respuesta es sí —un experimento preregistrado, un ensayo diseñado en torno a una hipótesis—, estás en terreno confirmatorio. Si la comparación solo te resultó interesante <em>después</em> de mirar los datos, estás explorando, aparezca o no la palabra "prueba".</p>
+<p>Ten en cuenta que esta es una cuestión distinta de si los datos proceden de un experimento aleatorizado: un ensayo aleatorizado bien diseñado también puede analizarse de forma exploratoria (por ejemplo, revisando muchos criterios de valoración secundarios o subgrupos que no estaba diseñado específicamente para contrastar); la aleatorización resuelve la <em>confusión</em>, no <em>qué comparaciones sales a buscar</em>.</p>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li>Gelman &amp; Loken (2014), "The statistical crisis in science," <em>American Scientist</em> 102(6), 460–465 — el "jardín de los senderos que se bifurcan" en lenguaje llano.</li>
+<li>Simmons, Nelson &amp; Simonsohn (2011), "False-positive psychology," <em>Psychological Science</em> 22(11), 1359–1366 — cómo las decisiones flexibles de análisis inflan los falsos positivos.</li>
+<li>Wagenmakers et al. (2012), "An agenda for purely confirmatory research," <em>Perspectives on Psychological Science</em> 7(6), 632–638 — por qué importa la frontera entre lo exploratorio y lo confirmatorio.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

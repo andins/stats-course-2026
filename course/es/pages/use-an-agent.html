@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trabaja con un agente de IA | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/use-an-agent.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top active" aria-current="page">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="use-an-agent" class="page"><h1 id="use-an-agent--trabaja-con-un-agente-de-ia">Trabaja con un agente de IA</h1>
+<p><strong>En pocas palabras:</strong> un agente de IA es un asistente de chat que además puede leer los archivos de tu proyecto, escribir código y cuadernos (<em>notebooks</em>) y ejecutar comandos. El <strong>skill statistics-advisor</strong> es una carpeta de instrucciones que hace que un agente se comporte como un asesor estadístico cuidadoso que sigue este curso: pregunta qué tipo de análisis estás haciendo antes de elegir una prueba, comprueba los supuestos, informa de los tamaños del efecto con sus intervalos y cita fuentes. Esta página te enseña a poner en marcha ambas cosas, con la ruta más sencilla para cada proveedor habitual.</p>
+<p>No necesitas un agente para seguir este curso. Las <a href="../index.html#home--aplica-lo-que-aprendes">guías prácticas</a> funcionan por sí solas. Un agente ayuda sobre todo cuando quieres código adaptado a tus propios datos, una segunda opinión sobre tu plan o una explicación de un resultado.</p>
+<h2 id="use-an-agent--antes-de-empezar-cuatro-precauciones">Antes de empezar: cuatro precauciones</h2>
+<ol type="1">
+<li><strong>Los agentes se equivocan, a veces con mucha seguridad.</strong> Trata la respuesta como el borrador de un asistente rápido. Contrasta el razonamiento con las páginas del curso, ejecuta tú el código y mira los gráficos. El skill le indica al agente que no invente números de página, pero aun así comprueba cualquier referencia que te dé.</li>
+<li><strong>Privacidad.</strong> Todo lo que lee el agente suele enviarse a los servidores del proveedor. No le des a un agente en la nube datos de pacientes, datos sujetos a un acuerdo de confidencialidad ni resultados sin publicar sin comprobar antes la normativa de tu institución. Opciones más seguras: describir las columnas y mostrar unas pocas filas de ejemplo inventadas, usar un subconjunto anonimizado, o preguntar a tu institución qué herramientas aprobadas ofrece.</li>
+<li><strong>Mantén el control.</strong> Un agente que ejecuta comandos puede cambiar o borrar archivos. Trabaja dentro de tu <a href="project-structure.html">carpeta de proyecto</a>, haz un <em>commit</em> en Git antes de una sesión larga, deja la configuración de aprobación en <strong>preguntar primero</strong> para ver cada comando, y no le permitas nunca tocar <code>data/raw</code>.</li>
+<li><strong>Sigue aprendiendo.</strong> Pregunta <em>por qué</em>, no solo <em>qué</em>. Un buen hábito es pedirle al agente que te indique la página del curso que explica cada decisión que toma.</li>
+</ol>
+<h2 id="use-an-agent--paso-1-elige-una-herramienta">Paso 1: elige una herramienta</h2>
+<p>Los planes, las cuotas gratuitas y los nombres de los modelos cambian a menudo, así que consulta la página de cada proveedor para conocer las condiciones actuales.</p>
+<table>
+<thead>
+<tr>
+<th>Si...</th>
+<th>Usa</th>
+<th>Necesitas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ya seguiste <a href="setup-environment.html">Prepara tu ordenador</a> y quieres el comienzo más sencillo</td>
+<td><strong>El chat de VS Code con GitHub Copilot</strong></td>
+<td>Una cuenta de GitHub. Al iniciar sesión se activa un plan gratuito con una cuota mensual limitada. El alumnado y el profesorado pueden solicitar acceso gratuito a través de <a href="https://github.com/education" target="_blank" rel="noopener">GitHub Education</a>.</td>
+</tr>
+<tr>
+<td>tienes una suscripción a Claude</td>
+<td><strong>Claude Code</strong>, como extensión de VS Code o en una terminal</td>
+<td>Un plan de pago de Claude o una cuenta de Claude Console</td>
+</tr>
+<tr>
+<td>tienes una suscripción a ChatGPT</td>
+<td><strong>Codex</strong>, como extensión de VS Code, en una terminal o en la aplicación de escritorio de ChatGPT</td>
+<td>Una cuenta de ChatGPT</td>
+</tr>
+<tr>
+<td>tienes una cuenta de Google y te manejas con una terminal</td>
+<td><strong>Gemini CLI</strong></td>
+<td>Una cuenta de Google</td>
+</tr>
+<tr>
+<td>ya usas Cursor</td>
+<td><strong>Cursor</strong></td>
+<td>Una cuenta de Cursor</td>
+</tr>
+<tr>
+<td>solo puedes usar un navegador web</td>
+<td><strong>Un chat web</strong>: Claude, ChatGPT, Gemini o Copilot</td>
+<td>Una cuenta. La aplicación web de Claude acepta el skill como archivo subido; para los demás usa la <a href="#use-an-agent--chat-web-sin-un-skill-instalado">alternativa de un único archivo</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Si no tienes preferencia, empieza con <strong>VS Code y GitHub Copilot</strong>. Todo lo que instalaste para el curso ya está en su sitio.</p>
+<h2 id="use-an-agent--paso-2-instala-el-skill">Paso 2: instala el skill</h2>
+<p>Un <em>skill</em> es una carpeta con un archivo llamado <code>SKILL.md</code> y archivos de apoyo. Al principio los agentes solo leen su breve descripción, y cargan las instrucciones completas cuando tu pregunta encaja. El formato es un estándar abierto, así que la misma carpeta funciona en todas las herramientas siguientes. Solo tiene que estar en el lugar donde mira cada herramienta.</p>
+<p>El skill está en la carpeta <code>statistics-advisor</code> del repositorio del curso, junto al propio curso. Instala <strong>solo esa carpeta</strong>, no todo el repositorio: un repositorio copiado dentro de una carpeta de skills no tiene <code>SKILL.md</code> en su nivel superior, así que no se cargará ningún skill. El instalador de abajo se ocupa de esto.</p>
+<h3 id="use-an-agent--2a-consigue-el-repositorio">2a. Consigue el repositorio</h3>
+<p>Si tienes Git (véase <a href="project-structure.html#project-structure--control-de-versiones-con-git-opcional">Organiza tu proyecto</a>), abre una terminal en la carpeta donde guardas tus proyectos y ejecuta (sustituye la dirección por la que te hayan dado):</p>
+<pre class="text"><code>git clone &lt;REPOSITORY ADDRESS&gt;
+cd stats-course-2026</code></pre>
+<p>¿No tienes Git? En la página web del repositorio elige <strong>Code &gt; Download ZIP</strong>, descomprímelo y abre una terminal en la carpeta descomprimida. Puede que la carpeta se llame <code>stats-course-2026-main</code>; el nombre no importa.</p>
+<h3 id="use-an-agent--2b-ejecuta-el-instalador">2b. Ejecuta el instalador</h3>
+<p>El instalador copia el skill en la carpeta adecuada para tu herramienta. Solo necesita Python, que ya configuraste en <a href="setup-environment.html">Prepara tu ordenador</a>. Elige la línea de tu herramienta:</p>
+<table>
+<thead>
+<tr>
+<th>Tu herramienta</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat de VS Code (GitHub Copilot)</td>
+<td><code>python3 tools/install_skill.py --tool copilot</code></td>
+</tr>
+<tr>
+<td>Claude Code, Claude en VS Code</td>
+<td><code>python3 tools/install_skill.py --tool claude</code></td>
+</tr>
+<tr>
+<td>Codex (VS Code, terminal o aplicación)</td>
+<td><code>python3 tools/install_skill.py --tool agents</code></td>
+</tr>
+<tr>
+<td>Gemini CLI</td>
+<td><code>python3 tools/install_skill.py --tool gemini</code></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>python3 tools/install_skill.py --tool cursor</code></td>
+</tr>
+</tbody>
+</table>
+<p>En Windows escribe <code>py tools\install_skill.py --tool copilot</code> en su lugar. Si no se encuentra ni <code>python3</code> ni <code>py</code>, ejecútalo con uv: <code>uv run --no-project python tools/install_skill.py --tool copilot</code>. Añade <code>--dry-run</code> para ver dónde se instalaría el skill sin copiar nada.</p>
+<p>Por defecto el skill se instala para <strong>todos tus proyectos</strong>. Para instalarlo <strong>solo en un proyecto</strong>, añade su carpeta, por ejemplo <code>--project ~/projects/my-first-analysis</code>; así se guarda con ese proyecto y puede incluirse en sus <em>commits</em>.</p>
+<p><strong>Para actualizar</strong> el skill más adelante, ejecuta <code>git pull</code> en el repositorio (o vuelve a descargar el ZIP) y ejecuta el mismo comando del instalador: reemplaza la copia anterior.</p>
+<h3 id="use-an-agent--2c-o-cópialo-a-mano">2c. O cópialo a mano</h3>
+<p>El instalador solo copia una carpeta. Puedes hacer lo mismo tú. La carpeta del skill es <code>statistics-advisor</code> dentro del repositorio, y tiene que acabar en la carpeta de skills de tu herramienta, conservando el nombre <code>statistics-advisor</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Carpeta para todos tus proyectos</th>
+<th>O, solo para un proyecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat de VS Code (Copilot)</td>
+<td><code>~/.copilot/skills/</code></td>
+<td><code>.github/skills/</code></td>
+</tr>
+<tr>
+<td>Claude Code, Claude en VS Code</td>
+<td><code>~/.claude/skills/</code></td>
+<td><code>.claude/skills/</code></td>
+</tr>
+<tr>
+<td>Codex, en VS Code, terminal o aplicación</td>
+<td><code>~/.agents/skills/</code></td>
+<td><code>.agents/skills/</code></td>
+</tr>
+<tr>
+<td>Gemini CLI</td>
+<td><code>~/.gemini/skills/</code> o <code>~/.agents/skills/</code></td>
+<td><code>.gemini/skills/</code> o <code>.agents/skills/</code></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>~/.cursor/skills/</code> o <code>~/.agents/skills/</code></td>
+<td><code>.cursor/skills/</code> o <code>.agents/skills/</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>~</code> es tu carpeta personal (<code>C:\Users\&lt;tú&gt;</code> en Windows). Las rutas que empiezan por <code>.</code> en la última columna son relativas a la carpeta de tu proyecto.</p>
+<p><strong>macOS y Linux</strong>, desde la carpeta del repositorio (sustituye <code>.copilot</code> por <code>.claude</code> o <code>.agents</code> según la tabla):</p>
+<pre class="text"><code>mkdir -p ~/.copilot/skills
+cp -r statistics-advisor ~/.copilot/skills/</code></pre>
+<p><strong>Windows</strong> (PowerShell, desde la carpeta del repositorio):</p>
+<pre class="text"><code>New-Item -ItemType Directory -Force &quot;$HOME\.copilot\skills&quot; | Out-Null
+Copy-Item -Recurse statistics-advisor &quot;$HOME\.copilot\skills\&quot;</code></pre>
+<p>Para actualizar a mano, borra primero la copia anterior (<code>rm -r ~/.copilot/skills/statistics-advisor</code>, o <code>Remove-Item -Recurse -Force "$HOME\.copilot\skills\statistics-advisor"</code> en Windows) y copia la nueva.</p>
+<p>Los skills pueden contener scripts que un agente puede ejecutar, así que instala solo skills de fuentes en las que confíes.</p>
+<h2 id="use-an-agent--paso-3-inicia-el-agente-y-comprueba-que-ve-el-skill">Paso 3: inicia el agente y comprueba que ve el skill</h2>
+<p>Abre un chat <strong>nuevo</strong> después de instalarlo (los agentes leen la lista de skills al iniciar una sesión), con la carpeta de tu proyecto abierta. Después, o bien pregunta,</p>
+<blockquote>
+<p>¿Qué skills tienes disponibles? ¿Está statistics-advisor entre ellos?</p>
+</blockquote>
+<p>o búscalo en la lista de skills de la herramienta:</p>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Busca el skill con</th>
+<th>Invócalo explícitamente con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat de VS Code</td>
+<td>escribe <code>/</code> en el cuadro del chat</td>
+<td><code>/statistics-advisor</code></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>escribe <code>/</code></td>
+<td><code>/statistics-advisor</code></td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>escribe <code>$</code>, o <code>/skills</code></td>
+<td><code>$statistics-advisor</code></td>
+</tr>
+<tr>
+<td>Gemini CLI</td>
+<td><code>/skills list</code></td>
+<td>menciónalo: «usa el skill statistics-advisor»</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>escribe <code>/</code> en el chat de Agent</td>
+<td><code>/statistics-advisor</code></td>
+</tr>
+</tbody>
+</table>
+<p>El skill también se activa <strong>solo</strong> cuando tu pregunta trata de estadística, así que invocarlo explícitamente solo es necesario cuando no se activa. Gemini CLI te pide confirmación la primera vez que activa un skill.</p>
+<h2 id="use-an-agent--notas-por-herramienta">Notas por herramienta</h2>
+<h3 id="use-an-agent--vs-code-con-github-copilot">VS Code con GitHub Copilot</h3>
+<ol type="1">
+<li>Pasa el cursor sobre el icono de Copilot en la barra de estado, elige <strong>Use AI Features</strong> e inicia sesión con GitHub.</li>
+<li>Abre la carpeta de tu proyecto (<strong>File &gt; Open Folder</strong>). Si VS Code te pregunta si confías en ella, elige <strong>Trust</strong>.</li>
+<li>Abre la vista de Chat con <code>Ctrl+Alt+I</code> (<code>Cmd+Ctrl+I</code> en macOS). Haz clic en <code>+</code> para un chat nuevo.</li>
+<li>Elige <strong>Copilot</strong> como destino de la sesión y <strong>Agent</strong> como modo, y mantén los permisos en <strong>Manual</strong> para aprobar cada comando o uso de herramienta.</li>
+<li>Instala el skill en <code>~/.copilot/skills/</code> (Paso 2), inicia un chat nuevo y haz tu pregunta.</li>
+</ol>
+<p>Si usas en su lugar el destino de sesión <strong>Local</strong>, VS Code también lee <code>~/.claude/skills/</code> y <code>~/.agents/skills/</code>, y al escribir <code>/skills</code> se abre el menú de skills.</p>
+<h3 id="use-an-agent--claude-code">Claude Code</h3>
+<p>Instala la extensión <strong>Claude Code</strong> desde la vista de Extensiones de VS Code (<code>Ctrl+Shift+X</code>, <code>Cmd+Shift+X</code> en macOS), ábrela con el icono de la chispa (<em>Spark</em>) o con el elemento <strong>✻ Claude Code</strong> de la barra de estado, e inicia sesión. Para usarlo en una terminal, abre una en la carpeta de tu proyecto e instálalo:</p>
+<pre class="text"><code># macOS, Linux
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex</code></pre>
+<p>Abre una terminal nueva, ejecuta <code>claude</code> en la carpeta de tu proyecto y sigue las indicaciones para iniciar sesión. El skill va en <code>~/.claude/skills/</code>. Si algo falla, consulta la <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">guía de instalación</a> de Anthropic.</p>
+<h3 id="use-an-agent--codex-openai">Codex (OpenAI)</h3>
+<p>Instala la extensión OpenAI Codex desde la vista de Extensiones de VS Code, o sigue la <a href="https://developers.openai.com/codex" target="_blank" rel="noopener">documentación de Codex</a> para usarlo en una terminal o en la aplicación de escritorio de ChatGPT. Inicia sesión con tu cuenta de ChatGPT. El skill va en <code>~/.agents/skills/</code>. Si no aparece, reinicia Codex.</p>
+<h3 id="use-an-agent--gemini-cli">Gemini CLI</h3>
+<p>Sigue la <a href="https://geminicli.com/docs/" target="_blank" rel="noopener">documentación de Gemini CLI</a> para instalarlo e iniciar sesión con tu cuenta de Google, y después ejecuta <code>gemini</code> en la carpeta de tu proyecto. Pon el skill en <code>~/.gemini/skills/</code> (o <code>~/.agents/skills/</code>), y luego ejecuta <code>/skills list</code> para confirmarlo y <code>/skills reload</code> tras añadirlo.</p>
+<h3 id="use-an-agent--cursor">Cursor</h3>
+<p>Pon el skill en <code>~/.cursor/skills/</code> (o <code>~/.agents/skills/</code>) y escribe <code>/</code> en el chat de Agent para encontrarlo. Cursor también carga skills de las carpetas de Claude y de Codex.</p>
+<h2 id="use-an-agent--chat-web-sin-un-skill-instalado">Chat web sin un skill instalado</h2>
+<p>Un chat web no puede leer una carpeta de tu ordenador, pero hay dos formas sencillas de darle las mismas instrucciones. Genera ambos archivos con un solo comando desde la carpeta del repositorio (solo necesita Python, que configuraste antes):</p>
+<pre class="text"><code>python3 tools/package_skill.py</code></pre>
+<p>En Windows usa <code>py tools\package_skill.py</code>. Si no se encuentra el comando <code>python3</code> ni <code>py</code>, ejecútalo con uv: <code>uv run --no-project python tools/package_skill.py</code>. Crea una carpeta <code>dist/</code> con dos archivos.</p>
+<p><strong>La aplicación web de Claude (claude.ai):</strong> sube <code>dist/statistics-advisor.zip</code> en <strong>Customize &gt; Skills</strong> (<a href="https://claude.ai/customize/skills" target="_blank" rel="noopener">claude.ai/customize/skills</a>). Después funciona como las demás herramientas: se activa solo ante preguntas de estadística. En los planes Enterprise, un administrador debe habilitar antes los skills.</p>
+<p><strong>ChatGPT, Gemini, el chat de Copilot o cualquier otro chat:</strong> adjunta <code>dist/statistics-advisor-single-file.md</code> a una conversación nueva (o añádelo a un Proyecto, a un Gem o a un asistente personalizado si tu herramienta los tiene) y empieza con:</p>
+<blockquote>
+<p>Sigue las instrucciones adjuntas de statistics-advisor durante toda esta conversación. Empieza haciéndome las preguntas de triaje que describe.</p>
+</blockquote>
+<p>Este único archivo contiene las instrucciones del skill y sus cuatro documentos de referencia. Hay dos limitaciones. El chat no puede ejecutar tus archivos ni los scripts auxiliares, así que escribirá código para que lo pegues y lo ejecutes tú en un cuaderno. Y solo puede trabajar con lo que le cuentes, así que describe tus columnas, unidades y diseño del estudio en lugar de subir datos confidenciales.</p>
+<h2 id="use-an-agent--cómo-sacarle-partido-al-skill">Cómo sacarle partido al skill</h2>
+<h3 id="use-an-agent--cuéntale-lo-que-necesita-saber">Cuéntale lo que necesita saber</h3>
+<p>La primera tarea del skill es preguntar si tus datos ya están recogidos, si la pregunta se decidió antes de ver los datos y si quieres predicción o una respuesta causal. Obtendrás una primera respuesta mejor si lo indicas desde el principio:</p>
+<ul>
+<li><strong>La pregunta</strong> con palabras sencillas, y qué piensas decidir con la respuesta.</li>
+<li><strong>El diseño del estudio:</strong> cómo se recogieron los datos, si la exposición se asignó al azar, cuántas unidades hay, si hay mediciones repetidas o grupos.</li>
+<li><strong>Los datos:</strong> el nombre del archivo, las columnas que importan y sus unidades, cuánto falta.</li>
+<li><strong>Lo que quieres recibir:</strong> una explicación, una recomendación o un cuaderno en tu carpeta <code>notebooks/</code>.</li>
+</ul>
+<h3 id="use-an-agent--ejemplos-de-mensajes">Ejemplos de mensajes</h3>
+<ul>
+<li><em>Planificar:</em> «Estoy planificando un estudio de una variante del gen LDLR y el colesterol LDL, con 15 familias y 20 familiares por familia. ¿Cuántas familias necesito? Usa el skill statistics-advisor.»</li>
+<li><em>Explorar:</em> «Tengo <code>data/raw/ldl_2024.csv</code>. Todavía no tengo una hipótesis concreta. Ayúdame a explorarlo. Crea un cuaderno en <code>notebooks/</code> y no modifiques el archivo original.»</li>
+<li><em>Elegir una prueba:</em> «Antes de recoger los datos decidí comparar la presión arterial antes y después del tratamiento en 40 pacientes. ¿Qué análisis corresponde y qué supuestos tengo que comprobar?»</li>
+<li><em>Causal:</em> «Quiero saber si portar una variante genética afecta al colesterol LDL, pero nadie asignó los genotipos y los portadores difieren en ascendencia y en quién se hizo la prueba. Explícame paso a paso por qué tengo que ajustar.»</li>
+<li><em>Revisar mi trabajo:</em> «Aquí tienes mi plan de análisis y mis resultados. ¿Qué se me ha pasado? Revisa los supuestos, las comparaciones múltiples y los datos faltantes.»</li>
+<li><em>Entender:</em> «Explica qué significa un intervalo de confianza para la pendiente de una regresión e indícame la página del curso correspondiente.»</li>
+</ul>
+<h3 id="use-an-agent--cómo-es-una-buena-respuesta">Cómo es una buena respuesta</h3>
+<p>El skill funciona si el agente:</p>
+<ul>
+<li><strong>pregunta</strong> de qué tipo de análisis se trata antes de recomendar una prueba, cuando no está claro;</li>
+<li>empieza con una <strong>respuesta breve en lenguaje sencillo</strong> y luego da los detalles;</li>
+<li><strong>enumera los supuestos</strong> e indica cómo comprobar cada uno;</li>
+<li>informa de una <strong>estimación con su intervalo de confianza</strong>, no solo de «significativo»;</li>
+<li>avisa de los <strong>valores p exploratorios, las comparaciones múltiples y los datos faltantes</strong> cuando corresponde;</li>
+<li><strong>cita fuentes</strong> y dice cuándo no está seguro;</li>
+<li>ofrece crear un <strong>cuaderno</strong> e indica las <strong>páginas del curso</strong> correspondientes (módulo y título; búscalas en el buscador de la barra lateral del curso), para que puedas seguir el razonamiento.</li>
+</ul>
+<p>Si salta directamente a un valor p, dile: «Usa el skill statistics-advisor y empieza por las preguntas de triaje».</p>
+<h3 id="use-an-agent--dale-al-agente-las-normas-de-la-casa-de-tu-proyecto">Dale al agente las normas de la casa de tu proyecto</h3>
+<p>La mayoría de los agentes leen un breve archivo de instrucciones de la carpeta del proyecto (<code>AGENTS.md</code> para VS Code, Codex y otros; <code>CLAUDE.md</code> para Claude Code; <code>GEMINI.md</code> para Gemini CLI). Unas pocas líneas evitan los problemas más comunes. Guarda esto como <code>AGENTS.md</code> (y una copia llamada <code>CLAUDE.md</code> si usas Claude Code) y adáptalo a tu proyecto:</p>
+<pre class="text"><code># Project instructions
+
+- Run all Python with `uv run`. Add libraries with `uv add &lt;name&gt;`; never install packages globally.
+- data/raw/ is read-only: never edit, move or delete files there. Write cleaned data to data/processed/.
+- Notebooks go in notebooks/ (numbered 01_, 02_, ...), figures in results/figures/, tables in results/tables/.
+- Use relative paths and set random seeds.
+- Report effect sizes with confidence intervals, state assumptions and how they were checked,
+  and say how many rows were dropped for missing data.
+- Ask me before assuming anything about the study design.
+- Ask before running any command that deletes files or changes Git history.</code></pre>
+<p>Si tu herramienta no lee un archivo así, pega las mismas líneas al principio del chat.</p>
+<h3 id="use-an-agent--revisa-lo-que-produce-el-agente">Revisa lo que produce el agente</h3>
+<ul>
+<li><strong>Lee el código</strong> antes de fiarte de él y ejecuta los cuadernos desde el principio (<strong>Restart</strong>, luego <strong>Run All</strong>).</li>
+<li><strong>Asegúrate de que usa el entorno de tu proyecto:</strong> <code>uv run</code>, o el kernel <code>.venv</code> en VS Code. Si ves <code>ModuleNotFoundError</code>, esa suele ser la causa.</li>
+<li><strong>Compáralo con el curso:</strong> la guía práctica correspondiente muestra la receta estándar. Si el agente hace algo distinto, pregúntale por qué.</li>
+<li><strong>Mira tú mismo los datos.</strong> Los gráficos detectan problemas que ningún resumen detecta (véase <a href="m2-howto-explore-a-dataset.html">Cómo: explorar un conjunto de datos</a>).</li>
+<li><strong>Guarda el registro:</strong> haz un <em>commit</em> en Git después de cada paso que funcione, y anota en <code>docs/</code> las decisiones que tomáis tú y el agente.</li>
+</ul>
+<h2 id="use-an-agent--solución-de-problemas">Solución de problemas</h2>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Qué probar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El skill no aparece en la lista</td>
+<td>Comprueba que la carpeta se llama exactamente <code>statistics-advisor</code> y que <code>SKILL.md</code> está directamente dentro. El error habitual es copiar todo el repositorio (o una segunda carpeta <code>statistics-advisor</code> dentro de la primera) en lugar de la carpeta <code>statistics-advisor</code> que hay dentro; el instalador (<code>tools/install_skill.py</code>) lo evita. Después abre un chat nuevo; en Gemini CLI ejecuta <code>/skills reload</code>; en Codex, reinícialo.</td>
+</tr>
+<tr>
+<td>El skill aparece en la lista pero el agente lo ignora</td>
+<td>Invócalo explícitamente (<code>/statistics-advisor</code>, o <code>$statistics-advisor</code> en Codex), o empieza tu mensaje con «Usa el skill statistics-advisor».</td>
+</tr>
+<tr>
+<td>Dice que no puede leer ni ejecutar archivos</td>
+<td>Probablemente estés en un chat web, o los permisos de archivos y comandos de la herramienta están desactivados. Usa la vía del archivo único y ejecuta tú el código, o abre la carpeta de tu proyecto en VS Code.</td>
+</tr>
+<tr>
+<td>El instalador dice que no encuentra <code>SKILL.md</code></td>
+<td>Ejecútalo desde dentro del repositorio descargado: la carpeta <code>tools</code> y la carpeta <code>statistics-advisor</code> deben estar una junto a otra. Si moviste <code>install_skill.py</code> a otro sitio, devuélvelo a su lugar.</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError</code> cuando el agente ejecuta código</td>
+<td>Pídele que use <code>uv run</code>, o selecciona el kernel <code>.venv</code> del proyecto. No le dejes instalar paquetes de forma global.</td>
+</tr>
+<tr>
+<td>El agente pide ejecutar un comando que no entiendes</td>
+<td>Di que no y pídele que lo explique. Siempre puedes aprobar los comandos de uno en uno.</td>
+</tr>
+<tr>
+<td>Una referencia o un número de página parece inventado</td>
+<td>Contrástalo con <code>references/core-references.md</code> en la carpeta del skill, o con la fuente original. Pídele al agente que diga de qué no está seguro.</td>
+</tr>
+<tr>
+<td>Llegas al límite de uso del proveedor</td>
+<td>Espera a que se renueve la cuota, cambia de herramienta (la misma carpeta del skill funciona en varias) o usa las guías prácticas, que no necesitan agente.</td>
+</tr>
+<tr>
+<td>Errores de descarga o de inicio de sesión en una red universitaria o de empresa</td>
+<td>Suelen deberse a la configuración de certificados o del proxy. Consulta la documentación de red del proveedor o pregunta a tu equipo de TI.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prepara tu ordenador | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/setup-environment.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top active" aria-current="page">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="setup-environment" class="page"><h1 id="setup-environment--prepara-tu-ordenador">Prepara tu ordenador</h1>
+<p><strong>En pocas palabras:</strong> para ejecutar los cuadernos (<em>notebooks</em>) y el código de las guías prácticas necesitas tres cosas: un lugar donde escribir y ejecutar código, Python con un puñado de bibliotecas de estadística y una forma de mantener esas bibliotecas separadas para cada proyecto. Esta página te lleva hasta ahí partiendo de un ordenador limpio, en Windows, macOS o Linux, en unos 30 minutos. Solo tienes que hacerlo una vez.</p>
+<p>Usamos dos herramientas:</p>
+<ul>
+<li><strong>VS Code</strong>, un editor gratuito que también puede ejecutar cuadernos.</li>
+<li><strong>uv</strong>, una herramienta gratuita que instala Python por ti y guarda las bibliotecas de cada proyecto en su propio entorno aislado. No hace falta instalar Python por separado, y nada de lo que hagas aquí puede estropear otro proyecto ni tu sistema.</li>
+</ul>
+<p>Si prefieres no instalar nada, consulta <a href="#setup-environment--sin-instalación-google-colab">Sin instalación: Google Colab</a> al final. Para saber cómo organizar las carpetas de un análisis cuando ya lo tengas todo listo, consulta <a href="project-structure.html">Organiza tu proyecto</a>. Para que un asistente de IA te ayude con el análisis, consulta <a href="use-an-agent.html">Trabaja con un agente de IA</a>.</p>
+<h2 id="setup-environment--qué-tendrás-al-terminar">Qué tendrás al terminar</h2>
+<ul>
+<li>VS Code con las extensiones de Python y Jupyter.</li>
+<li>Una carpeta de proyecto con un entorno de Python 3.12 que incluye <code>numpy</code>, <code>pandas</code>, <code>scipy</code>, <code>statsmodels</code>, <code>scikit-learn</code>, <code>matplotlib</code>, <code>seaborn</code> y <code>jupyterlab</code>: todo lo que usan los cuadernos y las guías prácticas del curso.</li>
+<li>Un archivo (<code>uv.lock</code>) que registra las versiones exactas instaladas, de modo que el mismo entorno pueda reconstruirse en cualquier ordenador.</li>
+</ul>
+<h2 id="setup-environment--paso-1-instala-vs-code">Paso 1: Instala VS Code</h2>
+<p>Descarga el instalador para tu sistema desde <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">code.visualstudio.com</a> y ejecútalo. Si prefieres la línea de comandos:</p>
+<p><strong>Windows</strong> (en PowerShell):</p>
+<pre class="text"><code>winget install --id Microsoft.VisualStudioCode -e</code></pre>
+<p><strong>macOS:</strong> abre el archivo descargado y arrastra <em>Visual Studio Code</em> a la carpeta <em>Applications</em>. Si usas Homebrew: <code>brew install --cask visual-studio-code</code>.</p>
+<p><strong>Linux:</strong> en Debian o Ubuntu, descarga el archivo <code>.deb</code> desde la web e instálalo con <code>sudo apt install ./&lt;file&gt;.deb</code>. Muchas distribuciones también ofrecen <code>sudo snap install --classic code</code>. Para Fedora y otros sistemas, sigue las <a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener">instrucciones oficiales para Linux</a>.</p>
+<p>Después abre VS Code, haz clic en el icono de <strong>Extensions</strong> de la barra izquierda (o pulsa <code>Ctrl+Shift+X</code>, <code>Cmd+Shift+X</code> en macOS) e instala dos extensiones, ambas publicadas por Microsoft: <strong>Python</strong> y <strong>Jupyter</strong>.</p>
+<h2 id="setup-environment--paso-2-abre-una-terminal-e-instala-uv">Paso 2: Abre una terminal e instala uv</h2>
+<p>Una terminal es una ventana donde escribes comandos. Abre una:</p>
+<ul>
+<li><strong>Windows:</strong> abre el menú Inicio, escribe <em>PowerShell</em> y ábrelo.</li>
+<li><strong>macOS:</strong> pulsa <code>Cmd+Space</code>, escribe <em>Terminal</em> y pulsa Enter.</li>
+<li><strong>Linux:</strong> pulsa <code>Ctrl+Alt+T</code> en la mayoría de los escritorios, o busca <em>Terminal</em>.</li>
+</ul>
+<p>Después instala uv.</p>
+<p><strong>Windows</strong> (PowerShell):</p>
+<pre class="text"><code>powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</code></pre>
+<p>Como alternativa: <code>winget install --id=astral-sh.uv -e</code>.</p>
+<p><strong>macOS y Linux:</strong></p>
+<pre class="text"><code>curl -LsSf https://astral.sh/uv/install.sh | sh</code></pre>
+<p>En una instalación de Linux muy mínima puede faltar <code>curl</code>; instálalo antes (<code>sudo apt install curl</code> en Debian o Ubuntu) o usa <code>wget -qO- https://astral.sh/uv/install.sh | sh</code>. En macOS con Homebrew, también sirve <code>brew install uv</code>.</p>
+<p><strong>Cierra la terminal y abre una nueva</strong>, y comprueba que ha funcionado:</p>
+<pre class="text"><code>uv --version</code></pre>
+<p>Debería mostrar un número de versión. Si dice que no encuentra el comando, consulta <a href="#setup-environment--solución-de-problemas">Solución de problemas</a>.</p>
+<h2 id="setup-environment--paso-3-crea-un-proyecto-y-su-entorno">Paso 3: Crea un proyecto y su entorno</h2>
+<p>Estos comandos son los mismos en todos los sistemas. Crean una carpeta para tu primer análisis, le dicen a uv que use Python 3.12 e instalan las bibliotecas en un entorno que pertenece solo a esa carpeta.</p>
+<pre class="text"><code>cd ~
+mkdir projects
+cd projects
+mkdir my-first-analysis
+cd my-first-analysis
+
+uv init --bare
+uv python pin 3.12
+uv add numpy pandas scipy statsmodels scikit-learn matplotlib seaborn jupyterlab</code></pre>
+<p>La primera ejecución descarga Python y las bibliotecas, lo que tarda unos minutos. Después, la carpeta contiene:</p>
+<table>
+<thead>
+<tr>
+<th>Archivo o carpeta</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td>La lista de bibliotecas que necesita tu proyecto.</td>
+</tr>
+<tr>
+<td><code>uv.lock</code></td>
+<td>Las versiones exactas instaladas. Consérvalo: hace que el entorno sea reproducible.</td>
+</tr>
+<tr>
+<td><code>.python-version</code></td>
+<td>La versión de Python que usa el proyecto.</td>
+</tr>
+<tr>
+<td><code>.venv/</code></td>
+<td>El propio entorno. No lo edites nunca a mano ni lo copies entre ordenadores; reconstrúyelo con <code>uv sync</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>La misma lista de paquetes está también en <a href="notebooks/requirements.txt" download>requirements.txt</a>. Si tienes ese archivo en la carpeta del proyecto, <code>uv add -r requirements.txt</code> hace lo mismo que el largo comando <code>uv add</code> de arriba.</p>
+<p>Guarda tus proyectos en un lugar sencillo, como <code>projects</code> dentro de tu carpeta personal. Las carpetas sincronizadas con OneDrive, Dropbox o iCloud pueden ralentizarse o dar conflictos con los miles de archivos pequeños de un entorno. Para hacer copias de seguridad y compartir tu trabajo, usa <a href="project-structure.html#project-structure--control-de-versiones-con-git-opcional">Git</a>.</p>
+<h2 id="setup-environment--paso-4-abre-el-proyecto-en-vs-code-y-ejecuta-un-cuaderno">Paso 4: Abre el proyecto en VS Code y ejecuta un cuaderno</h2>
+<ol type="1">
+<li>En VS Code elige <strong>File &gt; Open Folder</strong> y selecciona <code>my-first-analysis</code>.</li>
+<li>Crea dentro una carpeta llamada <code>notebooks</code> (clic derecho en la lista de archivos, <em>New Folder</em>).</li>
+<li>Descarga un cuaderno del curso, por ejemplo el <a href="notebooks/measurement-error-attenuation.ipynb" download>cuaderno sobre error de medición</a>, y guárdalo en esa carpeta <code>notebooks</code>.</li>
+<li>Abre el cuaderno en VS Code. Haz clic en <strong>Select Kernel</strong> arriba a la derecha, elige <strong>Python Environments</strong> y, después, la entrada que mencione <code>.venv</code> y Python 3.12.</li>
+<li>Haz clic en <strong>Run All</strong>. Los gráficos y las tablas aparecen debajo de las celdas.</li>
+</ol>
+<p>¿Prefieres el navegador? En la carpeta del proyecto ejecuta <code>uv run jupyter lab</code>; se abre JupyterLab con el mismo entorno.</p>
+<h2 id="setup-environment--paso-5-comprueba-que-todo-está-instalado">Paso 5: Comprueba que todo está instalado</h2>
+<p>En una celda nueva de un cuaderno (o en cualquier cuaderno), ejecuta:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy, pandas, scipy, statsmodels, sklearn, matplotlib, seaborn</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Python&quot;</span>, sys.version.split()[<span class="dv">0</span>])</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> module <span class="kw">in</span> (numpy, pandas, scipy, statsmodels, sklearn, matplotlib, seaborn):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>module<span class="sc">.</span><span class="va">__name__</span><span class="sc">:12s}</span><span class="ss"> </span><span class="sc">{</span>module<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>Deberías ver una versión de Python 3.12 y un número de versión para cada biblioteca, sin ningún error. El código del curso se probó con Python 3.12 y versiones recientes de las bibliotecas (por ejemplo pandas 3.1, scipy 1.18, statsmodels 0.15, scikit-learn 1.9).</p>
+<p>Para ejecutar un script desde la terminal en lugar de un cuaderno, usa <code>uv run python my_script.py</code> dentro de la carpeta del proyecto; uv siempre usa el entorno propio del proyecto.</p>
+<h2 id="setup-environment--más-adelante-añadir-una-biblioteca-o-reconstruir-el-entorno-en-otro-ordenador">Más adelante: añadir una biblioteca o reconstruir el entorno en otro ordenador</h2>
+<ul>
+<li><strong>Añadir una biblioteca:</strong> <code>uv add &lt;package-name&gt;</code>. Para los ejemplos bayesianos opcionales: <code>uv add pymc bambi arviz</code> (son grandes; instálalas solo si las necesitas).</li>
+<li><strong>Reconstruir el mismo entorno</strong> en un ordenador nuevo o tras una instalación limpia: instala VS Code y uv (pasos 1 y 2), copia la carpeta del proyecto <em>sin</em> <code>.venv</code> y ejecuta <code>uv sync</code> dentro de ella.</li>
+<li><strong>Actualizar las bibliotecas:</strong> <code>uv lock --upgrade</code> y después <code>uv sync</code>. Hazlo entre proyectos, no a mitad de un análisis, porque las versiones nuevas pueden cambiar ligeramente los resultados.</li>
+</ul>
+<h2 id="setup-environment--solución-de-problemas">Solución de problemas</h2>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uv: command not found</code> (o «no se reconoce») justo después de instalar</td>
+<td>Cierra la terminal y abre una nueva; el instalador modifica la ruta de búsqueda solo para las terminales nuevas. Si sigue fallando, reinicia el ordenador.</td>
+</tr>
+<tr>
+<td><code>invalid peer certificate: UnknownIssuer</code> u otro error de certificado durante la descarga</td>
+<td>Es típico de las redes de empresas o universidades que inspeccionan el tráfico seguro. Indica a uv que use los certificados del sistema: <code>export UV_SYSTEM_CERTS=1</code> (macOS, Linux) o <code>$env:UV_SYSTEM_CERTS = "1"</code> (Windows PowerShell) y repite el comando. Las versiones antiguas de uv lo llaman <code>UV_NATIVE_TLS</code>.</td>
+</tr>
+<tr>
+<td>Las descargas se agotan o fallan en una red que exige un proxy</td>
+<td>Pide a tu equipo informático la dirección del proxy y asígnala a <code>HTTPS_PROXY</code>.</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError: No module named 'pandas'</code> en un cuaderno</td>
+<td>El cuaderno está usando el kernel equivocado. Haz clic en <strong>Select Kernel</strong> y elige el <code>.venv</code> de tu proyecto.</td>
+</tr>
+<tr>
+<td>El kernel de <code>.venv</code> no aparece en VS Code</td>
+<td>Pulsa <code>Ctrl+Shift+P</code> (<code>Cmd+Shift+P</code> en macOS), ejecuta <strong>Python: Select Interpreter</strong> y elige la entrada <code>.venv</code>. Si no aparece, comprueba que has abierto en VS Code la <em>carpeta del proyecto</em> (la que contiene <code>pyproject.toml</code>).</td>
+</tr>
+<tr>
+<td>No puedes instalar software en tu ordenador</td>
+<td>Pide a tu equipo informático que instale VS Code y uv, o usa Google Colab (más abajo).</td>
+</tr>
+<tr>
+<td>Los gráficos no aparecen en un script ejecutado desde la terminal</td>
+<td>Los cuadernos muestran los gráficos automáticamente; los scripts necesitan <code>plt.show()</code> al final, o <code>plt.savefig("figure.png")</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setup-environment--si-no-puedes-o-no-quieres-usar-uv">Si no puedes o no quieres usar uv</h2>
+<p>La vía clásica también funciona: instala Python 3.12 o posterior, crea un entorno con el módulo <code>venv</code> incluido en Python e instala las bibliotecas con <code>pip</code>, usando el <a href="notebooks/requirements.txt" download>requirements.txt</a> del curso.</p>
+<p><strong>Windows:</strong> descarga Python desde <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> y marca <em>Add python.exe to PATH</em> en el instalador. Después, en PowerShell dentro de la carpeta de tu proyecto:</p>
+<pre class="text"><code>py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt</code></pre>
+<p>Si PowerShell se niega a ejecutar el script de activación, ejecuta una vez <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code> e inténtalo de nuevo.</p>
+<p><strong>macOS y Linux:</strong> necesitas <code>python3</code> versión 3.12 o posterior. El que viene con macOS suele ser demasiado antiguo, así que instala uno actual desde <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> o con Homebrew; en Debian o Ubuntu quizá necesites también <code>sudo apt install python3-venv</code>:</p>
+<pre class="text"><code>python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt</code></pre>
+<p>En VS Code, selecciona el intérprete de <code>.venv</code> como se describe en el paso 4. Pierdes el archivo de bloqueo (<em>lockfile</em>), así que anota lo que has instalado con <code>pip freeze &gt; requirements-frozen.txt</code> cuando tu análisis ya funcione.</p>
+<h2 id="setup-environment--sin-instalación-google-colab">Sin instalación: Google Colab</h2>
+<p><a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colab</a> ejecuta cuadernos en tu navegador con <code>numpy</code>, <code>pandas</code>, <code>scipy</code>, <code>statsmodels</code>, <code>scikit-learn</code>, <code>matplotlib</code> y <code>seaborn</code> ya disponibles. Abre Colab, elige <strong>File &gt; Upload notebook</strong> y selecciona un cuaderno del curso. Es una buena forma de probar cosas, pero tus archivos desaparecen al terminar la sesión a menos que los guardes en Google Drive, y <strong>no debes subir datos confidenciales ni de pacientes</strong> sin comprobar antes la normativa de tu institución.</p>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

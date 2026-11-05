@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organiza tu proyecto | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/project-structure.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top active" aria-current="page">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="project-structure" class="page"><h1 id="project-structure--organiza-tu-proyecto">Organiza tu proyecto</h1>
+<p><strong>En pocas palabras:</strong> un análisis estadístico es un pequeño proyecto de software. Dale una carpeta propia, mantén intactos los datos originales, guarda el código, los resultados y las notas en lugares distintos y deja escrito cómo volver a ejecutarlo. Dentro de seis meses (o cuando una persona revisora te pida un cambio), tú o un colega deberíais poder reproducir cada número y cada figura ejecutando el código desde el principio.</p>
+<p>Esta página da por hecho que ya has <a href="setup-environment.html">preparado tu ordenador</a>.</p>
+<h2 id="project-structure--la-estructura-de-carpetas">La estructura de carpetas</h2>
+<p>Una carpeta por proyecto, con una estructura como esta:</p>
+<pre class="text"><code>my-first-analysis/
+├── README.md             what the project is and how to rerun it
+├── AGENTS.md             optional house rules for an AI agent (see &quot;Work with an AI agent&quot;)
+├── pyproject.toml        the libraries the project needs (made by uv)
+├── uv.lock               the exact versions installed (made by uv; keep it)
+├── .gitignore            files Git should not track
+├── data/
+│   ├── raw/              original data exactly as received: never edited
+│   └── processed/        cleaned data produced by your code
+├── notebooks/            01_explore.ipynb, 02_model.ipynb, ...
+├── src/                  reusable code (functions) and scripts
+├── results/
+│   ├── figures/          plots produced by your code
+│   └── tables/           tables produced by your code
+└── docs/
+    ├── analysis-plan.md  what you planned to do, written before looking at the data
+    └── data-dictionary.md  what each column means, its units, and its allowed values</code></pre>
+<p>Para crear las carpetas, guarda esto como <code>make_folders.py</code> en la carpeta de tu proyecto y ejecuta <code>uv run python make_folders.py</code> (o pégalo en una celda de un cuaderno abierto en esa carpeta):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> folder <span class="kw">in</span> [<span class="st">&quot;data/raw&quot;</span>, <span class="st">&quot;data/processed&quot;</span>, <span class="st">&quot;notebooks&quot;</span>, <span class="st">&quot;src&quot;</span>, <span class="st">&quot;results/figures&quot;</span>, <span class="st">&quot;results/tables&quot;</span>, <span class="st">&quot;docs&quot;</span>]:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    Path(folder).mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<p>No necesitas todas ellas para un análisis pequeño. Un proyecto con solo <code>data/raw</code>, <code>notebooks</code> y <code>results</code> ya es mucho mejor que una carpeta llena de <code>final_v3_REALLY_final.xlsx</code>.</p>
+<h2 id="project-structure--las-reglas-que-más-importan">Las reglas que más importan</h2>
+<ol type="1">
+<li><strong>No edites nunca los datos originales.</strong> Guarda el archivo exactamente como llegó del instrumento, de la persona colaboradora o de la base de datos, en <code>data/raw</code>. Haz toda la limpieza con código que lea el archivo original y escriba un archivo nuevo en <code>data/processed</code>. Así cada cambio que hiciste es visible y repetible, y puedes corregir un error cambiando una línea en lugar de rehacerlo a mano en una hoja de cálculo.</li>
+<li><strong>Todo se produce con código.</strong> Cada figura y cada tabla de un informe debe salir de un cuaderno o de un script, no de copiar y pegar. Si cambias los datos o una decisión, vuelve a ejecutar y todo se actualiza.</li>
+<li><strong>Una pregunta, un cuaderno, en orden.</strong> Numera los cuadernos (<code>01_explore.ipynb</code>, <code>02_clean.ipynb</code>, <code>03_model.ipynb</code>) para que el orden del análisis sea evidente. Cada cuaderno debe hacer una sola tarea y leer su entrada del resultado del paso anterior.</li>
+<li><strong>Los cuadernos exploran; los scripts repiten.</strong> Un cuaderno es el lugar adecuado para mirar gráficos y probar ideas. Cuando varios cuadernos usan un mismo código, o este tarda mucho, pásalo a una función en <code>src/</code> e impórtala.</li>
+<li><strong>Anota las decisiones.</strong> Registra qué filas excluiste y por qué, cómo trataste los valores faltantes y qué análisis ejecutaste. El número de filas descartadas es algo que te pedirá quien lea tu trabajo. Consulta <a href="m2-missing-data.html">Datos faltantes</a>.</li>
+<li><strong>Escribe el plan de análisis antes de mirar.</strong> Para un análisis confirmatorio, anota en <code>docs/analysis-plan.md</code> la comparación que vas a contrastar, la variable de respuesta, el modelo y las reglas de exclusión <em>antes</em> de explorar los datos. Después, todo lo que añadas tras mirar es exploratorio y debe etiquetarse como tal. Consulta <a href="m2-exploratory-vs-confirmatory.html">Exploratorio vs. confirmatorio</a>.</li>
+</ol>
+<h2 id="project-structure--buenos-hábitos-con-los-cuadernos">Buenos hábitos con los cuadernos</h2>
+<ul>
+<li><strong>Pon los ajustes al principio</strong>: rutas de archivos, la semilla aleatoria, umbrales, nombres de columnas. Así cualquiera puede verlos y cambiarlos en un solo lugar.</li>
+<li><strong>Fija una semilla aleatoria</strong> siempre que haya aleatoriedad (<code>rng = np.random.default_rng(0)</code>, <code>random_state=0</code>), para que al volver a ejecutar salgan los mismos números.</li>
+<li><strong>Ejecútalo desde el principio antes de fiarte.</strong> Usa <strong>Restart</strong> y después <strong>Run All</strong>. Un cuaderno que solo funciona si sus celdas se ejecutan en un orden concreto es un error esperando a ocurrir.</li>
+<li><strong>Mantén las rutas de archivos relativas al proyecto</strong>, no a tu ordenador (<code>C:\Users\you\...</code> deja de funcionar para cualquier otra persona). Este fragmento encuentra la carpeta del proyecto tanto si el cuaderno está en <code>notebooks/</code> como en la raíz del proyecto:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> Path.cwd().parent <span class="cf">if</span> Path.cwd().name <span class="op">==</span> <span class="st">&quot;notebooks&quot;</span> <span class="cf">else</span> Path.cwd()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>RAW <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">&quot;data&quot;</span> <span class="op">/</span> <span class="st">&quot;raw&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>PROCESSED <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">&quot;data&quot;</span> <span class="op">/</span> <span class="st">&quot;processed&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>FIGURES <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">&quot;results&quot;</span> <span class="op">/</span> <span class="st">&quot;figures&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Project folder:&quot;</span>, ROOT)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># df = pd.read_csv(RAW / &quot;ldl_2024.csv&quot;)</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.savefig(FIGURES / &quot;ldl_by_genotype.png&quot;, dpi=200, bbox_inches=&quot;tight&quot;)</span></span></code></pre></div>
+<ul>
+<li><strong>Guarda los resultados desde el código</strong>, con nombres descriptivos (<code>ldl_by_genotype.png</code>, no <code>Figure 3.png</code>).</li>
+<li><strong>Usa nombres de archivo sencillos:</strong> en minúsculas, sin espacios, con las fechas como <code>2024-06-15</code> para que se ordenen correctamente.</li>
+</ul>
+<h2 id="project-structure--un-readme-que-merece-la-pena-escribir">Un README que merece la pena escribir</h2>
+<p>Un <code>README.md</code> breve en la raíz del proyecto responde a las primeras preguntas de quien lo abra:</p>
+<pre class="text"><code># LDLR variant study 2024
+
+Is a variant in the LDLR gene linked to LDL cholesterol? Lipid-clinic cohort, 15 families x 20 relatives.
+
+## How to rerun
+1. Install uv (see the course page &quot;Set up your computer&quot;).
+2. In this folder run:  uv sync
+3. Open the notebooks in notebooks/ in order (01, 02, ...) and run each one.
+
+## Data
+data/raw/ldl_2024.csv  from the clinic team, received 2024-09-12, not modified.
+Columns are described in docs/data-dictionary.md.
+
+## Contact
+Your name, your email.</code></pre>
+<h2 id="project-structure--control-de-versiones-con-git-opcional">Control de versiones con Git (opcional)</h2>
+<p>Esta sección es opcional: hazla solo si quieres dedicar un poco más de tiempo a aprender Git.</p>
+<p>Git registra cada versión de tus archivos, de modo que puedes ver qué ha cambiado, deshacer un error y trabajar con otras personas. También es una buena copia de seguridad para archivos de texto y cuadernos. Instálalo una sola vez:</p>
+<ul>
+<li><strong>Windows:</strong> <code>winget install --id Git.Git -e</code> (o descárgalo desde <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a>).</li>
+<li><strong>macOS:</strong> ejecuta <code>git --version</code> en una terminal; si falta Git, macOS te ofrece instalarlo.</li>
+<li><strong>Linux:</strong> <code>sudo apt install git</code> (Debian, Ubuntu) o <code>sudo dnf install git</code> (Fedora).</li>
+</ul>
+<p>Dile a Git quién eres (una vez por ordenador) y empieza a seguir el proyecto:</p>
+<pre class="text"><code>git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;you@example.com&quot;
+
+git init
+git add .
+git commit -m &quot;Start the project&quot;</code></pre>
+<p>A partir de ahí, <code>git add .</code> y <code>git commit -m "short description of what changed"</code> guardan una nueva instantánea. Haz un <em>commit</em> cuando algo funcione, con un mensaje que diga qué y por qué.</p>
+<p>Crea un archivo <code>.gitignore</code> en la carpeta del proyecto para que Git omita lo que no debe seguirse:</p>
+<pre class="text"><code># the environment is rebuilt with `uv sync`; never commit it
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# raw data: keep out of Git if it is large or confidential, and back it up elsewhere
+# (remove this line if the data is small, public, and you want it versioned too)
+data/raw/
+
+# generated by the code, can be recreated
+data/processed/
+results/</code></pre>
+<p>Algunas precauciones:</p>
+<ul>
+<li><strong>No pongas nunca datos confidenciales en Git</strong>, en particular datos de pacientes o cualquier cosa sujeta a un acuerdo de intercambio de datos, y tampoco contraseñas ni claves. Un archivo eliminado en un <em>commit</em> posterior sigue estando en el historial. Guarda los datos originales sensibles en un lugar seguro aprobado por tu institución y describe en el README dónde están.</li>
+<li><strong>Sí debes subir</strong> <code>pyproject.toml</code> y <code>uv.lock</code>, para que el entorno pueda reconstruirse.</li>
+<li><strong>Los resultados de los cuadernos pueden contener datos</strong> (tablas impresas, gráficos de registros individuales). Antes de compartir un cuaderno, borra sus resultados (VS Code: <strong>Clear All Outputs</strong> en la barra de herramientas del cuaderno), salvo que quieras compartirlos.</li>
+<li>Para guardar una copia en la nube y compartirla con colegas, crea un repositorio vacío en un servicio como GitHub o GitLab (tu institución puede tener el suyo propio) y sigue las instrucciones que te muestre para conectarlo.</li>
+</ul>
+<h2 id="project-structure--reconstruye-el-proyecto-en-otro-ordenador">Reconstruye el proyecto en otro ordenador</h2>
+<p>Como el proyecto registra su entorno, ponerlo en marcha en otro sitio lleva unos pocos pasos: instala <a href="setup-environment.html">VS Code y uv</a>, consigue la carpeta del proyecto (<code>git clone &lt;address&gt;</code>, o cópiala sin <code>.venv</code>), coloca los datos originales en <code>data/raw</code> y ejecuta <code>uv sync</code> en la carpeta. Después abre los cuadernos y ejecuta Run All.</p>
+<h2 id="project-structure--algunas-cosas-que-conviene-evitar">Algunas cosas que conviene evitar</h2>
+<ul>
+<li><strong>Analizar en una hoja de cálculo y en código a la vez.</strong> Elige un único lugar donde viva el análisis; usa la hoja de cálculo solo para mirar o introducir datos.</li>
+<li><strong>Varias copias de los datos con nombres distintos.</strong> Si un archivo cambia, debe ir en <code>data/processed</code> junto con el código que lo generó.</li>
+<li><strong>Un cuaderno gigante que lo hace todo.</strong> Divídelo cuando deje de caber en unas pocas pantallas.</li>
+<li><strong>Entornos compartidos entre proyectos.</strong> Un entorno separado por proyecto significa que actualizar una biblioteca para un análisis nunca puede cambiar los resultados de otro.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

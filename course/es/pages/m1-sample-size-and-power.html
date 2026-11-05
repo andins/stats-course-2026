@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamaño muestral y potencia | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m1-sample-size-and-power.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link  active" aria-current="page">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m1-sample-size-and-power" class="page"><h1 id="m1-sample-size-and-power--tamaño-muestral-y-potencia">Tamaño muestral y potencia</h1>
+<p><strong>En pocas palabras:</strong> la potencia es la probabilidad de que tu estudio detecte un efecto real, <em>si de verdad existe</em>. Planificar el tamaño muestral es trabajar hacia atrás, desde «con cuánta seguridad quiero estar» hasta «cuántos sujetos necesito».</p>
+<h2 id="m1-sample-size-and-power--el-ejemplo-de-mia">El ejemplo de Mia</h2>
+<p>Mia cree que portar su variante de LDLR aumenta el colesterol LDL en torno a un 10%, a partir de una pequeña serie clínica previa (6 portadores y 6 no portadores). Antes de poner en marcha el estudio de cohortes completo, necesita saber: ¿cuántos pacientes necesita por grupo para detectar de forma fiable una diferencia del 10%, si es real?</p>
+<h2 id="m1-sample-size-and-power--los-cuatro-ingredientes-de-un-cálculo-de-potencia">Los cuatro ingredientes de un cálculo de potencia</h2>
+<p>Todo cálculo de tamaño muestral necesita cuatro números, y fijando tres de ellos queda determinado el cuarto:</p>
+<ol type="1">
+<li><strong>Tamaño del efecto</strong> — qué diferencia tan grande intentas detectar (véase <a href="m1-effect-size.html">Tamaño del efecto</a>). Suele ser el más difícil de concretar.</li>
+<li><strong>Alfa (nivel de significación)</strong> — tu tolerancia a los falsos positivos, por convención 0.05.</li>
+<li><strong>Potencia</strong> — tu tolerancia a los falsos negativos, por convención 0.80 (un 80% de probabilidad de detectar el efecto si es real).</li>
+<li><strong>Tamaño muestral</strong> — lo que normalmente quieres calcular.</li>
+</ol>
+<p>Como regla general: efectos más pequeños, menor tolerancia a los errores y datos más variables exigen todos <em>más</em> muestra.</p>
+<h2 id="m1-sample-size-and-power--usar-directamente-el-tamaño-del-efecto-de-un-estudio-piloto">Usar directamente el tamaño del efecto de un estudio piloto</h2>
+<p>Los estudios piloto pequeños dan estimaciones ruidosas del tamaño del efecto, y las estimaciones ruidosas de muestras pequeñas tienden a ser, de media, mayores que el efecto real (a veces se llama «la maldición del ganador», <em>winner's curse</em>). Si la serie clínica previa de Mia tenía solo 6 pacientes por grupo, el «aumento del 10%» que mostró podría estar más cerca del 3%, o de cero. Introducir en una calculadora de tamaño muestral el número bruto del piloto puede producir un estudio que sobre el papel parece tener potencia suficiente pero que en la práctica no la tiene.</p>
+<p><strong>Mejores alternativas</strong>: usa el menor tamaño del efecto que <em>resultaría útil</em> detectar (p. ej. «un aumento del LDL inferior al 5% no cambiaría cómo se trata a un portador en la clínica»), consulta tamaños del efecto de estudios publicados, o calcula el tamaño muestral para un pequeño rango de tamaños del efecto plausibles y compara los resultados.</p>
+<h2 id="m1-sample-size-and-power--la-potencia-no-es-solo-para-experimentos">La potencia no es solo para experimentos</h2>
+<p>Si no hay una única prueba planificada de antemano —p. ej. Mia hace en cambio una encuesta abierta del colesterol LDL en muchas clínicas—, la pregunta adecuada pasa a ser de <strong>precisión</strong>: «¿qué tamaño de muestra necesito para estimar el LDL medio con un margen de, digamos, ±5%?». Se responde del mismo modo (más datos → intervalo más estrecho) pero no exige elegir una única hipótesis que contrastar.</p>
+<h2 id="m1-sample-size-and-power--la-trampa-en-sentido-contrario-la-potencia-observada">La trampa en sentido contrario: la «potencia observada»</h2>
+<p>Es tentador, una vez terminado el estudio, calcular «la potencia que alcanzamos» a partir del propio resultado. Ese número es un reempaquetado del valor p que ya tienes y no aporta información nueva. Para valorar el resultado de un estudio ya terminado, mira la anchura de su intervalo de confianza y comprueba si el signo o el tamaño del efecto podrían estar exagerados (una comprobación de <strong>error de tipo S/tipo M</strong>, <em>Type S/Type M error</em>), en lugar de calcular la potencia a posteriori.</p>
+<aside class="do-it-yourself" aria-label="Guía práctica"><p class="do-it-yourself-title">Hazlo tú mismo</p><ul>
+<li><a href="m1-howto-plan-a-sample-size.html">Cómo: planificar un tamaño muestral</a> — cálculos de potencia y de precisión en Python, con una tabla de sensibilidad.</li>
+<li><a href="notebooks/power-and-pilot-studies.ipynb" download>Cuaderno: potencia y estudios piloto</a> — comprueba por qué el tamaño del efecto de un piloto pequeño engaña.</li>
+</ul>
+</aside>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li><a href="https://avehtari.github.io/ROS-Examples/" target="_blank" rel="noopener">Gelman, Hill &amp; Vehtari (2020)</a>, <em>Regression and Other Stories</em>, §16.1 "The problem with statistical power" (pp. 291–293) y §16.5 "Design calculations after the data have been collected" (pp. 304–306) — la alternativa del error de tipo S/tipo M a la potencia retroactiva.</li>
+<li><a href="https://lakens.github.io/statistical_inferences/" target="_blank" rel="noopener">Lakens (2022)</a>, <em>Improving Your Statistical Inferences</em>, Ch. 8 "Sample Size Justification" — el análisis de potencia y otras justificaciones defendibles.</li>
+<li>Hoenig &amp; Heisey (2001), "The abuse of power," <em>The American Statistician</em> 55(1), 19–24 — por qué la «potencia observada» es solo una reformulación del valor p.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

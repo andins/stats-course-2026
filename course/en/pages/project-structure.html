@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organize your project | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/project-structure.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top active" aria-current="page">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="project-structure" class="page"><h1 id="project-structure--organize-your-project">Organize Your Project</h1>
+<p><strong>In plain terms:</strong> a statistical analysis is a small software project. Give it one folder, keep the original data untouched, keep code, results and notes in separate places, and write down how to rerun it. Six months from now (or when a reviewer asks for a change) you, or a colleague, should be able to reproduce every number and figure by running the code from the top.</p>
+<p>This page assumes you have <a href="setup-environment.html">set up your computer</a>.</p>
+<h2 id="project-structure--the-folder-layout">The folder layout</h2>
+<p>One folder per project, with a layout like this:</p>
+<pre class="text"><code>my-first-analysis/
+├── README.md             what the project is and how to rerun it
+├── AGENTS.md             optional house rules for an AI agent (see &quot;Work with an AI agent&quot;)
+├── pyproject.toml        the libraries the project needs (made by uv)
+├── uv.lock               the exact versions installed (made by uv; keep it)
+├── .gitignore            files Git should not track
+├── data/
+│   ├── raw/              original data exactly as received: never edited
+│   └── processed/        cleaned data produced by your code
+├── notebooks/            01_explore.ipynb, 02_model.ipynb, ...
+├── src/                  reusable code (functions) and scripts
+├── results/
+│   ├── figures/          plots produced by your code
+│   └── tables/           tables produced by your code
+└── docs/
+    ├── analysis-plan.md  what you planned to do, written before looking at the data
+    └── data-dictionary.md  what each column means, its units, and its allowed values</code></pre>
+<p>To create the folders, save this as <code>make_folders.py</code> in your project folder and run <code>uv run python make_folders.py</code> (or paste it into a notebook cell opened in that folder):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> folder <span class="kw">in</span> [<span class="st">&quot;data/raw&quot;</span>, <span class="st">&quot;data/processed&quot;</span>, <span class="st">&quot;notebooks&quot;</span>, <span class="st">&quot;src&quot;</span>, <span class="st">&quot;results/figures&quot;</span>, <span class="st">&quot;results/tables&quot;</span>, <span class="st">&quot;docs&quot;</span>]:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    Path(folder).mkdir(parents<span class="op">=</span><span class="va">True</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<p>You don't need all of these for a small analysis. A project with just <code>data/raw</code>, <code>notebooks</code> and <code>results</code> already beats a folder full of <code>final_v3_REALLY_final.xlsx</code>.</p>
+<h2 id="project-structure--the-rules-that-matter-most">The rules that matter most</h2>
+<ol type="1">
+<li><strong>Never edit the raw data.</strong> Keep the file exactly as it came from the instrument, the collaborator or the database, in <code>data/raw</code>. Do all cleaning in code that reads the raw file and writes a new file to <code>data/processed</code>. Then every change you made is visible and repeatable, and you can fix a mistake by changing a line instead of redoing it by hand in a spreadsheet.</li>
+<li><strong>Everything is produced by code.</strong> Every figure and table in a report should come from a notebook or script, not from copying and pasting. If you change the data or a decision, rerun and everything updates.</li>
+<li><strong>One question, one notebook, in order.</strong> Number the notebooks (<code>01_explore.ipynb</code>, <code>02_clean.ipynb</code>, <code>03_model.ipynb</code>) so the order of the analysis is obvious. A notebook should do one job and read its input from the previous step's output.</li>
+<li><strong>Notebooks explore; scripts repeat.</strong> A notebook is the right place to look at plots and try ideas. When some code is used by several notebooks, or takes a long time, move it into a function in <code>src/</code> and import it.</li>
+<li><strong>Write down decisions.</strong> Record which rows you excluded and why, how you handled missing values, and which analyses you ran. The count of rows dropped is something a reader will ask for. See <a href="m2-missing-data.html">Missing data</a>.</li>
+<li><strong>Write the analysis plan before you look.</strong> For a confirmatory analysis, put the comparison you will test, the outcome, the model and the exclusion rules in <code>docs/analysis-plan.md</code> <em>before</em> exploring the data. Later, anything you added after looking is exploratory and should be labelled that way. See <a href="m2-exploratory-vs-confirmatory.html">Exploratory vs. confirmatory</a>.</li>
+</ol>
+<h2 id="project-structure--habits-for-notebooks">Habits for notebooks</h2>
+<ul>
+<li><strong>Put the settings at the top</strong>: file paths, the random seed, thresholds, column names. Then someone can see and change them in one place.</li>
+<li><strong>Set a random seed</strong> wherever randomness is used (<code>rng = np.random.default_rng(0)</code>, <code>random_state=0</code>), so a rerun gives the same numbers.</li>
+<li><strong>Run from the top before you trust it.</strong> Use <strong>Restart</strong> and then <strong>Run All</strong>. A notebook that only works when its cells are run in a particular order is a bug waiting to happen.</li>
+<li><strong>Keep file paths relative to the project</strong>, not to your computer (<code>C:\Users\you\...</code> stops working for anyone else). This snippet finds the project folder whether the notebook is in <code>notebooks/</code> or in the project root:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ROOT <span class="op">=</span> Path.cwd().parent <span class="cf">if</span> Path.cwd().name <span class="op">==</span> <span class="st">&quot;notebooks&quot;</span> <span class="cf">else</span> Path.cwd()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>RAW <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">&quot;data&quot;</span> <span class="op">/</span> <span class="st">&quot;raw&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>PROCESSED <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">&quot;data&quot;</span> <span class="op">/</span> <span class="st">&quot;processed&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>FIGURES <span class="op">=</span> ROOT <span class="op">/</span> <span class="st">&quot;results&quot;</span> <span class="op">/</span> <span class="st">&quot;figures&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Project folder:&quot;</span>, ROOT)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># df = pd.read_csv(RAW / &quot;ldl_2024.csv&quot;)</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># fig.savefig(FIGURES / &quot;ldl_by_genotype.png&quot;, dpi=200, bbox_inches=&quot;tight&quot;)</span></span></code></pre></div>
+<ul>
+<li><strong>Save outputs from code</strong>, with descriptive names (<code>ldl_by_genotype.png</code>, not <code>Figure 3.png</code>).</li>
+<li><strong>Keep file names plain:</strong> lowercase, no spaces, with dates as <code>2024-06-15</code> so they sort correctly.</li>
+</ul>
+<h2 id="project-structure--a-readme-worth-writing">A README worth writing</h2>
+<p>A short <code>README.md</code> at the top of the project answers the first questions of anyone who opens it:</p>
+<pre class="text"><code># LDLR variant study 2024
+
+Is a variant in the LDLR gene linked to LDL cholesterol? Lipid-clinic cohort, 15 families x 20 relatives.
+
+## How to rerun
+1. Install uv (see the course page &quot;Set up your computer&quot;).
+2. In this folder run:  uv sync
+3. Open the notebooks in notebooks/ in order (01, 02, ...) and run each one.
+
+## Data
+data/raw/ldl_2024.csv  from the clinic team, received 2024-09-12, not modified.
+Columns are described in docs/data-dictionary.md.
+
+## Contact
+Your name, your email.</code></pre>
+<h2 id="project-structure--version-control-with-git-optional">Version control with Git (optional)</h2>
+<p>This section is optional: do it only if you want to spend a bit more time learning Git.</p>
+<p>Git records every version of your files, so you can see what changed, undo a mistake, and work with others. It is also a good backup for text files and notebooks. Install it once:</p>
+<ul>
+<li><strong>Windows:</strong> <code>winget install --id Git.Git -e</code> (or download it from <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a>).</li>
+<li><strong>macOS:</strong> run <code>git --version</code> in a terminal; if Git is missing, macOS offers to install it.</li>
+<li><strong>Linux:</strong> <code>sudo apt install git</code> (Debian, Ubuntu) or <code>sudo dnf install git</code> (Fedora).</li>
+</ul>
+<p>Tell Git who you are (once per computer), then start tracking the project:</p>
+<pre class="text"><code>git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;you@example.com&quot;
+
+git init
+git add .
+git commit -m &quot;Start the project&quot;</code></pre>
+<p>After that, <code>git add .</code> and <code>git commit -m "short description of what changed"</code> save a new snapshot. Commit when something works, with a message that says what and why.</p>
+<p>Create a <code>.gitignore</code> file in the project folder so Git skips what shouldn't be tracked:</p>
+<pre class="text"><code># the environment is rebuilt with `uv sync`; never commit it
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# raw data: keep out of Git if it is large or confidential, and back it up elsewhere
+# (remove this line if the data is small, public, and you want it versioned too)
+data/raw/
+
+# generated by the code, can be recreated
+data/processed/
+results/</code></pre>
+<p>A few cautions:</p>
+<ul>
+<li><strong>Never put confidential data in Git</strong>, in particular patient data or anything under a data-sharing agreement, and never passwords or keys. A file removed from a later commit is still in the history. Keep sensitive raw data in a secure place approved by your institution, and describe in the README where it lives.</li>
+<li><strong>Do commit</strong> <code>pyproject.toml</code> and <code>uv.lock</code>, so the environment can be rebuilt.</li>
+<li><strong>Notebook outputs can contain data</strong> (printed tables, plots of individual records). Before sharing a notebook, clear its outputs (VS Code: <strong>Clear All Outputs</strong> in the notebook toolbar) unless you mean to share them.</li>
+<li>To keep a copy in the cloud and share with colleagues, create an empty repository on a service such as GitHub or GitLab (your institution may run its own) and follow the instructions it shows for connecting it.</li>
+</ul>
+<h2 id="project-structure--rebuild-the-project-on-another-computer">Rebuild the project on another computer</h2>
+<p>Because the project records its environment, getting going elsewhere takes a few steps: install <a href="setup-environment.html">VS Code and uv</a>, get the project folder (<code>git clone &lt;address&gt;</code>, or copy it without <code>.venv</code>), place the raw data in <code>data/raw</code>, and run <code>uv sync</code> in the folder. Then open the notebooks and Run All.</p>
+<h2 id="project-structure--a-few-things-to-avoid">A few things to avoid</h2>
+<ul>
+<li><strong>Analyzing in a spreadsheet and in code at the same time.</strong> Pick one place where the analysis lives; use the spreadsheet only to look at or enter data.</li>
+<li><strong>Several copies of the data with different names.</strong> If a file changes, it belongs in <code>data/processed</code> with the code that made it.</li>
+<li><strong>One giant notebook that does everything.</strong> Split it when it stops fitting on a few screens.</li>
+<li><strong>Environments shared between projects.</strong> A separate environment per project means upgrading a library for one analysis can never change the results of another.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

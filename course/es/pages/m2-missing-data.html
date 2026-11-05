@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datos faltantes | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m2-missing-data.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link  active" aria-current="page">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m2-missing-data" class="page"><h1 id="m2-missing-data--datos-faltantes">Datos faltantes</h1>
+<p><strong>En pocas palabras:</strong> los conjuntos de datos reales casi siempre tienen huecos. Lo que puedes hacer con ellos sin riesgo depende de <em>por qué</em> faltan, no solo de cuántos son.</p>
+<h2 id="m2-missing-data--tres-tipos-de-faltante-y-por-qué-importa-la-diferencia">Tres tipos de "faltante" (y por qué importa la diferencia)</h2>
+<p>Los estadísticos distinguen entre:</p>
+<ul>
+<li><strong>Faltantes completamente al azar (MCAR, <em>missing completely at random</em>)</strong>: los huecos no tienen nada que ver con nada; por ejemplo, un instrumento de laboratorio falló al azar al registrar una lectura algunos días, sin relación con la salud del paciente.</li>
+<li><strong>Faltantes al azar (MAR, <em>missing at random</em>)</strong>: los huecos dependen de algo que <em>sí</em> mediste; por ejemplo, un técnico de laboratorio tiene menos probabilidad de registrar una medición en semanas especialmente ajetreadas, y tienes constancia de qué semanas lo fueron.</li>
+<li><strong>Faltantes no al azar (MNAR, <em>missing not at random</em>)</strong>: los huecos dependen del propio valor que falta; por ejemplo, los pacientes con el colesterol más alto tienen más probabilidad de faltar a su análisis de sangre (están demasiado enfermos para acudir), de modo que los valores de LDL "faltantes" son sistemáticamente los peores.</li>
+</ul>
+<p>Con MCAR, eliminar las filas incompletas no sesga tus resultados (pierdes algo de precisión, pero no exactitud). Con MAR o MNAR, eliminar filas puede sesgar tus conclusiones; por ejemplo, si faltan desproporcionadamente los pacientes más enfermos, tu estimación del LDL medio parecerá mejor que la realidad.</p>
+<figure><img src="figures/missing_data_mechanisms.png" alt="Tres diagramas causales para los valores de LDL faltantes. MCAR: la edad apunta al LDL, y solo el azar apunta a si falta el LDL. MAR: la edad apunta tanto al LDL como a si falta el LDL. MNAR: el propio valor del LDL apunta a si falta." loading="lazy"><figcaption>Los tres mecanismos como diagramas: qué decide, si es que algo lo hace, que un valor falte.</figcaption></figure>
+<h2 id="m2-missing-data--la-opción-práctica-por-defecto">La opción práctica por defecto</h2>
+<ol type="1">
+<li><strong>Informa siempre de ello</strong>: cuántas filas o valores faltan, y en qué columnas. Esto ya es informativo y lleva dos minutos.</li>
+<li><strong>Solución por defecto — eliminación por casos completos (<em>listwise deletion</em>)</strong>: descarta las filas con valores faltantes en las columnas que estás usando en ese momento, e indica explícitamente cuántas filas se han eliminado. Es sencillo, transparente y adecuado con MCAR.</li>
+<li><strong>Cuándo ser más cuidadoso</strong>: si se está descartando una fracción grande de los datos, o sospechas que los datos faltantes están relacionados con la propia variable de respuesta (MAR/MNAR), no sigas simplemente eliminando filas: aquí es donde resultan apropiadas técnicas más avanzadas como la <em>imputación múltiple</em> (rellenos estadísticamente plausibles para los valores faltantes, repetidos varias veces para reflejar la incertidumbre), idealmente con ayuda de un estadístico o de una referencia especializada en lugar de improvisar una solución sobre la marcha.</li>
+</ol>
+<h2 id="m2-missing-data--el-ejemplo-de-mia">El ejemplo de Mia</h2>
+<p>A 15 de las 300 muestras de Mia les falta el genotipo porque falló un lote de secuenciación: un caso plausible de MCAR, sin relación con el LDL ni con la salud de los pacientes. Eliminar esas 15 filas e informar de que "15/300 muestras (5%) se excluyeron por el fallo de un lote de secuenciación" es una opción razonable por defecto en este caso.</p>
+<aside class="do-it-yourself" aria-label="Guía práctica"><p class="do-it-yourself-title">Hazlo tú mismo</p><p><a href="m2-howto-explore-a-dataset.html">Cómo: explorar un conjunto de datos</a> — incluye las comprobaciones de cuánto falta y de si depende de otras variables.</p>
+</aside>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li><a href="https://stefvanbuuren.name/fimd/" target="_blank" rel="noopener">van Buuren (2018)</a>, <em>Flexible Imputation of Missing Data</em> (2nd ed., free online), §1.2 "Concepts of MCAR, MAR and MNAR", §1.3.1 "Listwise deletion" y §2.7 "When not to use multiple imputation".</li>
+<li><a href="https://avehtari.github.io/ROS-Examples/" target="_blank" rel="noopener">Gelman, Hill &amp; Vehtari (2020)</a>, <em>Regression and Other Stories</em>, §17.3–17.5 "Models for missingness" hasta "Understanding multiple imputation", pp. 322–332.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

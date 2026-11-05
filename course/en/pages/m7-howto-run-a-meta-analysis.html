@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to: run a meta-analysis | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m7-howto-run-a-meta-analysis.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto active" aria-current="page">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-howto-run-a-meta-analysis" class="page"><h1 id="m7-howto-run-a-meta-analysis--how-to-run-a-meta-analysis">How to: run a meta-analysis</h1>
+<p><strong>Use this when:</strong> you have an effect estimate and its standard error from each of several studies of the same question (studies of one gene variant, trials of one drug), and you want one combined answer. The ideas are on the <a href="m7-meta-analysis.html">Meta-analysis</a> page; the traps are on <a href="m7-meta-analysis-pitfalls.html">Meta-analysis: bias and pitfalls</a>.</p>
+<h2 id="m7-howto-run-a-meta-analysis--steps">Steps</h2>
+<ol type="1">
+<li><strong>Fix the question and the eligibility rules before you look at results.</strong> Which treatment, which outcome, which kinds of study count? Write it down; searching and selecting studies is the part that most affects the answer.</li>
+<li><strong>Put every study on the same scale.</strong> One row per study with an <code>effect</code> and its standard error <code>se</code>. Last code block below shows how to get them from group means or counts.</li>
+<li><strong>Pool with a random-effects model.</strong> Report the pooled estimate with its interval.</li>
+<li><strong>Report the spread of the true effects:</strong> heterogeneity (τ, I²) and the prediction interval, not just the pooled mean.</li>
+<li><strong>Draw the forest plot</strong> and look at it before trusting any number.</li>
+<li><strong>Check how fragile the result is:</strong> leave one study out at a time, and compare with the fixed-effect estimate.</li>
+<li><strong>Look for publication bias</strong> (funnel plot, Egger's regression), keeping in mind that with fewer than about 10 studies it cannot tell you much.</li>
+<li><strong>Report</strong> the number of studies, how they were found, and the limits above.</li>
+</ol>
+<h2 id="m7-howto-run-a-meta-analysis--code-pool-the-studies">Code: pool the studies</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.meta_analysis <span class="im">import</span> combine_effects</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>)    <span class="co"># one row per study: study, effect (difference in LDL, mmol/L), se (its standard error)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="bu">len</span>(df)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> combine_effects(df[<span class="st">&quot;effect&quot;</span>].to_numpy(), (df[<span class="st">&quot;se&quot;</span>] <span class="op">**</span> <span class="dv">2</span>).to_numpy(), method_re<span class="op">=</span><span class="st">&quot;iterated&quot;</span>, row_names<span class="op">=</span><span class="bu">list</span>(df[<span class="st">&quot;study&quot;</span>]))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pooled, pooled_se <span class="op">=</span> res.mean_effect_re, res.sd_eff_w_re              <span class="co"># random effects</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>fixed, fixed_se <span class="op">=</span> res.mean_effect_fe, res.sd_eff_w_fe                <span class="co"># one common true effect</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>tau2, i2 <span class="op">=</span> res.tau2, <span class="bu">max</span>(<span class="fl">0.0</span>, res.i2)                                <span class="co"># between-study variance; share of spread beyond chance</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>q_p <span class="op">=</span> stats.chi2.sf(res.q, k <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>pi_half <span class="op">=</span> stats.t.ppf(<span class="fl">0.975</span>, k <span class="op">-</span> <span class="dv">2</span>) <span class="op">*</span> np.sqrt(tau2 <span class="op">+</span> pooled_se <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> studies&quot;</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;random effects: </span><span class="sc">{</span>pooled<span class="sc">:.2f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>pooled <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> pooled_se<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>pooled <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> pooled_se<span class="sc">:.2f}</span><span class="ss">)&quot;</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;fixed effect:   </span><span class="sc">{</span>fixed<span class="sc">:.2f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>fixed <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> fixed_se<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>fixed <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> fixed_se<span class="sc">:.2f}</span><span class="ss">)&quot;</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;tau = </span><span class="sc">{</span>np<span class="sc">.</span>sqrt(tau2)<span class="sc">:.2f}</span><span class="ss">, I2 = </span><span class="sc">{</span><span class="dv">100</span> <span class="op">*</span> i2<span class="sc">:.0f}</span><span class="ss">%, heterogeneity test p = </span><span class="sc">{</span>q_p<span class="sc">:.3f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;95% prediction interval for a new study: </span><span class="sc">{</span>pooled <span class="op">-</span> pi_half<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>pooled <span class="op">+</span> pi_half<span class="sc">:.2f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>res.plot_forest()</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<h2 id="m7-howto-run-a-meta-analysis--code-few-studies-widen-the-interval-honestly">Code: few studies? Widen the interval honestly</h2>
+<p>With a handful of studies, τ² is poorly estimated and the usual interval is too narrow. The Hartung-Knapp (HKSJ) adjustment uses the observed scatter of the studies and a t distribution:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (df[<span class="st">&quot;se&quot;</span>] <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> tau2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> (w <span class="op">*</span> df[<span class="st">&quot;effect&quot;</span>]).<span class="bu">sum</span>() <span class="op">/</span> w.<span class="bu">sum</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>se_hksj <span class="op">=</span> np.sqrt((w <span class="op">*</span> (df[<span class="st">&quot;effect&quot;</span>] <span class="op">-</span> mu) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>() <span class="op">/</span> ((k <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> w.<span class="bu">sum</span>()))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>se_hksj <span class="op">=</span> <span class="bu">max</span>(se_hksj, np.sqrt(<span class="dv">1</span> <span class="op">/</span> w.<span class="bu">sum</span>()))                   <span class="co"># never narrower than the usual interval</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>t_crit <span class="op">=</span> stats.t.ppf(<span class="fl">0.975</span>, k <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;random effects, Hartung-Knapp: </span><span class="sc">{</span>mu<span class="sc">:.2f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>mu <span class="op">-</span> t_crit <span class="op">*</span> se_hksj<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>mu <span class="op">+</span> t_crit <span class="op">*</span> se_hksj<span class="sc">:.2f}</span><span class="ss">)&quot;</span>)</span></code></pre></div>
+<h2 id="m7-howto-run-a-meta-analysis--code-how-fragile-is-the-result">Code: how fragile is the result?</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> df[<span class="st">&quot;study&quot;</span>]:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    rest <span class="op">=</span> df[df[<span class="st">&quot;study&quot;</span>] <span class="op">!=</span> name]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> combine_effects(rest[<span class="st">&quot;effect&quot;</span>].to_numpy(), (rest[<span class="st">&quot;se&quot;</span>] <span class="op">**</span> <span class="dv">2</span>).to_numpy(), method_re<span class="op">=</span><span class="st">&quot;iterated&quot;</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    rows.append({<span class="st">&quot;left out&quot;</span>: name, <span class="st">&quot;estimate&quot;</span>: r.mean_effect_re, <span class="st">&quot;tau&quot;</span>: np.sqrt(r.tau2)})</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>leave_one_out <span class="op">=</span> pd.DataFrame(rows).<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(leave_one_out.to_string(index<span class="op">=</span><span class="va">False</span>))</span></code></pre></div>
+<h2 id="m7-howto-run-a-meta-analysis--code-publication-bias">Code: publication bias</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>precision <span class="op">=</span> (<span class="dv">1</span> <span class="op">/</span> df[<span class="st">&quot;se&quot;</span>]).rename(<span class="st">&quot;precision&quot;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>egger <span class="op">=</span> sm.OLS(df[<span class="st">&quot;effect&quot;</span>] <span class="op">/</span> df[<span class="st">&quot;se&quot;</span>], sm.add_constant(precision)).fit()     <span class="co"># Egger&#39;s regression</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Egger intercept = </span><span class="sc">{</span>egger<span class="sc">.</span>params[<span class="st">&#39;const&#39;</span>]<span class="sc">:.2f}</span><span class="ss"> (p = </span><span class="sc">{</span>egger<span class="sc">.</span>pvalues[<span class="st">&#39;const&#39;</span>]<span class="sc">:.2f}</span><span class="ss">); &quot;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> studies, so treat this as a weak check&quot;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>ax.scatter(df[<span class="st">&quot;effect&quot;</span>], df[<span class="st">&quot;se&quot;</span>])</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>ax.axvline(pooled, color<span class="op">=</span><span class="st">&quot;grey&quot;</span>, linestyle<span class="op">=</span><span class="st">&quot;--&quot;</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>ax.invert_yaxis()                                                <span class="co"># the most precise studies at the top</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;effect&quot;</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;standard error&quot;</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<h2 id="m7-howto-run-a-meta-analysis--code-get-an-effect-and-a-standard-error-from-each-study">Code: get an effect and a standard error from each study</h2>
+<p>If a paper gives group summaries instead of an effect and a standard error, compute them yourself. Use the same scale for every study.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.meta_analysis <span class="im">import</span> effectsize_2proportions, effectsize_smd</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Continuous outcome, same unit in every study: the raw mean difference and its standard error</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>means <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;mean_t&quot;</span>: [<span class="fl">24.1</span>, <span class="fl">22.8</span>, <span class="fl">25.0</span>], <span class="st">&quot;sd_t&quot;</span>: [<span class="fl">3.2</span>, <span class="fl">2.9</span>, <span class="fl">3.6</span>], <span class="st">&quot;n_t&quot;</span>: [<span class="dv">30</span>, <span class="dv">45</span>, <span class="dv">28</span>],</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;mean_c&quot;</span>: [<span class="fl">22.0</span>, <span class="fl">22.1</span>, <span class="fl">22.7</span>], <span class="st">&quot;sd_c&quot;</span>: [<span class="fl">3.0</span>, <span class="fl">3.1</span>, <span class="fl">3.3</span>], <span class="st">&quot;n_c&quot;</span>: [<span class="dv">30</span>, <span class="dv">44</span>, <span class="dv">29</span>],</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>diff <span class="op">=</span> means[<span class="st">&quot;mean_t&quot;</span>] <span class="op">-</span> means[<span class="st">&quot;mean_c&quot;</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>se_diff <span class="op">=</span> np.sqrt(means[<span class="st">&quot;sd_t&quot;</span>] <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> means[<span class="st">&quot;n_t&quot;</span>] <span class="op">+</span> means[<span class="st">&quot;sd_c&quot;</span>] <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> means[<span class="st">&quot;n_c&quot;</span>])</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Different units or instruments across studies: the standardized mean difference (Hedges&#39; g)</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>g, var_g <span class="op">=</span> effectsize_smd(means[<span class="st">&quot;mean_t&quot;</span>], means[<span class="st">&quot;sd_t&quot;</span>], means[<span class="st">&quot;n_t&quot;</span>],</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                          means[<span class="st">&quot;mean_c&quot;</span>], means[<span class="st">&quot;sd_c&quot;</span>], means[<span class="st">&quot;n_c&quot;</span>])</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Yes/no outcome: the log odds ratio (pool on the log scale, then exponentiate)</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> pd.DataFrame({<span class="st">&quot;events_t&quot;</span>: [<span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">20</span>], <span class="st">&quot;n_t&quot;</span>: [<span class="dv">60</span>, <span class="dv">40</span>, <span class="dv">90</span>], <span class="st">&quot;events_c&quot;</span>: [<span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">31</span>], <span class="st">&quot;n_c&quot;</span>: [<span class="dv">60</span>, <span class="dv">42</span>, <span class="dv">88</span>]})</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>log_or, var_log_or <span class="op">=</span> effectsize_2proportions(counts[<span class="st">&quot;events_t&quot;</span>], counts[<span class="st">&quot;n_t&quot;</span>], counts[<span class="st">&quot;events_c&quot;</span>], counts[<span class="st">&quot;n_c&quot;</span>],</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>                                             statistic<span class="op">=</span><span class="st">&quot;odds-ratio&quot;</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">&quot;difference&quot;</span>: diff, <span class="st">&quot;se&quot;</span>: se_diff, <span class="st">&quot;g&quot;</span>: g, <span class="st">&quot;se_g&quot;</span>: np.sqrt(var_g),</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>                    <span class="st">&quot;log_or&quot;</span>: log_or, <span class="st">&quot;se_log_or&quot;</span>: np.sqrt(var_log_or)}).<span class="bu">round</span>(<span class="dv">2</span>))</span></code></pre></div>
+<h2 id="m7-howto-run-a-meta-analysis--reading-the-output">Reading the output</h2>
+<p>Example output on made-up data (10 studies of an LDLR variant, effect in mmol/L of extra LDL cholesterol in carriers):</p>
+<pre class="text"><code>10 studies
+random effects: 0.34 (95% CI 0.23 to 0.45)
+fixed effect:   0.30 (95% CI 0.23 to 0.38)
+tau = 0.13, I2 = 66%, heterogeneity test p = 0.002
+95% prediction interval for a new study: 0.01 to 0.67
+random effects, Hartung-Knapp: 0.34 (95% CI 0.21 to 0.47)
+left out  estimate  tau
+ Study 1      0.32 0.14
+ ...
+ Study 9      0.39 0.02
+Study 10      0.33 0.14
+Egger intercept = 3.17 (p = 0.11); 10 studies, so treat this as a weak check</code></pre>
+<ul>
+<li><strong>The pooled estimate is the average effect, not the effect everywhere.</strong> On average carrying the variant adds about 0.34 mmol/L of LDL. But τ = 0.13 mmol/L and I² = 66% say the studies genuinely differ, and the prediction interval (0.01 to 0.67 mmol/L) says a new study could show anything from no effect to twice the average. That is the honest summary; the CI of the mean alone sounds much more certain.</li>
+<li><strong>Random effects gave a wider interval than fixed effect</strong> (0.23 to 0.45 against 0.23 to 0.38) because it counts the differences between studies as uncertainty. When heterogeneity is low the two agree.</li>
+<li><strong>The Hartung-Knapp interval is wider still</strong> (0.21 to 0.47), as expected with only 10 studies. Report it if you have few studies.</li>
+<li><strong>Leaving out Study 9 shrinks τ from 0.13 to 0.02</strong> and moves the estimate to 0.39. Much of the heterogeneity comes from one study. Look at what was different there (a different ancestry? a different assay?) before deciding whether it belongs in the pool. Do not drop it just because it is inconvenient: report both results.</li>
+<li><strong>Egger's intercept points toward small studies with larger effects</strong> (3.17), though not "significantly" (p = 0.11). With 10 studies this test has little power, so absence of significance is not evidence of no publication bias. Look at the funnel plot, and treat the pooled estimate as possibly optimistic.</li>
+</ul>
+<h2 id="m7-howto-run-a-meta-analysis--which-approach-when">Which approach when</h2>
+<table>
+<thead>
+<tr>
+<th>Your situation</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Studies measured the same thing on the same scale</td>
+<td>Raw mean difference (or log odds ratio) and random effects</td>
+</tr>
+<tr>
+<td>Studies used different instruments or units</td>
+<td>Standardized mean difference, with the caveat that it also depends on how variable each sample was</td>
+</tr>
+<tr>
+<td>Fewer than about 5-10 studies</td>
+<td>Random effects with the Hartung-Knapp interval, or a Bayesian model; say how few studies there were</td>
+</tr>
+<tr>
+<td>Several effects from the same study (two doses against one control, several outcomes)</td>
+<td>They are not independent: pick one per study, or treat study as a cluster (see <a href="m7-clustered-and-hierarchical-data.html">Clustered and hierarchical data</a>)</td>
+</tr>
+<tr>
+<td>You have the raw data from every site</td>
+<td>Not a meta-analysis problem: analyze it as clustered data with site as the cluster, see <a href="m7-howto-analyze-clustered-data.html">How to: analyze clustered data</a></td>
+</tr>
+<tr>
+<td>You want to know why studies differ</td>
+<td>A meta-regression on study-level characteristics, read as exploratory: the characteristics are not randomized</td>
+</tr>
+</tbody>
+</table>
+<h2 id="m7-howto-run-a-meta-analysis--if-it-goes-wrong">If it goes wrong</h2>
+<ul>
+<li><strong>τ² comes out as zero but the forest plot clearly scatters:</strong> with few or imprecise studies τ² is badly estimated. Report the prediction interval and the Hartung-Knapp interval rather than concluding the studies agree.</li>
+<li><strong>I² is very high (above about 75%):</strong> the average may not describe any real setting. Look for what differs between studies (dose, ancestry, assay, design) before reporting one number.</li>
+<li><strong>One study dominates the weights, or leaving it out changes the answer:</strong> say so, and report the result with and without it.</li>
+<li><strong>The funnel plot is lopsided:</strong> small studies with large effects and no small studies with null effects suggest publication bias, but also real differences between small and large studies. The pooled estimate may be too optimistic; say so.</li>
+<li><strong>Studies report different things (medians, no standard errors):</strong> conversion formulas exist (see the Cochrane Handbook), but each conversion adds assumptions; state them.</li>
+<li><strong>A binary outcome with zero events in a group:</strong> the log odds ratio is not defined; use <code>zero_correction</code> in <code>effectsize_2proportions</code> and check the result is not driven by the correction.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

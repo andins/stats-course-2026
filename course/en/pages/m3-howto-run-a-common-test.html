@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to: run a common test | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m3-howto-run-a-common-test.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto active" aria-current="page">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m3-howto-run-a-common-test" class="page"><h1 id="m3-howto-run-a-common-test--how-to-run-a-common-test-and-report-it-properly">How to: run a common test and report it properly</h1>
+<p><strong>Use this when:</strong> you have a specific comparison that was decided <em>before</em> looking at the data (see <a href="m2-exploratory-vs-confirmatory.html">Exploratory vs. confirmatory</a>) and want to run the matching classical test. The test table is on the <a href="m3-common-tests.html">Common tests</a> page; the p-value caveats are on <a href="m3-p-values-and-significance.html">P-values and significance</a>.</p>
+<h2 id="m3-howto-run-a-common-test--steps">Steps</h2>
+<ol type="1">
+<li><strong>Pick the recipe below</strong> from the type of outcome and the design: two independent groups, the same units measured twice, three or more groups, two categories, or two numbers.</li>
+<li><strong>Check the assumptions</strong> with the plots in <a href="m3-howto-check-test-assumptions.html">How to: check a test's assumptions</a> before trusting the result.</li>
+<li><strong>Report the estimate and its confidence interval first</strong>, the p-value second. "Carriers had LDL cholesterol 0.35 mmol/L higher (95% CI 0.12 to 0.59)" tells the reader more than "p = 0.001".</li>
+<li><strong>If the question is about a treatment's effect,</strong> remember that a test only compares groups; whether the difference is <em>causal</em> depends on the design (see <a href="m5-experiments-vs-observational-data.html">Experiments vs. observational data</a>).</li>
+</ol>
+<p>Every recipe below can also be written as a regression, which is easier to extend with covariates; see <a href="m4-howto-run-a-test-as-a-regression.html">How to: run a test as a regression</a>.</p>
+<h2 id="m3-howto-run-a-common-test--two-independent-groups-welchs-t-test">Two independent groups: Welch's t-test</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.weightstats <span class="im">import</span> CompareMeans, DescrStatsW</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>carriers <span class="op">=</span> df.loc[df[<span class="st">&quot;carrier_status&quot;</span>] <span class="op">==</span> <span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>].dropna()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>non_carriers <span class="op">=</span> df.loc[df[<span class="st">&quot;carrier_status&quot;</span>] <span class="op">==</span> <span class="st">&quot;non-carrier&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>].dropna()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>diff <span class="op">=</span> carriers.mean() <span class="op">-</span> non_carriers.mean()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>low, high <span class="op">=</span> CompareMeans(DescrStatsW(carriers), DescrStatsW(non_carriers)).tconfint_diff(usevar<span class="op">=</span><span class="st">&quot;unequal&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>welch <span class="op">=</span> stats.ttest_ind(carriers, non_carriers, equal_var<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>pooled_sd <span class="op">=</span> np.sqrt(((<span class="bu">len</span>(carriers) <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> carriers.var() <span class="op">+</span> (<span class="bu">len</span>(non_carriers) <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> non_carriers.var())</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                    <span class="op">/</span> (<span class="bu">len</span>(carriers) <span class="op">+</span> <span class="bu">len</span>(non_carriers) <span class="op">-</span> <span class="dv">2</span>))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;difference in means </span><span class="sc">{</span>diff<span class="sc">:.2f}</span><span class="ss"> mmol/L (95% CI </span><span class="sc">{</span>low<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.2f}</span><span class="ss">); &quot;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;Cohen&#39;s d = </span><span class="sc">{</span>diff <span class="op">/</span> pooled_sd<span class="sc">:.2f}</span><span class="ss">; Welch p = </span><span class="sc">{</span>welch<span class="sc">.</span>pvalue<span class="sc">:.3f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># If the data are far from bell-shaped or have outliers: rank-based alternative</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(stats.mannwhitneyu(carriers, non_carriers))</span></code></pre></div>
+<p>Welch's version doesn't assume equal variances and costs almost nothing when they are equal, so use it by default.</p>
+<h2 id="m3-howto-run-a-common-test--the-same-units-measured-twice-paired-t-test">The same units measured twice: paired t-test</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>paired <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_paired_data.csv&quot;</span>)   <span class="co"># one row per patient</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>change <span class="op">=</span> paired[<span class="st">&quot;bp_after&quot;</span>] <span class="op">-</span> paired[<span class="st">&quot;bp_before&quot;</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>low, high <span class="op">=</span> DescrStatsW(change).tconfint_mean()</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;mean change </span><span class="sc">{</span>change<span class="sc">.</span>mean()<span class="sc">:.1f}</span><span class="ss"> mmHg (95% CI </span><span class="sc">{</span>low<span class="sc">:.1f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.1f}</span><span class="ss">); &quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;paired t-test p = </span><span class="sc">{</span>stats<span class="sc">.</span>ttest_rel(paired[<span class="st">&#39;bp_after&#39;</span>], paired[<span class="st">&#39;bp_before&#39;</span>])<span class="sc">.</span>pvalue<span class="sc">:.2g}</span><span class="ss">&quot;</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Rank-based alternative on the differences</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(stats.wilcoxon(change))</span></code></pre></div>
+<p>Analyze the <em>differences</em>; don't run the independent-groups test on paired data.</p>
+<h2 id="m3-howto-run-a-common-test--three-or-more-groups-one-way-anova">Three or more groups: one-way ANOVA</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> [values.dropna() <span class="cf">for</span> _, values <span class="kw">in</span> df.groupby(<span class="st">&quot;genotype&quot;</span>)[<span class="st">&quot;ldl_mmol&quot;</span>]]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(stats.f_oneway(<span class="op">*</span>groups))                      <span class="co"># overall: do the groups differ at all?</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> df.groupby(<span class="st">&quot;genotype&quot;</span>)[<span class="st">&quot;ldl_mmol&quot;</span>].agg([<span class="st">&quot;count&quot;</span>, <span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sem&quot;</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>summary[<span class="st">&quot;ci_low&quot;</span>] <span class="op">=</span> summary[<span class="st">&quot;mean&quot;</span>] <span class="op">-</span> stats.t.ppf(<span class="fl">0.975</span>, summary[<span class="st">&quot;count&quot;</span>] <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> summary[<span class="st">&quot;sem&quot;</span>]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>summary[<span class="st">&quot;ci_high&quot;</span>] <span class="op">=</span> summary[<span class="st">&quot;mean&quot;</span>] <span class="op">+</span> stats.t.ppf(<span class="fl">0.975</span>, summary[<span class="st">&quot;count&quot;</span>] <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> summary[<span class="st">&quot;sem&quot;</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary.<span class="bu">round</span>(<span class="dv">2</span>))                              <span class="co"># each group&#39;s mean with its own 95% CI</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.multicomp <span class="im">import</span> pairwise_tukeyhsd</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>clean <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">&quot;ldl_mmol&quot;</span>])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pairwise_tukeyhsd(clean[<span class="st">&quot;ldl_mmol&quot;</span>], clean[<span class="st">&quot;genotype&quot;</span>]))   <span class="co"># pairwise differences with CIs, adjusted for multiplicity</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(stats.kruskal(<span class="op">*</span>groups))                       <span class="co"># rank-based alternative</span></span></code></pre></div>
+<p>The overall F-test only says "not all groups are equal". The pairwise table is what answers "which ones, and by how much"; see <a href="m3-multiple-comparisons.html">Multiple comparisons</a> for why the adjustment matters.</p>
+<h2 id="m3-howto-run-a-common-test--two-categories-chi-squared-test">Two categories: chi-squared test</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.proportion <span class="im">import</span> confint_proportions_2indep</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> pd.crosstab(df[<span class="st">&quot;treatment&quot;</span>], df[<span class="st">&quot;disease&quot;</span>])</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>chi2, p, dof, expected <span class="op">=</span> stats.chi2_contingency(table)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> table[<span class="st">&quot;yes&quot;</span>]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>totals <span class="op">=</span> table.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((counts <span class="op">/</span> totals).<span class="bu">round</span>(<span class="dv">3</span>))                    <span class="co"># share with the disease in each group</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>low, high <span class="op">=</span> confint_proportions_2indep(counts.iloc[<span class="dv">0</span>], totals.iloc[<span class="dv">0</span>], counts.iloc[<span class="dv">1</span>], totals.iloc[<span class="dv">1</span>],</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                                       compare<span class="op">=</span><span class="st">&quot;diff&quot;</span>, method<span class="op">=</span><span class="st">&quot;newcomb&quot;</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;difference in proportions </span><span class="sc">{</span>counts<span class="sc">.</span>iloc[<span class="dv">0</span>] <span class="op">/</span> totals<span class="sc">.</span>iloc[<span class="dv">0</span>] <span class="op">-</span> counts<span class="sc">.</span>iloc[<span class="dv">1</span>] <span class="op">/</span> totals<span class="sc">.</span>iloc[<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss"> &quot;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;(95% CI </span><span class="sc">{</span>low<span class="sc">:.3f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.3f}</span><span class="ss">); chi-squared p = </span><span class="sc">{</span>p<span class="sc">:.3f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (expected <span class="op">&lt;</span> <span class="dv">5</span>).<span class="bu">any</span>():                             <span class="co"># small expected counts: use the exact test (2x2 tables)</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(stats.fisher_exact(table))</span></code></pre></div>
+<p>Report the proportions in each group, not just the p-value.</p>
+<h2 id="m3-howto-run-a-common-test--two-numbers-correlation">Two numbers: correlation</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pair <span class="op">=</span> df[[<span class="st">&quot;age&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>]].dropna()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> stats.pearsonr(pair[<span class="st">&quot;age&quot;</span>], pair[<span class="st">&quot;ldl_mmol&quot;</span>])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>low, high <span class="op">=</span> r.confidence_interval()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;r = </span><span class="sc">{</span>r<span class="sc">.</span>statistic<span class="sc">:.2f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>low<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.2f}</span><span class="ss">), p = </span><span class="sc">{</span>r<span class="sc">.</span>pvalue<span class="sc">:.3g}</span><span class="ss">&quot;</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(stats.spearmanr(pair[<span class="st">&quot;age&quot;</span>], pair[<span class="st">&quot;ldl_mmol&quot;</span>]))   <span class="co"># for curved-but-steadily-rising relationships or outliers</span></span></code></pre></div>
+<p>Always plot the scatter first: a single r can't tell a line from a curve or an outlier-driven pattern.</p>
+<h2 id="m3-howto-run-a-common-test--reading-the-output">Reading the output</h2>
+<p>Example output on made-up data, from the first (Welch) recipe:</p>
+<pre class="text"><code>difference in means 0.35 mmol/L (95% CI 0.12 to 0.59); Cohen&#39;s d = 0.39; Welch p = 0.004</code></pre>
+<ul>
+<li><strong>The difference and its CI</strong> are the result. The CI shows the range of effects compatible with the data; if it spans differences that would matter in practice and ones that wouldn't, the study can't settle the question, whatever the p-value says.</li>
+<li><strong>Cohen's d</strong> puts the difference in units of the outcome's SD, which is handy for comparing across studies and for <a href="m1-howto-plan-a-sample-size.html">power calculations</a>. Around 0.2 is conventionally small, 0.5 medium and 0.8 large, but what matters is your field's scale, not those labels.</li>
+<li><strong>The p-value</strong> answers a narrow question: how surprising would data like these be if there were truly no difference? Don't read a large p-value as "no effect" or a small one as "important".</li>
+</ul>
+<h2 id="m3-howto-run-a-common-test--if-it-goes-wrong">If it goes wrong</h2>
+<ul>
+<li><strong>An assumption looks shaky:</strong> run the alternative shown in each recipe and see whether the conclusion changes.</li>
+<li><strong>You ran several tests and are reporting the significant ones:</strong> that is the multiple-comparisons problem, see <a href="m3-multiple-comparisons.html">Multiple comparisons</a>.</li>
+<li><strong>You chose the comparison after looking at the plots:</strong> label it exploratory. A p-value from it is a lead, not a confirmation.</li>
+<li><strong>Your data are grouped or repeated</strong> (relatives within families, several visits per patient): these tests assume independent observations; see <a href="m7-clustered-and-hierarchical-data.html">Clustered data</a>.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

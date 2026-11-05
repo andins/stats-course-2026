@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to: explore a dataset | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m2-howto-explore-a-dataset.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto active" aria-current="page">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m2-howto-explore-a-dataset" class="page"><h1 id="m2-howto-explore-a-dataset--how-to-explore-a-dataset-before-analyzing-it">How to: explore a dataset before analyzing it</h1>
+<p><strong>Use this when:</strong> you have a new dataset and want to understand it before testing or modeling anything. The reasoning is on the <a href="m2-eda-basics.html">EDA basics</a> page; for the line between harmless looking and picking your hypothesis from the data, see <a href="m2-exploratory-vs-confirmatory.html">Exploratory vs. confirmatory</a>.</p>
+<p>For a guided tour with plots on a made-up dataset that has some planted problems, work through the <a href="notebooks/eda-walkthrough.ipynb" download>EDA walkthrough notebook</a> (download it and open it in Jupyter, VS Code or Colab). You can point it at your own CSV by changing one line.</p>
+<h2 id="m2-howto-explore-a-dataset--steps">Steps</h2>
+<ol type="1">
+<li><strong>Check the basics and data quality:</strong> size, column types, ranges, duplicates, missing values. This is hygiene, not hypothesis-peeking, and you should do it for any analysis.</li>
+<li><strong>Look at one variable at a time.</strong> Histograms for numbers, counts for categories. Look for impossible values, odd spikes (e.g. a default of 0 or 999), and skew.</li>
+<li><strong>Look at pairs of variables.</strong> Scatterplots for number vs. number, boxplots with the raw points for number vs. category.</li>
+<li><strong>Look for subgroup structure and trends over time.</strong> Does the pattern differ by group? Does the outcome drift with date?</li>
+<li><strong>Write down what you noticed as questions</strong>, not conclusions. Anything you found by looking is a hypothesis to check on new data, not a result.</li>
+</ol>
+<h2 id="m2-howto-explore-a-dataset--code-basics-data-quality-missingness">Code: basics, data quality, missingness</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>, parse_dates<span class="op">=</span>[<span class="st">&quot;sample_date&quot;</span>])  <span class="co"># list your date columns, if any</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.shape)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.dtypes)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe(include<span class="op">=</span><span class="st">&quot;number&quot;</span>).T[[<span class="st">&quot;count&quot;</span>, <span class="st">&quot;mean&quot;</span>, <span class="st">&quot;std&quot;</span>, <span class="st">&quot;min&quot;</span>, <span class="st">&quot;max&quot;</span>]])  <span class="co"># ranges: anything impossible?</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;duplicate rows:&quot;</span>, df.duplicated().<span class="bu">sum</span>())</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.isna().mean().sort_values(ascending<span class="op">=</span><span class="va">False</span>).<span class="bu">round</span>(<span class="dv">2</span>))  <span class="co"># share missing per column</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>outcome <span class="op">=</span> <span class="st">&quot;ldl_mmol&quot;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[df[outcome] <span class="op">&lt;</span> <span class="dv">0</span>])                                        <span class="co"># inspect suspicious rows directly</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.groupby(df[outcome].isna()).mean(numeric_only<span class="op">=</span><span class="va">True</span>))     <span class="co"># do rows with a missing outcome look different?</span></span></code></pre></div>
+<p>The last line is the most important check for missing data: if the rows with a missing outcome differ systematically from the others (here, perhaps older patients), dropping them is not harmless. See <a href="m2-missing-data.html">Missing data</a>.</p>
+<h2 id="m2-howto-explore-a-dataset--code-the-plots">Code: the plots</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>numeric <span class="op">=</span> df.select_dtypes(<span class="st">&quot;number&quot;</span>).columns.tolist()</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> df.select_dtypes(exclude<span class="op">=</span>[<span class="st">&quot;number&quot;</span>, <span class="st">&quot;datetime&quot;</span>]).columns.tolist()</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. One variable at a time</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df[numeric].hist(bins<span class="op">=</span><span class="dv">30</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Pairs of numeric variables (scatter matrix); colour by a category to spot subgroups</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df, <span class="bu">vars</span><span class="op">=</span>numeric, hue<span class="op">=</span>categories[<span class="dv">0</span>] <span class="cf">if</span> categories <span class="cf">else</span> <span class="va">None</span>, corner<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. The outcome by each category, with the raw points on top of the boxes</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cat <span class="kw">in</span> categories:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    sns.boxplot(data<span class="op">=</span>df, x<span class="op">=</span>cat, y<span class="op">=</span>outcome, ax<span class="op">=</span>ax)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    sns.stripplot(data<span class="op">=</span>df, x<span class="op">=</span>cat, y<span class="op">=</span>outcome, color<span class="op">=</span><span class="st">&quot;black&quot;</span>, alpha<span class="op">=</span><span class="fl">0.3</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Trend over time</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>df.sort_values(<span class="st">&quot;sample_date&quot;</span>).plot(x<span class="op">=</span><span class="st">&quot;sample_date&quot;</span>, y<span class="op">=</span>outcome, style<span class="op">=</span><span class="st">&quot;.&quot;</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">3</span>))</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<h2 id="m2-howto-explore-a-dataset--what-to-look-for">What to look for</h2>
+<ul>
+<li><strong>Histograms:</strong> impossible or implausible values (negative LDL values, a 10x outlier that looks like a decimal slip), pile-ups at a round number, two humps (a hidden subgroup), a long right tail (often a sign that a log scale would be more natural).</li>
+<li><strong>Scatterplots:</strong> curves instead of straight lines, a few points driving the whole pattern, a fan shape (variability that grows with the level), clusters.</li>
+<li><strong>Boxplots with points:</strong> groups of very different sizes, one group with much more spread, overlapping vs. clearly separated groups, outliers that belong to one clinic or one date.</li>
+<li><strong>Over time:</strong> a drift or step change (new instrument, new operator, a different season).</li>
+<li><strong>Missingness:</strong> which columns, how many, and whether it depends on other variables.</li>
+</ul>
+<h2 id="m2-howto-explore-a-dataset--if-you-find-something">If you find something</h2>
+<ul>
+<li><strong>A clear data error (a typo, an impossible value):</strong> fix it at the source if you can, otherwise exclude it and say so explicitly in your methods, with the number of rows affected.</li>
+<li><strong>An unexplained outlier:</strong> don't delete it just because it is inconvenient. Report the analysis with and without it if it matters.</li>
+<li><strong>Subgroups or curves:</strong> note them as things to model. If you found them by looking, say so; they are leads, not confirmed findings.</li>
+<li><strong>Substantial missing data:</strong> report how much and where, and see <a href="m2-missing-data.html">Missing data</a> before choosing a fix.</li>
+<li><strong>Before testing anything,</strong> decide your comparison, and ideally write it down, <em>without</em> choosing it from the plots. If the plots suggest a new comparison, label it exploratory.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

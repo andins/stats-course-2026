@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multicolinealidad | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m6-multicollinearity.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link  active" aria-current="page">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m6-multicollinearity" class="page"><h1 id="m6-multicollinearity--multicolinealidad">Multicolinealidad</h1>
+<p><strong>En pocas palabras:</strong> si dos de tus predictores están muy correlacionados entre sí, un modelo puede tener dificultades para distinguir sus efectos individuales, aunque siga prediciendo la variable de respuesta perfectamente bien en conjunto.</p>
+<h2 id="m6-multicollinearity--una-imagen-concreta">Una imagen concreta</h2>
+<p>Supón que Mia registra los genotipos de dos variantes, A y B, que están muy próximas en el mismo cromosoma. Las variantes tan cercanas tienden a heredarse juntas (un patrón llamado <strong>desequilibrio de ligamiento</strong>, <em>linkage disequilibrium</em>, LD), de modo que el número de copias de A y de B acaba estando casi perfectamente correlacionado entre sus pacientes. Una regresión que intente estimar los efectos separados de la variante A y de la variante B sobre el colesterol LDL tendrá problemas: los datos no contienen muchas personas que lleven una sin la otra, así que queda poca información para distinguir entre "el LDL responde específicamente a la variante A" y "el LDL responde específicamente a la variante B". Las estimaciones de los coeficientes individuales se vuelven inestables: pequeños cambios en los datos pueden dispararlas o incluso invertir su signo.</p>
+<h2 id="m6-multicollinearity--qué-estropea-y-qué-no">Qué estropea y qué no</h2>
+<ul>
+<li><strong>Lo que estropea</strong>: la confianza en cualquier coeficiente <em>individual</em> y en su error estándar/intervalo de confianza, que dejan de ser fiables.</li>
+<li><strong>Lo que no estropea</strong>: el ajuste global del modelo y sus predicciones. Un modelo con multicolinealidad grave puede seguir prediciendo bien el LDL; lo único que no puede es decirte con fiabilidad <em>cuál</em> de los dos predictores solapados "hace el trabajo".</li>
+</ul>
+<p>Esto significa que la multicolinealidad importa sobre todo cuando tu objetivo es <strong>interpretar coeficientes individuales</strong> (un uso explicativo/causal), y importa mucho menos cuando tu único objetivo es la <strong>predicción</strong>.</p>
+<h2 id="m6-multicollinearity--cómo-comprobarla-el-vif">Cómo comprobarla: el VIF</h2>
+<p>El <strong>factor de inflación de la varianza</strong> (<em>Variance Inflation Factor</em>, VIF) cuantifica, para cada predictor, cuánto se infla su incertidumbre por su correlación con los demás predictores. Un VIF cercano a 1 indica que no hay problema; por convención, un VIF superior a 5 merece una revisión más atenta y uno superior a 10 es una señal de alarma clara. Trata estos valores como orientaciones aproximadas, no como umbrales estrictos.</p>
+<h2 id="m6-multicollinearity--qué-hacer-al-respecto">Qué hacer al respecto</h2>
+<ul>
+<li>Elimina uno de los predictores solapados, si miden la misma realidad subyacente.</li>
+<li>Combínalos en una única variable compuesta, si tiene sentido desde el punto de vista sustantivo.</li>
+<li>Recoge más datos, o datos distintos, en los que los predictores varíen con más independencia entre sí, si es factible.</li>
+<li>O, si el verdadero objetivo es la predicción (no la interpretación), plantéate dejarlo tal cual y usar en su lugar la <a href="m6-overfitting-and-regularization.html">regularización</a>, que maneja los predictores correlacionados mejor que la regresión simple.</li>
+</ul>
+<aside class="do-it-yourself" aria-label="Guía práctica"><p class="do-it-yourself-title">Hazlo tú mismo</p><p><a href="m6-howto-check-multicollinearity.html">Cómo: comprobar la multicolinealidad</a> — calcula e interpreta los VIF en unas pocas líneas de Python.</p>
+</aside>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li><a href="https://www.statlearning.com/" target="_blank" rel="noopener">James, Witten, Hastie &amp; Tibshirani (2021)</a>, <em>An Introduction to Statistical Learning</em> (2.ª ed.), §3.3.3 "Potential Problems", el apartado "Collinearity" (pp. 100–103), que incluye el VIF.</li>
+<li>O'Brien (2007), "A caution regarding rules of thumb for variance inflation factors," <em>Quality &amp; Quantity</em> 41(5), 673–690 — por qué los umbrales de VIF de 5 o 10 son heurísticos.</li>
+<li>McElreath (2020), <em>Statistical Rethinking</em> (2.ª ed.), cap. 6, §6.1 "Multicollinearity".</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

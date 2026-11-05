@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set up your computer | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/setup-environment.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top active" aria-current="page">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="setup-environment" class="page"><h1 id="setup-environment--set-up-your-computer">Set Up Your Computer</h1>
+<p><strong>In plain terms:</strong> to run the notebooks and the code in the how-to guides you need three things: a place to write and run code, Python with a handful of statistics libraries, and a way to keep those libraries separate for each project. This page gets you there from a clean computer, on Windows, macOS or Linux, in about 30 minutes. You only do it once.</p>
+<p>We use two tools:</p>
+<ul>
+<li><strong>VS Code</strong>, a free editor that can also run notebooks.</li>
+<li><strong>uv</strong>, a free tool that installs Python for you and keeps each project's libraries in its own isolated environment. You don't have to install Python separately, and nothing you do here can break another project or your system.</li>
+</ul>
+<p>If you would rather not install anything, see <a href="#setup-environment--no-installation-google-colab">No installation: Google Colab</a> at the end. For how to organize the folders of an analysis once you are set up, see <a href="project-structure.html">Organize your project</a>. To get an AI assistant to help with the analysis, see <a href="use-an-agent.html">Work with an AI agent</a>.</p>
+<h2 id="setup-environment--what-you-will-end-up-with">What you will end up with</h2>
+<ul>
+<li>VS Code with the Python and Jupyter extensions.</li>
+<li>A project folder containing a Python 3.12 environment with <code>numpy</code>, <code>pandas</code>, <code>scipy</code>, <code>statsmodels</code>, <code>scikit-learn</code>, <code>matplotlib</code>, <code>seaborn</code> and <code>jupyterlab</code>: everything the course's notebooks and how-to guides use.</li>
+<li>A file (<code>uv.lock</code>) that records the exact versions installed, so the same environment can be rebuilt on any computer.</li>
+</ul>
+<h2 id="setup-environment--step-1-install-vs-code">Step 1: Install VS Code</h2>
+<p>Download the installer for your system from <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">code.visualstudio.com</a> and run it. If you prefer the command line:</p>
+<p><strong>Windows</strong> (in PowerShell):</p>
+<pre class="text"><code>winget install --id Microsoft.VisualStudioCode -e</code></pre>
+<p><strong>macOS:</strong> open the downloaded file and drag <em>Visual Studio Code</em> to the <em>Applications</em> folder. If you use Homebrew: <code>brew install --cask visual-studio-code</code>.</p>
+<p><strong>Linux:</strong> on Debian or Ubuntu, download the <code>.deb</code> file from the website and install it with <code>sudo apt install ./&lt;file&gt;.deb</code>. Many distributions also offer <code>sudo snap install --classic code</code>. For Fedora and other systems, follow the <a href="https://code.visualstudio.com/docs/setup/linux" target="_blank" rel="noopener">official Linux instructions</a>.</p>
+<p>Then open VS Code, click the <strong>Extensions</strong> icon in the left bar (or press <code>Ctrl+Shift+X</code>, <code>Cmd+Shift+X</code> on macOS) and install two extensions, both published by Microsoft: <strong>Python</strong> and <strong>Jupyter</strong>.</p>
+<h2 id="setup-environment--step-2-open-a-terminal-and-install-uv">Step 2: Open a terminal and install uv</h2>
+<p>A terminal is a window where you type commands. Open one:</p>
+<ul>
+<li><strong>Windows:</strong> open the Start menu, type <em>PowerShell</em>, and open it.</li>
+<li><strong>macOS:</strong> press <code>Cmd+Space</code>, type <em>Terminal</em>, and press Enter.</li>
+<li><strong>Linux:</strong> press <code>Ctrl+Alt+T</code> on most desktops, or search for <em>Terminal</em>.</li>
+</ul>
+<p>Then install uv.</p>
+<p><strong>Windows</strong> (PowerShell):</p>
+<pre class="text"><code>powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</code></pre>
+<p>Alternatively: <code>winget install --id=astral-sh.uv -e</code>.</p>
+<p><strong>macOS and Linux:</strong></p>
+<pre class="text"><code>curl -LsSf https://astral.sh/uv/install.sh | sh</code></pre>
+<p>On a very minimal Linux installation <code>curl</code> may be missing; install it first (<code>sudo apt install curl</code> on Debian or Ubuntu), or use <code>wget -qO- https://astral.sh/uv/install.sh | sh</code>. On macOS with Homebrew, <code>brew install uv</code> also works.</p>
+<p><strong>Close the terminal and open a new one</strong>, then check that it worked:</p>
+<pre class="text"><code>uv --version</code></pre>
+<p>It should print a version number. If it says the command isn't found, see <a href="#setup-environment--troubleshooting">Troubleshooting</a>.</p>
+<h2 id="setup-environment--step-3-create-a-project-and-its-environment">Step 3: Create a project and its environment</h2>
+<p>These commands are the same on every system. They create a folder for your first analysis, tell uv to use Python 3.12, and install the libraries into an environment that belongs to that folder only.</p>
+<pre class="text"><code>cd ~
+mkdir projects
+cd projects
+mkdir my-first-analysis
+cd my-first-analysis
+
+uv init --bare
+uv python pin 3.12
+uv add numpy pandas scipy statsmodels scikit-learn matplotlib seaborn jupyterlab</code></pre>
+<p>The first run downloads Python and the libraries, which takes a few minutes. Afterwards the folder contains:</p>
+<table>
+<thead>
+<tr>
+<th>File or folder</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td>The list of libraries your project needs.</td>
+</tr>
+<tr>
+<td><code>uv.lock</code></td>
+<td>The exact versions installed. Keep it: it makes the environment reproducible.</td>
+</tr>
+<tr>
+<td><code>.python-version</code></td>
+<td>The Python version the project uses.</td>
+</tr>
+<tr>
+<td><code>.venv/</code></td>
+<td>The environment itself. Never edit it by hand, and don't copy it between computers; rebuild it with <code>uv sync</code> instead.</td>
+</tr>
+</tbody>
+</table>
+<p>The same package list is also in <a href="notebooks/requirements.txt" download>requirements.txt</a>. If you have that file in the project folder, <code>uv add -r requirements.txt</code> does the same as the long <code>uv add</code> command above.</p>
+<p>Keep your projects somewhere simple such as <code>projects</code> in your home folder. Folders synced by OneDrive, Dropbox or iCloud can slow down or cause conflicts with the thousands of small files in an environment. To back up and share work, use <a href="project-structure.html#project-structure--version-control-with-git-optional">Git</a> instead.</p>
+<h2 id="setup-environment--step-4-open-the-project-in-vs-code-and-run-a-notebook">Step 4: Open the project in VS Code and run a notebook</h2>
+<ol type="1">
+<li>In VS Code choose <strong>File &gt; Open Folder</strong> and select <code>my-first-analysis</code>.</li>
+<li>Create a folder called <code>notebooks</code> in it (right-click in the file list, <em>New Folder</em>).</li>
+<li>Download a notebook from the course, for example the <a href="notebooks/measurement-error-attenuation.ipynb" download>measurement error notebook</a>, and save it in that <code>notebooks</code> folder.</li>
+<li>Open the notebook in VS Code. Click <strong>Select Kernel</strong> at the top right, choose <strong>Python Environments</strong>, then the entry that mentions <code>.venv</code> and Python 3.12.</li>
+<li>Click <strong>Run All</strong>. The plots and tables appear under the cells.</li>
+</ol>
+<p>Prefer the browser? In the project folder run <code>uv run jupyter lab</code>; it opens JupyterLab with the same environment.</p>
+<h2 id="setup-environment--step-5-check-that-everything-is-installed">Step 5: Check that everything is installed</h2>
+<p>In a new notebook cell (or any notebook), run:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy, pandas, scipy, statsmodels, sklearn, matplotlib, seaborn</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Python&quot;</span>, sys.version.split()[<span class="dv">0</span>])</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> module <span class="kw">in</span> (numpy, pandas, scipy, statsmodels, sklearn, matplotlib, seaborn):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>module<span class="sc">.</span><span class="va">__name__</span><span class="sc">:12s}</span><span class="ss"> </span><span class="sc">{</span>module<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>You should see a Python 3.12 version and a version number for each library, with no error. The course code was tested with Python 3.12 and recent library versions (for example pandas 3.1, scipy 1.18, statsmodels 0.15, scikit-learn 1.9).</p>
+<p>To run a script from the terminal instead of a notebook, use <code>uv run python my_script.py</code> inside the project folder; uv always uses the project's own environment.</p>
+<h2 id="setup-environment--later-add-a-library-or-rebuild-on-another-computer">Later: add a library, or rebuild on another computer</h2>
+<ul>
+<li><strong>Add a library:</strong> <code>uv add &lt;package-name&gt;</code>. For the optional Bayesian examples: <code>uv add pymc bambi arviz</code> (these are large; install them only if you need them).</li>
+<li><strong>Rebuild the same environment</strong> on a new computer or after a clean install: install VS Code and uv (steps 1 and 2), copy the project folder <em>without</em> <code>.venv</code>, and run <code>uv sync</code> inside it.</li>
+<li><strong>Update the libraries:</strong> <code>uv lock --upgrade</code> and then <code>uv sync</code>. Do this between projects, not in the middle of an analysis, since new versions can change results slightly.</li>
+</ul>
+<h2 id="setup-environment--troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uv: command not found</code> (or "not recognized") right after installing</td>
+<td>Close the terminal and open a new one; the installer changes the search path only for new terminals. If it still fails, restart the computer.</td>
+</tr>
+<tr>
+<td><code>invalid peer certificate: UnknownIssuer</code> or another certificate error while downloading</td>
+<td>Typical on company or university networks that inspect secure traffic. Tell uv to use the system's certificates: <code>export UV_SYSTEM_CERTS=1</code> (macOS, Linux) or <code>$env:UV_SYSTEM_CERTS = "1"</code> (Windows PowerShell), then repeat the command. Older uv versions call it <code>UV_NATIVE_TLS</code>.</td>
+</tr>
+<tr>
+<td>Downloads time out or fail on a network that requires a proxy</td>
+<td>Ask your IT team for the proxy address and set <code>HTTPS_PROXY</code> to it.</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError: No module named 'pandas'</code> in a notebook</td>
+<td>The notebook is using the wrong kernel. Click <strong>Select Kernel</strong> and choose the <code>.venv</code> of your project.</td>
+</tr>
+<tr>
+<td>The <code>.venv</code> kernel is not listed in VS Code</td>
+<td>Press <code>Ctrl+Shift+P</code> (<code>Cmd+Shift+P</code> on macOS), run <strong>Python: Select Interpreter</strong>, and choose the <code>.venv</code> entry. If it is missing, check that you opened the <em>project folder</em> (the one containing <code>pyproject.toml</code>) in VS Code.</td>
+</tr>
+<tr>
+<td>You cannot install software on your computer</td>
+<td>Ask IT to install VS Code and uv, or use Google Colab (below).</td>
+</tr>
+<tr>
+<td>Plots do not appear in a script run from the terminal</td>
+<td>Notebooks show plots automatically; scripts need <code>plt.show()</code> at the end, or <code>plt.savefig("figure.png")</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setup-environment--if-you-cannot-or-do-not-want-to-use-uv">If you cannot or do not want to use uv</h2>
+<p>The classic route works too: install Python 3.12 or newer, create an environment with Python's built-in <code>venv</code>, and install the libraries with <code>pip</code>, using the course's <a href="notebooks/requirements.txt" download>requirements.txt</a>.</p>
+<p><strong>Windows:</strong> download Python from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> and tick <em>Add python.exe to PATH</em> in the installer. Then, in PowerShell inside your project folder:</p>
+<pre class="text"><code>py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt</code></pre>
+<p>If PowerShell refuses to run the activation script, run <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code> once and try again.</p>
+<p><strong>macOS and Linux:</strong> you need <code>python3</code> version 3.12 or newer. The one that comes with macOS is often too old, so install a current one from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a> or Homebrew; on Debian or Ubuntu you may also need <code>sudo apt install python3-venv</code>:</p>
+<pre class="text"><code>python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt</code></pre>
+<p>In VS Code, select the <code>.venv</code> interpreter as described in step 4. You lose the lockfile, so record what you installed with <code>pip freeze &gt; requirements-frozen.txt</code> once your analysis works.</p>
+<h2 id="setup-environment--no-installation-google-colab">No installation: Google Colab</h2>
+<p><a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colab</a> runs notebooks in your browser with <code>numpy</code>, <code>pandas</code>, <code>scipy</code>, <code>statsmodels</code>, <code>scikit-learn</code>, <code>matplotlib</code> and <code>seaborn</code> already available. Open Colab, choose <strong>File &gt; Upload notebook</strong>, and select a course notebook. It is a good way to try things out, but your files disappear when the session ends unless you save them to Google Drive, and you should <strong>not upload confidential or patient data</strong> to it without checking your institution's rules.</p>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

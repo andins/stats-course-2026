@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error de medición | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m6-measurement-error.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link  active" aria-current="page">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m6-measurement-error" class="page"><h1 id="m6-measurement-error--error-de-medición">Error de medición</h1>
+<p><strong>En pocas palabras:</strong> si lo que registraste no es exactamente lo que querías medir (un sustituto ruidoso en lugar de la cantidad verdadera), el modelo no solo se vuelve más ruidoso: se vuelve sesgado, normalmente hacia el "ningún efecto".</p>
+<h2 id="m6-measurement-error--una-imagen-concreta">Una imagen concreta</h2>
+<p>Theo mide la tensión arterial con un tensiómetro doméstico preciso solo hasta ±5 mmHg, en lugar de un aparato de calidad clínica. Cada lectura es la tensión arterial real más un error aleatorio. Si Theo hace una regresión de una variable de respuesta sobre estas lecturas ruidosas, la pendiente estimada resulta sistemáticamente menor que la relación real, incluso con una muestra enorme, simplemente porque el predictor es una versión borrosa de lo que de verdad importa.</p>
+<h2 id="m6-measurement-error--por-qué-no-es-solo-ruido">Por qué no es "solo ruido"</h2>
+<ul>
+<li>El error aleatorio en la <strong>variable de respuesta</strong> infla sobre todo la varianza residual y ensancha el intervalo de confianza; no sesga la pendiente en promedio.</li>
+<li>El error aleatorio en un <strong>predictor</strong> es distinto: sesga la pendiente estimada hacia cero, un patrón llamado <strong>sesgo de atenuación</strong> (<em>attenuation bias</em>, o <em>regression dilution</em>, dilución de la regresión). Es un sesgo, no un problema de varianza: <strong>no</strong> disminuye al crecer el tamaño muestral.</li>
+<li>En la práctica, esto puede parecer "no se encontró ninguna relación" cuando existe una relación real que quedó diluida por una medición imprecisa.</li>
+</ul>
+<h2 id="m6-measurement-error--fuentes-habituales">Fuentes habituales</h2>
+<ul>
+<li>Cantidades autodeclaradas (recuerdo de la dieta, ejercicio o adherencia autodeclarados, cuestionarios).</li>
+<li>Ensayos de laboratorio o sensores con una variabilidad de medición conocida.</li>
+<li>Un sustituto (<em>proxy</em>) que representa el constructo que de verdad te interesa (p. ej., el IMC como sustituto de la grasa corporal).</li>
+</ul>
+<h2 id="m6-measurement-error--qué-hacer-al-respecto">Qué hacer al respecto</h2>
+<ul>
+<li>Nómbralo explícitamente cuando una variable sea un sustituto impreciso conocido, en lugar de tratar el valor observado como si fuera exacto.</li>
+<li>Si tienes una idea del tamaño del error (a partir de la precisión documentada del instrumento o de mediciones repetidas sobre la misma unidad), un <strong>modelo de error de medición / de errores en las variables</strong> (<em>errors-in-variables</em>), como la calibración de la regresión, SIMEX o un modelo bayesiano con un "valor verdadero" latente explícito, puede corregir el sesgo; los mínimos cuadrados ordinarios (OLS) sobre el valor observado no pueden (FULLER_MEASUREMENT_ERROR).</li>
+<li>Si existen mediciones replicadas, úsalas para estimar la varianza del error en lugar de suponerla.</li>
+<li>Más datos por sí solos no lo arreglan: el sesgo de atenuación persiste con cualquier tamaño muestral, así que no lo trates como un problema de potencia.</li>
+</ul>
+<h2 id="m6-measurement-error--la-conclusión">La conclusión</h2>
+<p>Un coeficiente es tan bueno como la variable que entró en él. Si un predictor (o una variable de respuesta) es un sustituto ruidoso conocido de lo que de verdad te interesa, dilo, y plantéate un modelo que tenga en cuenta el error de medición en lugar de presentar como respuesta final la estimación ingenua, probablemente atenuada.</p>
+<aside class="do-it-yourself" aria-label="Guía práctica"><p class="do-it-yourself-title">Hazlo tú mismo</p><ul>
+<li><a href="m6-howto-handle-measurement-error.html">Cómo: corregir el error de medición</a> — estima la fiabilidad a partir de réplicas y corrige la pendiente.</li>
+<li><a href="notebooks/measurement-error-attenuation.ipynb" download>Cuaderno: observa cómo se encoge la pendiente</a> — simula el sesgo y comprueba que tener más datos no lo elimina.</li>
+</ul>
+</aside>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li><a href="https://miguelhernan.org/whatifbook" target="_blank" rel="noopener">Hernán &amp; Robins (2020)</a>, <em>Causal Inference: What If</em> (de acceso libre en línea), §9.1–9.2 "Measurement error" y "The structure of measurement error", pp. 125–128.</li>
+<li>Fuller (1987), <em>Measurement Error Models</em>, cap. 1 "A Single Explanatory Variable" — el tratamiento clásico del sesgo de atenuación y de sus correcciones.</li>
+<li>McElreath (2020), <em>Statistical Rethinking</em> (2.ª ed.), cap. 15, §15.1 "Measurement error" — un modelo bayesiano que tiene en cuenta el error de medición.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

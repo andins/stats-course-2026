@@ -1,0 +1,10 @@
+# Packages needed by the course notebooks and how-to guides.
+# Install with:  uv add -r requirements.txt   (see "Set up your computer" in the course)
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+matplotlib
+seaborn
+jupyterlab

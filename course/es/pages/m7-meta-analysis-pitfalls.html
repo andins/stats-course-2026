@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metaanálisis: sesgos y trampas | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m7-meta-analysis-pitfalls.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link  active" aria-current="page">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-meta-analysis-pitfalls" class="page"><h1 id="m7-meta-analysis-pitfalls--metaanálisis-sesgos-y-trampas">Metaanálisis: sesgos y trampas</h1>
+<p><strong>En pocas palabras:</strong> combinar estudios hace que una respuesta parezca más sólida que la de cualquier estudio individual, pero no puede arreglar lo que falla en los estudios en sí ni en la forma en que se reunieron. Casi todo lo que puede salir mal ocurre antes de cualquier estadística.</p>
+<h2 id="m7-meta-analysis-pitfalls--1-basura-entra-basura-sale">1. Basura entra, basura sale</h2>
+<p>Un metaanálisis hereda las debilidades de sus estudios. Si los ensayos tenían una evaluación del desenlace sin enmascaramiento, o los estudios eran observacionales con <a href="m5-causal-diagrams.html">confusión</a> sin controlar, combinarlos da una versión más <em>precisa</em> del mismo sesgo, con un intervalo más estrecho y por tanto más engañoso. No mezcles experimentos aleatorizados y estudios observacionales en una sola cifra sin un buen motivo; si lo haces, muéstralos también por separado. Véase <a href="m5-experiments-vs-observational-data.html">Experimentos vs. datos observacionales</a>.</p>
+<h2 id="m7-meta-analysis-pitfalls--2-cómo-se-encontraron-los-estudios">2. Cómo se encontraron los estudios</h2>
+<p>Theo quiere resumir los ensayos de un fármaco contra la hipertensión. Si incluye los que casualmente conoce, o deja de buscar cuando la respuesta le parece correcta, el resultado refleja sus decisiones y no la evidencia: es de nuevo el <a href="m2-exploratory-vs-confirmatory.html">jardín de los senderos que se bifurcan</a>, pero a nivel de la revisión. El remedio es de procedimiento: decide la pregunta, las bases de datos, los términos de búsqueda y los criterios de inclusión <strong>antes</strong> de mirar los resultados, déjalos por escrito (un protocolo) e indica cuántos estudios se encontraron, se cribaron y se excluyeron, y por qué. La declaración PRISMA 2020 es una lista de comprobación pensada justo para esto.</p>
+<h2 id="m7-meta-analysis-pitfalls--3-sesgo-de-publicación-y-efectos-de-los-estudios-pequeños">3. Sesgo de publicación y efectos de los estudios pequeños</h2>
+<p>Los estudios con resultados llamativos tienen más probabilidad de redactarse y publicarse que los que no encontraron nada, de modo que la literatura publicada sobrestima los efectos (el mismo mecanismo que los <a href="m1-sample-size-and-power.html">errores de tipo M</a>). Dos comprobaciones habituales:</p>
+<ul>
+<li><strong>Gráfico de embudo</strong> (<em>funnel plot</em>): el efecto de cada estudio frente a su precisión. Sin sesgo parece un embudo invertido simétrico; una esquina vacía (estudios pequeños con resultados nulos o negativos) sugiere que faltan algunos estudios.</li>
+<li><strong>Regresión de Egger:</strong> una prueba estadística de esa asimetría.</li>
+</ul>
+<p>Ambas son débiles. Con menos de unos 10 estudios tienen poca potencia, y la asimetría puede deberse también a otras causas (los estudios pequeños a menudo se llevan a cabo de manera distinta a los grandes, o con poblaciones distintas). Úsalas como una luz de aviso, no como prueba en ningún sentido, y di que la estimación combinada puede ser demasiado optimista. Buscar estudios no publicados (registros, preprints, contactar con los autores) es mejor que cualquier corrección estadística.</p>
+<figure><img src="figures/funnel_plots.png" alt="Dos gráficos de embudo de estimaciones del efecto frente al error estándar. Izquierda: los estudios se dispersan simétricamente alrededor del efecto combinado. Derecha: el mismo tipo de datos con los estudios pequeños nulos o negativos ausentes, lo que deja una esquina sombreada vacía en un lado y una estimación combinada desplazada hacia arriba." loading="lazy"><figcaption>Gráficos de embudo con estudios simulados. Sin sesgo el embudo es simétrico; cuando los estudios pequeños con resultados decepcionantes no se publican, una esquina queda vacía.</figcaption></figure>
+<h2 id="m7-meta-analysis-pitfalls--4-comparar-peras-con-manzanas">4. Comparar peras con manzanas</h2>
+<p>Si los estudios difieren en dosis, especie, población o definición del desenlace, «el efecto promedio» puede no describir nada real. Eso es lo que mide la heterogeneidad, y por eso el intervalo de predicción importa más que la media combinada. Una <strong>metarregresión</strong> o una comparación por subgrupos puede explorar <em>por qué</em> difieren los estudios (por ejemplo, según la dosis), pero trátala como exploratoria: las características de los estudios no están aleatorizadas, están enredadas entre sí y, con pocos estudios, hay poca potencia. Además, una relación entre estudios (mayor dosis media, mayor efecto medio) puede no cumplirse dentro de ningún estudio concreto.</p>
+<h2 id="m7-meta-analysis-pitfalls--5-los-estudios-no-siempre-son-independientes">5. Los estudios no siempre son independientes</h2>
+<p>Un metaanálisis asume que cada estimación aporta información distinta. Esto falla cuando:</p>
+<ul>
+<li>un estudio aporta varias estimaciones (dos dosis frente a un mismo control, varios desenlaces), o</li>
+<li>varios estudios proceden del mismo laboratorio, grupo o conjunto de datos.</li>
+</ul>
+<p>Contar esos resultados como independientes estrecha demasiado el intervalo, exactamente igual que con los <a href="m7-clustered-and-hierarchical-data.html">datos agrupados</a>. Elige una estimación por estudio o modela la dependencia.</p>
+<h2 id="m7-meta-analysis-pitfalls--6-no-cuentes-votos">6. No cuentes votos</h2>
+<p>«Siete de diez estudios fueron significativos, así que funciona» ignora tanto el tamaño de los efectos como la potencia de cada estudio. Combina las estimaciones, no los veredictos.</p>
+<h2 id="m7-meta-analysis-pitfalls--7-pocos-estudios">7. Pocos estudios</h2>
+<p>Con dos o tres estudios, τ² no puede estimarse de forma fiable, y una estimación combinada puede confundir más de lo que aclara. Indica cuán pocos estudios tienes, usa el intervalo de Hartung-Knapp o un <a href="m7-bayesian-methods.html">modelo bayesiano</a> con una distribución a priori sensata para la dispersión entre estudios, y plantéate simplemente mostrar los estudios uno al lado del otro.</p>
+<h2 id="m7-meta-analysis-pitfalls--8-mismos-datos-otro-problema">8. Mismos datos, otro problema</h2>
+<p>Si dispones de los datos en bruto de cada centro (cada paciente, cada familia), no necesitas un metaanálisis: analízalos como <a href="m7-clustered-and-hierarchical-data.html">datos agrupados</a> con el centro como grupo. Es más flexible, porque puedes ajustar a nivel individual. Un metaanálisis es para cuando solo tienes el resumen de cada estudio.</p>
+<h2 id="m7-meta-analysis-pitfalls--una-breve-lista-de-comprobación">Una breve lista de comprobación</h2>
+<ol type="1">
+<li>La pregunta y los criterios de inclusión se escribieron antes de mirar los resultados.</li>
+<li>La búsqueda fue sistemática y se indica el número de estudios encontrados y excluidos.</li>
+<li>Los efectos están en una escala común y el error estándar de cada estudio es correcto.</li>
+<li>Efectos aleatorios, con τ, I² y un intervalo de predicción presentados.</li>
+<li>Se examinaron un diagrama de bosque, una comprobación dejando uno fuera (<em>leave-one-out</em>) y un gráfico de embudo.</li>
+<li>La calidad de los estudios y el sesgo de publicación se discuten como límites del resultado.</li>
+</ol>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li>Page et al. (2021), "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews," <em>BMJ</em> 372, n71.</li>
+<li>Sterne et al. (2011), "Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials," <em>BMJ</em> 343, d4002 — incluye por qué evitar las pruebas con menos de 10 estudios.</li>
+<li>Egger, Smith, Schneider &amp; Minder (1997), "Bias in meta-analysis detected by a simple, graphical test," <em>BMJ</em> 315(7109), 629–634.</li>
+<li><a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current" target="_blank" rel="noopener">Cochrane Handbook for Systematic Reviews of Interventions</a> (versión 6.5, gratuito en línea), Ch. 13 "Assessing risk of bias due to missing evidence in a meta-analysis".</li>
+<li>IntHout, Ioannidis &amp; Borm (2014), "The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method," <em>BMC Medical Research Methodology</em> 14, 25.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

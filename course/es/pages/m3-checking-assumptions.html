@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprobar los supuestos | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m3-checking-assumptions.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link  active" aria-current="page">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m3-checking-assumptions" class="page"><h1 id="m3-checking-assumptions--comprobar-los-supuestos">Comprobar los supuestos</h1>
+<p><strong>En pocas palabras:</strong> toda prueba clásica viene con condiciones en letra pequeña. La mayoría se comprueban mejor mirando un gráfico que ejecutando una segunda prueba.</p>
+<h2 id="m3-checking-assumptions--supuestos-habituales">Supuestos habituales</h2>
+<ul>
+<li><strong>Independencia</strong>: cada observación no debería aportar información sobre otra (dos mediciones del mismo paciente <em>no</em> son independientes entre sí). Suele ser una cuestión de cómo se recogieron los datos, no algo que un gráfico pueda arreglar a posteriori; consulta <a href="m7-clustered-and-hierarchical-data.html">Datos agrupados y jerárquicos</a> y <a href="m7-time-series-data.html">Series temporales</a> si sospechas que no se cumple.</li>
+<li><strong>Normalidad</strong>: muchas pruebas suponen que los datos (o los errores del modelo) tienen forma aproximada de campana. Compruébalo con un histograma o con un "gráfico QQ" (un gráfico que es una diagonal recta si los datos son normales y se curva alejándose de ella si no lo son).</li>
+<li><strong>Variabilidad igual entre grupos</strong> (homogeneidad de la varianza): se comprueba comparando la dispersión visualmente (diagramas de cajas) o con la prueba de Levene.</li>
+</ul>
+<h2 id="m3-checking-assumptions--por-qué-un-gráfico-suele-ser-mejor-que-una-prueba-del-supuesto">Por qué un gráfico suele ser mejor que una "prueba del supuesto"</h2>
+<p>Es tentador ejecutar una prueba formal (como Shapiro-Wilk para la normalidad) y tratar su valor p como un veredicto de sí o no sobre si "te está permitido" usar una prueba determinada. Esto no funciona bien en ninguno de los dos sentidos:</p>
+<ul>
+<li>Con una muestra <strong>pequeña</strong>, estas pruebas de supuestos tienen muy poca potencia para detectar una desviación real, así que "la ha superado" no significa gran cosa.</li>
+<li>Con una muestra <strong>grande</strong>, se vuelven hipersensibles y marcarán como "significativas" incluso desviaciones triviales e inofensivas.</li>
+</ul>
+<p>Echar un vistazo rápido al gráfico, junto con preguntarte "¿cambiaría esta desviación mi conclusión?", suele ser más informativo que un único valor p sobre un supuesto.</p>
+<h2 id="m3-checking-assumptions--qué-hacer-si-un-supuesto-parece-dudoso">Qué hacer si un supuesto parece dudoso</h2>
+<p>Rara vez te quedas atascado: casi siempre hay una alternativa estándar y bien conocida:</p>
+<ul>
+<li>Varianzas desiguales → usa la prueba t de Welch (o el ANOVA de Welch) en lugar de la versión estándar.</li>
+<li>Lejos de la normalidad o con valores atípicos → usa una prueba no paramétrica (Mann-Whitney, Kruskal-Wallis), un enfoque de media recortada o <em>bootstrap</em>, o una alternativa bayesiana.</li>
+<li>Recuentos esperados pequeños en una tabla de chi-cuadrado → usa en su lugar la prueba exacta de Fisher.</li>
+</ul>
+<p>La respuesta correcta a "un supuesto parece incumplido" es casi siempre "cambiar a la alternativa conocida y más robusta", no "entrar en pánico" ni "ignorarlo y esperar que todo vaya bien".</p>
+<aside class="do-it-yourself" aria-label="Guía práctica"><p class="do-it-yourself-title">Hazlo tú mismo</p><p><a href="m3-howto-check-test-assumptions.html">Cómo: comprobar los supuestos de una prueba</a> — los gráficos que hay que hacer, qué aspecto deberían tener y qué hacer cuando no lo tienen.</p>
+</aside>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li><a href="https://avehtari.github.io/ROS-Examples/" target="_blank" rel="noopener">Gelman, Hill &amp; Vehtari (2020)</a>, <em>Regression and Other Stories</em>, §11.1–11.3 "Assumptions of regression analysis" hasta "Residual plots", pp. 153–163 — qué supuestos importan más y cómo comprobarlos gráficamente.</li>
+<li>Rochon, Gondan &amp; Kieser (2012), "To test or not to test: preliminary assessment of normality when comparing two independent samples," <em>BMC Medical Research Methodology</em> 12, 81 — por qué contrastar los supuestos de antemano es una mala opción por defecto.</li>
+<li>Delacre, Lakens &amp; Leys (2017), <em>International Review of Social Psychology</em> 30(1), 92–101 — el argumento a favor de la prueba de Welch como opción robusta por defecto.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

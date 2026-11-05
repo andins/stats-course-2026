@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metaanálisis | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m7-meta-analysis.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link  active" aria-current="page">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-meta-analysis" class="page"><h1 id="m7-meta-analysis--metaanálisis">Metaanálisis</h1>
+<p><strong>En pocas palabras:</strong> un metaanálisis combina las <em>estimaciones</em> de varios estudios sobre la misma pregunta en una única respuesta, dando más peso a los estudios más precisos, y te dice cuánto discrepan los estudios entre sí. Es estadística en la que cada «observación» es un estudio entero.</p>
+<h2 id="m7-meta-analysis--por-qué-combinar-estudios">Por qué combinar estudios</h2>
+<p>Mia no es la única persona que estudia su variante de LDLR: se han publicado diez estudios, cada uno en una clínica o población distinta y con su propia estimación del efecto de la variante sobre el colesterol LDL. Algunos encontraron una asociación clara, otros apenas nada, uno no encontró nada. Fijarse en qué estudios fueron «significativos» es una mala forma de resumirlos (los ensayos pequeños suelen ser no significativos incluso cuando el efecto es real; véase <a href="m1-sample-size-and-power.html">Tamaño muestral y potencia</a>). Un metaanálisis plantea en cambio dos preguntas mejores: <em>¿cuál es el efecto promedio y cuánto varía de un estudio a otro?</em></p>
+<h2 id="m7-meta-analysis--qué-entra-un-efecto-y-un-error-estándar-por-estudio">Qué entra: un efecto y un error estándar por estudio</h2>
+<p>Cada estudio aporta una fila: una <strong>estimación del efecto</strong> y su <strong>error estándar</strong> (cuán incierta es esa estimación). Todos los estudios deben medir el efecto en la misma escala, por ejemplo la diferencia de colesterol LDL medio en mmol/L, o un efecto <em>estandarizado</em> cuando los estudios usaron instrumentos distintos (véase <a href="m1-effect-size.html">Tamaño del efecto</a>). Para desenlaces de sí/no, la escala habitual es el logaritmo de la razón de odds o de la razón de riesgos. Se combinan estimaciones, nunca valores p ni veredictos de «significativo / no significativo».</p>
+<h2 id="m7-meta-analysis--la-idea-central-ponderar-por-la-precisión">La idea central: ponderar por la precisión</h2>
+<p>La estimación combinada es una media ponderada, y el peso de cada estudio es la inversa de su varianza:</p>
+<p>peso = 1 / (error estándar² + τ²)</p>
+<p>Un ensayo grande y preciso cuenta más que uno pequeño y ruidoso. El término adicional τ² (que se explica a continuación) vale cero en la versión más simple del modelo.</p>
+<h2 id="m7-meta-analysis--efecto-común-o-efectos-aleatorios">Efecto común o efectos aleatorios</h2>
+<ul>
+<li><strong>Modelo de efecto común (de «efecto fijo»):</strong> asume que hay <em>un único</em> efecto verdadero y que cada estudio se desvía de él solo por azar. La estimación combinada responde a «¿cuál es ese único efecto?». Es razonable para replicaciones casi idénticas (el mismo protocolo ejecutado en varios laboratorios).</li>
+<li><strong>Modelo de efectos aleatorios:</strong> asume que cada estudio tiene <em>su propio</em> efecto verdadero (distinta ascendencia, dieta, mezcla de edades, técnica de laboratorio, población), y que estos efectos verdaderos se dispersan alrededor de un promedio con dispersión τ. La estimación combinada responde a «¿cuál es el efecto <em>promedio</em> en contextos como estos?». Como el intervalo incluye las diferencias entre estudios, es más ancho y más honesto.</li>
+</ul>
+<p>En las ciencias de la vida los estudios casi nunca son replicaciones exactas, así que <strong>los efectos aleatorios son la opción por defecto sensata</strong>. Elige el modelo por lo que crees sobre los estudios, no porque uno dé un valor p menor.</p>
+<h2 id="m7-meta-analysis--cuánto-discrepan-los-estudios-heterogeneidad">¿Cuánto discrepan los estudios? (heterogeneidad)</h2>
+<ul>
+<li><strong>τ (tau):</strong> la desviación típica de los efectos verdaderos, en las mismas unidades que el efecto. «τ = 0.7 kg» significa que los efectos verdaderos suelen diferir unos 0.7 kg de la media.</li>
+<li><strong>I²:</strong> la proporción de la variabilidad entre las estimaciones que refleja diferencias reales y no azar. Aproximadamente, 25 % es bajo, 50 % moderado y 75 % alto; estas etiquetas son convenciones, no reglas. I² además crece con el tamaño de los estudios, así que puede parecer alta con estudios precisos aunque las diferencias sean pequeñas en términos prácticos: léela junto con τ.</li>
+<li><strong>Intervalo de predicción</strong> (<em>prediction interval</em>): el rango en el que cabría esperar que cayera el efecto verdadero de un estudio <em>nuevo</em>. Suele ser el número más útil: una media combinada de 0.34 mmol/L con un intervalo de predicción de 0 a 0.7 mmol/L cuenta una historia muy distinta de la misma media con un intervalo de 0.3 a 0.4 mmol/L. Preséntalo junto con el intervalo de confianza de la media. Hacen falta varios estudios para que sea creíble.</li>
+</ul>
+<h2 id="m7-meta-analysis--el-diagrama-de-bosque">El diagrama de bosque</h2>
+<p>La imagen estándar (<em>forest plot</em>): una fila por estudio (un cuadrado para su estimación, con tamaño proporcional al peso, y una línea para su intervalo) y un rombo al final para la estimación combinada. Míralo antes de leer ningún número. Si los intervalos apenas se solapan, o un estudio queda muy lejos del resto, el promedio combinado puede no describir a nadie.</p>
+<figure><img src="figures/forest_plot.png" alt="Diagrama de bosque de diez estudios inventados. Cada estudio es un cuadrado azul, con tamaño proporcional a su peso, y una línea horizontal para su intervalo de confianza del 95 %. Debajo, un rombo verde muestra la estimación combinada de 0.34 mmol/L y una barra verde muestra el intervalo de predicción de 0.01 a 0.67 mmol/L. Unas anotaciones explican cada elemento." loading="lazy"><figcaption>Cómo leer un diagrama de bosque. Los datos son inventados; son los mismos diez estudios que en la <a href="m7-howto-run-a-meta-analysis.html">guía práctica del metaanálisis</a>.</figcaption></figure>
+<h2 id="m7-meta-analysis--dónde-encaja-en-este-módulo">Dónde encaja en este módulo</h2>
+<p>Un metaanálisis de efectos aleatorios es un <strong>modelo multinivel</strong> con los estudios como grupos: la estimación de cada estudio se acerca («se encoge») hacia la media global, y cuanto más ruidoso es el estudio, más se acerca. Véase <a href="m7-clustered-and-hierarchical-data.html">Datos agrupados y jerárquicos</a>. Con pocos estudios, una versión <a href="m7-bayesian-methods.html">bayesiana</a> suele ser más estable, porque te permite expresar cuán grandes crees que podrían ser plausiblemente las diferencias entre estudios.</p>
+<p>Antes de fiarte de una cifra combinada, lee <a href="m7-meta-analysis-pitfalls.html">Metaanálisis: sesgos y trampas</a>: un metaanálisis solo es tan bueno como los estudios que reúne y la forma en que se reunieron.</p>
+<aside class="do-it-yourself" aria-label="Guía práctica"><p class="do-it-yourself-title">Hazlo tú mismo</p><ul>
+<li><a href="m7-howto-run-a-meta-analysis.html">Cómo: realizar un metaanálisis</a> — combina estudios, presenta la heterogeneidad y un intervalo de predicción, dibuja el diagrama de bosque y comprueba cuán frágil es el resultado.</li>
+</ul>
+</aside>
+<aside class="learn-more" aria-label="Lecturas recomendadas"><p class="learn-more-title">Para saber más</p><ul>
+<li>Borenstein, Hedges, Higgins &amp; Rothstein (2009), <em>Introduction to Meta-Analysis</em>, Wiley — el capítulo "Fixed-effect versus random-effects models" y los capítulos sobre heterogeneidad.</li>
+<li><a href="https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/" target="_blank" rel="noopener">Harrer, Cuijpers, Furukawa &amp; Ebert (2021)</a>, <em>Doing Meta-Analysis with R: A Hands-On Guide</em> (gratuito en línea) — una guía práctica, con R en lugar de Python.</li>
+<li>Higgins &amp; Thompson (2002), "Quantifying heterogeneity in a meta-analysis," <em>Statistics in Medicine</em> 21(11), 1539–1558 — de donde procede I².</li>
+<li>IntHout, Ioannidis, Rovers &amp; Goeman (2016), "Plea for routinely presenting prediction intervals in meta-analysis," <em>BMJ Open</em> 6(7), e010247.</li>
+<li><a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current" target="_blank" rel="noopener">Cochrane Handbook for Systematic Reviews of Interventions</a> (versión 6.5, gratuito en línea), Ch. 10 "Analysing data and undertaking meta-analyses".</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta-analysis: bias and pitfalls | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m7-meta-analysis-pitfalls.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link  active" aria-current="page">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-meta-analysis-pitfalls" class="page"><h1 id="m7-meta-analysis-pitfalls--meta-analysis-bias-and-pitfalls">Meta-analysis: bias and pitfalls</h1>
+<p><strong>In plain terms:</strong> pooling studies makes an answer look more solid than any single study, but it cannot fix what is wrong with the studies themselves or with the way they were collected. Most of what can go wrong happens before any statistics.</p>
+<h2 id="m7-meta-analysis-pitfalls--1-garbage-in-garbage-out">1. Garbage in, garbage out</h2>
+<p>A meta-analysis inherits the weaknesses of its studies. If the trials had unblinded outcome assessment, or the studies were observational with uncontrolled <a href="m5-causal-diagrams.html">confounding</a>, pooling them gives a more <em>precise</em> version of the same bias, with a narrower interval that is more misleading. Don't blend randomized experiments and observational studies into one number without a good reason; if you do, show them separately too. See <a href="m5-experiments-vs-observational-data.html">Experiments vs. observational data</a>.</p>
+<h2 id="m7-meta-analysis-pitfalls--2-how-the-studies-were-found">2. How the studies were found</h2>
+<p>Theo wants to summarize the trials of a blood-pressure drug. If he includes the ones he happens to know, or stops searching once the answer looks right, the result reflects his choices, not the evidence: this is the <a href="m2-exploratory-vs-confirmatory.html">garden of forking paths</a> again, at the level of the review. The remedy is procedural: decide the question, the databases, the search terms and the inclusion rules <strong>before</strong> looking at results, write them down (a protocol), and report how many studies were found, screened and excluded and why. The PRISMA 2020 statement is a checklist for exactly this.</p>
+<h2 id="m7-meta-analysis-pitfalls--3-publication-bias-and-small-study-effects">3. Publication bias and small-study effects</h2>
+<p>Studies with striking results are more likely to be written up and published than studies that found nothing, so the published literature overstates effects (the same mechanism as <a href="m1-sample-size-and-power.html">Type M errors</a>). Two common checks:</p>
+<ul>
+<li><strong>Funnel plot:</strong> each study's effect against its precision. Without bias it looks like a symmetric upside-down funnel; a missing corner (small studies with null or negative results) suggests that some studies are missing.</li>
+<li><strong>Egger's regression:</strong> a statistical test of that asymmetry.</li>
+</ul>
+<p>Both are weak. With fewer than about 10 studies they have little power, and asymmetry can also have other causes (small studies are often run differently from large ones, or on different populations). Use them as a warning light, not as proof either way, and say that the pooled estimate may be too optimistic. Looking for unpublished studies (registries, preprints, contacting authors) is better than any statistical correction.</p>
+<figure><img src="figures/funnel_plots.png" alt="Two funnel plots of effect estimates against standard error. Left: studies scatter symmetrically around the pooled effect. Right: the same kind of data with small null or negative studies missing, leaving an empty shaded corner on one side and a pooled estimate pushed upwards." loading="lazy"><figcaption>Funnel plots with simulated studies. Without bias the funnel is symmetric; when small studies with disappointing results go unpublished, one corner is empty.</figcaption></figure>
+<h2 id="m7-meta-analysis-pitfalls--4-apples-and-oranges">4. Apples and oranges</h2>
+<p>If the studies differ in dose, species, population or outcome definition, "the average effect" may describe nothing real. That is what heterogeneity measures, and why the prediction interval matters more than the pooled mean. A <strong>meta-regression</strong> or subgroup comparison can explore <em>why</em> studies differ (for example by dose), but treat it as exploratory: study characteristics are not randomized, they are tangled with each other, and with few studies there is little power. A relationship across studies (higher average dose, larger average effect) may also not hold within any one study.</p>
+<h2 id="m7-meta-analysis-pitfalls--5-studies-are-not-always-independent">5. Studies are not always independent</h2>
+<p>A meta-analysis assumes each estimate carries separate information. That fails when:</p>
+<ul>
+<li>one study contributes several estimates (two doses against one control, several outcomes), or</li>
+<li>several studies come from the same lab, group, or dataset.</li>
+</ul>
+<p>Counting such results as independent makes the interval too narrow, exactly as with <a href="m7-clustered-and-hierarchical-data.html">clustered data</a>. Choose one estimate per study or model the dependence.</p>
+<h2 id="m7-meta-analysis-pitfalls--6-dont-count-votes">6. Don't count votes</h2>
+<p>"Seven of ten studies were significant, so it works" ignores both the sizes of the effects and the power of each study. Pool the estimates, not the verdicts.</p>
+<h2 id="m7-meta-analysis-pitfalls--7-few-studies">7. Few studies</h2>
+<p>With two or three studies, τ² cannot be estimated reliably, and a pooled estimate can mislead more than it clarifies. Say how few studies you have, use the Hartung-Knapp interval or a <a href="m7-bayesian-methods.html">Bayesian model</a> with a sensible prior for the between-study spread, and consider simply showing the studies side by side.</p>
+<h2 id="m7-meta-analysis-pitfalls--8-same-data-different-problem">8. Same data, different problem</h2>
+<p>If you hold the raw data from every site (every patient, every family), you don't need a meta-analysis: analyze it as <a href="m7-clustered-and-hierarchical-data.html">clustered data</a> with site as the cluster. That is more flexible, because you can adjust at the individual level. A meta-analysis is for when you only have each study's summary.</p>
+<h2 id="m7-meta-analysis-pitfalls--a-short-checklist">A short checklist</h2>
+<ol type="1">
+<li>The question and inclusion rules were written down before looking at results.</li>
+<li>The search was systematic, and the number of studies found and excluded is reported.</li>
+<li>Effects are on a common scale and each study's standard error is correct.</li>
+<li>Random effects, with τ, I² and a prediction interval reported.</li>
+<li>A forest plot, a leave-one-out check and a funnel plot were looked at.</li>
+<li>Study quality and publication bias are discussed as limits of the result.</li>
+</ol>
+<aside class="learn-more" aria-label="Further reading"><p class="learn-more-title">Learn more</p><ul>
+<li>Page et al. (2021), "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews," <em>BMJ</em> 372, n71.</li>
+<li>Sterne et al. (2011), "Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials," <em>BMJ</em> 343, d4002 — including why to avoid the tests with fewer than 10 studies.</li>
+<li>Egger, Smith, Schneider &amp; Minder (1997), "Bias in meta-analysis detected by a simple, graphical test," <em>BMJ</em> 315(7109), 629–634.</li>
+<li><a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current" target="_blank" rel="noopener">Cochrane Handbook for Systematic Reviews of Interventions</a> (version 6.5, free online), Ch. 13 "Assessing risk of bias due to missing evidence in a meta-analysis".</li>
+<li>IntHout, Ioannidis &amp; Borm (2014), "The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method," <em>BMC Medical Research Methodology</em> 14, 25.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

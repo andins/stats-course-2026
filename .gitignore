@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Generated packages (rebuild with: python3 tools/package_skill.py)
+dist/
+
+# Operating system
+.DS_Store
+Thumbs.db

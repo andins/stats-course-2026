@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo: corregir el error de medición | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m6-howto-handle-measurement-error.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto active" aria-current="page">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m6-howto-handle-measurement-error" class="page"><h1 id="m6-howto-handle-measurement-error--cómo-estimar-y-corregir-el-error-de-medición">Cómo: estimar y corregir el error de medición</h1>
+<p><strong>Úsalo cuando:</strong> un predictor es una medición ruidosa de lo que te interesa y puedes hacerte una idea de cuánto ruido tiene. El razonamiento está en la página <a href="m6-measurement-error.html">Error de medición</a>.</p>
+<p>Para ver cómo aparece el sesgo y cómo persiste al crecer la muestra, juega primero con el <a href="notebooks/measurement-error-attenuation.ipynb" download>cuaderno sobre la atenuación</a> (descárgalo y ábrelo en Jupyter, VS Code o Colab).</p>
+<h2 id="m6-howto-handle-measurement-error--pasos">Pasos</h2>
+<ol type="1">
+<li><strong>Averigua el tamaño del error.</strong> La mejor fuente son las <strong>réplicas</strong>: dos o más mediciones independientes de la misma unidad (Theo mide dos veces a cada paciente). La alternativa es una desviación típica del error tomada de la documentación del instrumento o de un estudio de validación; usa una desviación típica, no un rango "±".</li>
+<li><strong>Calcula la fiabilidad</strong> (<em>reliability</em>) de tu predictor: la proporción de su variación que es señal real y no ruido. 1 significa que no hay error de medición; 0.5 significa que la mitad de la varianza es ruido.</li>
+<li><strong>Corrige la pendiente.</strong> Con un único predictor ruidoso, la pendiente ingenua es la pendiente verdadera multiplicada por la fiabilidad, así que dividir entre la fiabilidad deshace la atenuación.</li>
+<li><strong>Obtén un intervalo aplicando <em>bootstrap</em> a todo el procedimiento</strong>, incluida la estimación de la fiabilidad. El intervalo de confianza ingenuo no recoge la incertidumbre adicional que introduce la corrección.</li>
+</ol>
+<h2 id="m6-howto-handle-measurement-error--código">Código</h2>
+<p>Dos lecturas replicadas por paciente, <code>bp_1</code> y <code>bp_2</code>, y una columna <code>outcome</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>)  <span class="co"># columns: bp_1, bp_2, outcome</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> corrected_slope(d):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    r1, r2, y <span class="op">=</span> d[<span class="st">&quot;bp_1&quot;</span>], d[<span class="st">&quot;bp_2&quot;</span>], d[<span class="st">&quot;outcome&quot;</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> (r1 <span class="op">+</span> r2) <span class="op">/</span> <span class="dv">2</span>                                  <span class="co"># average of the replicates</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    var_error <span class="op">=</span> ((r1 <span class="op">-</span> r2) <span class="op">**</span> <span class="dv">2</span>).mean() <span class="op">/</span> <span class="dv">2</span>            <span class="co"># measurement-error variance of one reading</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    reliability <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (var_error <span class="op">/</span> <span class="dv">2</span>) <span class="op">/</span> x.var()        <span class="co"># share of var(x) that is signal</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    naive <span class="op">=</span> np.cov(x, y)[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">/</span> x.var()               <span class="co"># ordinary regression slope</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> naive, reliability, naive <span class="op">/</span> reliability</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>naive, reliability, corrected <span class="op">=</span> corrected_slope(df)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>boot <span class="op">=</span> [corrected_slope(df.sample(frac<span class="op">=</span><span class="dv">1</span>, replace<span class="op">=</span><span class="va">True</span>, random_state<span class="op">=</span>i))[<span class="dv">2</span>] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000</span>)]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>low, high <span class="op">=</span> np.percentile(boot, [<span class="fl">2.5</span>, <span class="fl">97.5</span>])</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;reliability </span><span class="sc">{</span>reliability<span class="sc">:.2f}</span><span class="ss">; naive slope </span><span class="sc">{</span>naive<span class="sc">:.2f}</span><span class="ss">; &quot;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;corrected </span><span class="sc">{</span>corrected<span class="sc">:.2f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>low<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.2f}</span><span class="ss">)&quot;</span>)</span></code></pre></div>
+<p>Si no tienes réplicas pero conoces la desviación típica del error de una sola lectura, omite el promediado: usa <code>x = df["bp"]</code> y <code>reliability = 1 - sd ** 2 / x.var()</code>.</p>
+<h2 id="m6-howto-handle-measurement-error--cómo-leer-los-resultados">Cómo leer los resultados</h2>
+<p>Ejemplo de salida con datos inventados, donde la pendiente verdadera es 0.50:</p>
+<pre class="text"><code>reliability 0.80; naive slope 0.41; corrected 0.52 (95% CI 0.44 to 0.60)</code></pre>
+<ul>
+<li><strong>La fiabilidad</strong> te dice cuánta atenuación cabe esperar. Con 0.80, la pendiente ingenua es un 20% menor de lo debido; con 0.5, es la mitad del valor verdadero.</li>
+<li><strong>La pendiente corregida</strong> es la estimación que debes comunicar, junto con su intervalo <em>bootstrap</em> y una declaración explícita del supuesto en que se apoya: los errores son aleatorios y no guardan relación con el valor verdadero ni con la variable de respuesta.</li>
+<li>Si la fiabilidad es cercana a 1, la corrección es despreciable y el resultado ingenuo sirve.</li>
+</ul>
+<h2 id="m6-howto-handle-measurement-error--límites-de-esta-receta">Límites de esta receta</h2>
+<ul>
+<li>Es válida para <strong>un</strong> predictor ruidoso, con un error no relacionado con nada más. Con varios predictores (o covariables por las que ajustas), la corrección es más compleja (calibración de la regresión, SIMEX o un modelo bayesiano con un valor verdadero latente); ese es el momento de contar con un estadístico.</li>
+<li>No sirve para el error <strong>sistemático</strong> (un aparato que siempre marca 5 mmHg de más), que una pendiente no detecta.</li>
+<li>El error en la <strong>variable de respuesta</strong> no sesga la pendiente; solo ensancha el intervalo, así que no hace falta corrección.</li>
+<li>No se arregla recogiendo más de los mismos datos ruidosos. Lo que ayuda son mejores mediciones o réplicas, y lo más barato es planificarlas en la fase de diseño (véase <a href="m1-design-considerations.html">Consideraciones de diseño</a>).</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

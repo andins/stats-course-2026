@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to: draw a causal diagram | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m5-howto-draw-and-use-a-causal-diagram.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto active" aria-current="page">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m5-howto-draw-and-use-a-causal-diagram" class="page"><h1 id="m5-howto-draw-and-use-a-causal-diagram--how-to-draw-and-use-a-causal-diagram">How to: draw and use a causal diagram</h1>
+<p><strong>Use this when:</strong> you want to know the effect of one variable on another from <em>observational</em> data (nobody randomized the exposure) and need to decide which other variables to adjust for. If the exposure was randomized, you don't need this; see <a href="m5-experiments-vs-observational-data.html">Experiments vs. observational data</a>. The ideas are on the <a href="m5-causal-diagrams.html">Causal diagrams</a> page.</p>
+<p>To see what goes wrong when you adjust for the wrong variable, with numbers, use the <a href="notebooks/confounder-mediator-collider.ipynb" download>confounder, mediator, collider notebook</a> (download it and open it in Jupyter, VS Code or Colab).</p>
+<h2 id="m5-howto-draw-and-use-a-causal-diagram--steps">Steps</h2>
+<ol type="1">
+<li><strong>Write down the exposure and the outcome</strong>: the effect you want, as "X on Y".</li>
+<li><strong>List every other variable that might matter</strong>, including ones you did <em>not</em> measure. Use the questions from the course page: does it cause the exposure? the outcome? both? is it a consequence of either? Check timing: causes come before effects.</li>
+<li><strong>Write each belief as an arrow</strong> <code>(cause, effect)</code> in a list. An arrow means "directly causes". Leave an arrow out only when you are willing to assume there is no direct effect.</li>
+<li><strong>Let the code label each variable's role</strong> and suggest what to adjust for.</li>
+<li><strong>Check the result with a proper tool</strong> (DAGitty, below), especially if the diagram has more than a handful of variables.</li>
+<li><strong>Estimate the effect</strong> with a regression that includes the exposure plus the adjustment set, and state the assumptions you made.</li>
+</ol>
+<h2 id="m5-howto-draw-and-use-a-causal-diagram--code-roles-and-a-first-adjustment-set">Code: roles and a first adjustment set</h2>
+<p>The diagram here is Mia's: does carrying the LDLR variant raise LDL cholesterol? Ancestry affects both (confounder), the variant lowers LDL-receptor activity which raises LDL (mediator), a patient is referred to the lipid clinic when they carry the variant or have high LDL (consequence of both), and a nearby variant in linkage disequilibrium with Mia's, which nobody genotyped, affects LDL and travels with the studied variant (unmeasured confounder):</p>
+<figure><img src="figures/causal_diagram_mia.png" alt="Mia&#39;s full causal diagram. Ancestry and an unmeasured linked variant each point to both carrier status and LDL. Carrier status points directly to LDL and also through receptor activity. Carrier status and LDL both point to clinic referral. A note below says to adjust for ancestry, leave out receptor activity and clinic referral, and state the unmeasured linked variant as an assumption." loading="lazy"><figcaption>The diagram the code below encodes, with each variable's role. Green = confounder (adjust for it if measured), purple = mediator, red = collider, dashed = not measured.</figcaption></figure>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> defaultdict</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>exposure, outcome <span class="op">=</span> <span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>unmeasured <span class="op">=</span> {<span class="st">&quot;linked_variant&quot;</span>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>edges <span class="op">=</span> [   <span class="co"># (cause, effect)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&quot;ancestry&quot;</span>, <span class="st">&quot;carrier&quot;</span>), (<span class="st">&quot;ancestry&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;receptor_activity&quot;</span>), (<span class="st">&quot;receptor_activity&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>), (<span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;clinic_referral&quot;</span>), (<span class="st">&quot;ldl_mmol&quot;</span>, <span class="st">&quot;clinic_referral&quot;</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&quot;linked_variant&quot;</span>, <span class="st">&quot;carrier&quot;</span>), (<span class="st">&quot;linked_variant&quot;</span>, <span class="st">&quot;ldl_mmol&quot;</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>children, parents <span class="op">=</span> defaultdict(<span class="bu">set</span>), defaultdict(<span class="bu">set</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cause, effect <span class="kw">in</span> edges:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    children[cause].add(effect)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    parents[effect].add(cause)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reachable(start, graph):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    seen, stack <span class="op">=</span> <span class="bu">set</span>(), [start]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> stack:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> nxt <span class="kw">in</span> graph[stack.pop()]:</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> nxt <span class="kw">not</span> <span class="kw">in</span> seen:</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                seen.add(nxt)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                stack.append(nxt)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> seen</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>common_causes <span class="op">=</span> reachable(exposure, parents) <span class="op">&amp;</span> reachable(outcome, parents)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>after_exposure <span class="op">=</span> reachable(exposure, children)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>after_outcome <span class="op">=</span> reachable(outcome, children)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>roles <span class="op">=</span> {}</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> <span class="bu">sorted</span>({name <span class="cf">for</span> edge <span class="kw">in</span> edges <span class="cf">for</span> name <span class="kw">in</span> edge} <span class="op">-</span> {exposure, outcome}):</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> v <span class="kw">in</span> common_causes:</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        roles[v] <span class="op">=</span> <span class="st">&quot;confounder&quot;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> v <span class="kw">in</span> after_exposure <span class="kw">and</span> outcome <span class="kw">in</span> reachable(v, children):</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        roles[v] <span class="op">=</span> <span class="st">&quot;mediator&quot;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> v <span class="kw">in</span> after_exposure <span class="kw">and</span> v <span class="kw">in</span> after_outcome:</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        roles[v] <span class="op">=</span> <span class="st">&quot;collider (consequence of both)&quot;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> v <span class="kw">in</span> after_exposure <span class="kw">or</span> v <span class="kw">in</span> after_outcome:</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        roles[v] <span class="op">=</span> <span class="st">&quot;consequence of exposure or outcome&quot;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        roles[v] <span class="op">=</span> <span class="st">&quot;unrelated / other&quot;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v, role <span class="kw">in</span> roles.items():</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>v<span class="sc">:18s}</span><span class="ss"> </span><span class="sc">{</span>role<span class="sc">}{</span><span class="st">&#39;  (UNMEASURED)&#39;</span> <span class="cf">if</span> v <span class="kw">in</span> unmeasured <span class="cf">else</span> <span class="st">&#39;&#39;</span><span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>confounders <span class="op">=</span> {v <span class="cf">for</span> v, role <span class="kw">in</span> roles.items() <span class="cf">if</span> role <span class="op">==</span> <span class="st">&quot;confounder&quot;</span>}</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>adjust_for <span class="op">=</span> <span class="bu">sorted</span>(confounders <span class="op">-</span> unmeasured)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">adjust for:&quot;</span>, adjust_for)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;unmeasured confounders you cannot adjust for:&quot;</span>, <span class="bu">sorted</span>(confounders <span class="op">&amp;</span> unmeasured))</span></code></pre></div>
+<h2 id="m5-howto-draw-and-use-a-causal-diagram--code-estimating-the-effect">Code: estimating the effect</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>naive <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>exposure<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df).fit()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>adjusted <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span><span class="st">&#39; + &#39;</span><span class="sc">.</span>join([exposure] <span class="op">+</span> adjust_for)<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df).fit(cov_type<span class="op">=</span><span class="st">&quot;HC3&quot;</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, model <span class="kw">in</span> [(<span class="st">&quot;unadjusted&quot;</span>, naive), (<span class="st">&quot;adjusted&quot;</span>, adjusted)]:</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    low, high <span class="op">=</span> model.conf_int().loc[exposure]</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>label<span class="sc">:10s}</span><span class="ss"> effect of </span><span class="sc">{</span>exposure<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>model<span class="sc">.</span>params[exposure]<span class="sc">:.2f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>low<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.2f}</span><span class="ss">)&quot;</span>)</span></code></pre></div>
+<h2 id="m5-howto-draw-and-use-a-causal-diagram--reading-the-output">Reading the output</h2>
+<p>Example output on made-up data where the true effect of carrying the variant is 0.5 mmol/L:</p>
+<pre class="text"><code>ancestry           confounder
+clinic_referral    collider (consequence of both)
+linked_variant     confounder  (UNMEASURED)
+receptor_activity  mediator
+
+adjust for: [&#39;ancestry&#39;]
+unmeasured confounders you cannot adjust for: [&#39;linked_variant&#39;]
+unadjusted effect of carrier: 1.10 (95% CI 0.96 to 1.24)
+adjusted   effect of carrier: 0.49 (95% CI 0.39 to 0.59)</code></pre>
+<ul>
+<li><strong>The two estimates differ a lot.</strong> Ancestry raises both the chance of carrying the variant <em>and</em> LDL (through diet and environment), which inflates the apparent effect when you just compare carriers with non-carriers; adjusting for ancestry recovers the true effect. (In this made-up data the linked variant doesn't actually exist; in real data, an unmeasured confounder would bias the adjusted estimate too.)</li>
+<li><strong>Confounders</strong> (common causes) are what you adjust for. Leaving one out biases the estimate; here the unadjusted estimate is more than double the true 0.5.</li>
+<li><strong>Mediators</strong> are <em>not</em> adjusted for if you want the total effect of the exposure: they carry part of the effect you are trying to measure.</li>
+<li><strong>Colliders</strong> (consequences of both) are never adjusted for: doing so creates a false association between exposure and outcome.</li>
+<li><strong>Unmeasured confounders</strong> can't be adjusted for. Say so explicitly: the estimate is only causal if their influence is negligible, or if you can reason about its direction. This assumption can't be tested from the data, which is why the diagram is written down before the analysis.</li>
+</ul>
+<h2 id="m5-howto-draw-and-use-a-causal-diagram--check-it-with-dagitty">Check it with DAGitty</h2>
+<p>The code above is a <strong>first-pass heuristic</strong> (common causes of exposure and outcome, minus anything that comes after the exposure). It is not the full backdoor criterion and can miss cases, such as variables that block a path only in combination or collider-induced biases that don't fit this simple pattern.</p>
+<p>For anything beyond a small diagram, paste your edges into <a href="https://www.dagitty.net/" target="_blank" rel="noopener">DAGitty</a> (free, runs in the browser; also available as an R package, <code>dagitty</code>). It draws the diagram, lists the minimal adjustment sets, and flags paths that stay open. It is also the easiest way to see the picture.</p>
+<h2 id="m5-howto-draw-and-use-a-causal-diagram--if-it-goes-wrong">If it goes wrong</h2>
+<ul>
+<li><strong>You can't agree on an arrow:</strong> keep both versions, run the analysis under each, and see whether the conclusion changes.</li>
+<li><strong>The adjustment set includes an unmeasured variable:</strong> adjustment can't identify the effect from these data alone. Options are a better design (randomization), a different identification strategy (an instrument, a natural experiment), or an honest statement that the estimate is only an association.</li>
+<li><strong>You were tempted to adjust for everything available:</strong> that is exactly how mediators and colliders slip in. Adjust for what the diagram says, nothing more.</li>
+<li><strong>Diagram drawn after looking at the results:</strong> it will tend to justify what you found. Draw it first, from knowledge of the subject, ideally with someone who knows the biology.</li>
+<li><strong>The goal is prediction, not an effect:</strong> you don't need any of this; see <a href="m5-prediction-vs-explanation.html">Prediction vs. explanation</a>.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

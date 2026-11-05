@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P-values and significance | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m3-p-values-and-significance.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link  active" aria-current="page">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m3-p-values-and-significance" class="page"><h1 id="m3-p-values-and-significance--p-values-and-significance">P-values and Significance</h1>
+<p><strong>In plain terms:</strong> a p-value is the probability of seeing a result at least this extreme <em>if there were truly no effect at all</em>. It is not the probability that your hypothesis is true.</p>
+<p>Remember that common tests used to get a p-value can usually be formulated as a regression (or GLM) model, which is usually a more informative approach (see <a href="m4-tests-as-regressions.html">Tests as regressions</a>).</p>
+<h2 id="m3-p-values-and-significance--a-concrete-walk-through">A concrete walk-through</h2>
+<p>Theo compares blood pressure between a drug group and a placebo group and gets p = 0.03. This means: <em>if the drug truly did nothing</em>, there'd be a 3% chance of seeing a difference this large (or larger) just from random sampling variation. Since 3% is fairly unlikely, Theo takes this as evidence against "the drug does nothing."</p>
+<figure><img src="figures/p_value.png" alt="A bell-shaped curve centred on zero showing how the difference in blood pressure would scatter if the drug did nothing. Theo&#39;s observed difference of minus 5 mmHg and its mirror image at plus 5 are marked, and the two small tails beyond them are shaded; together they make up p = 0.03." loading="lazy"><figcaption>A p-value is the shaded area: how often chance alone would produce a difference at least as extreme as the one observed, assuming the drug does nothing.</figcaption></figure>
+<p>What it does <strong>not</strong> mean:</p>
+<ul>
+<li>It's not "there's a 97% chance the drug works." (That confuses the p-value with something it isn't — the probability of the <em>hypothesis</em>, not of the <em>data</em>.)</li>
+<li>It's not a measure of how <em>big</em> the effect is — a tiny, meaningless effect can still produce a small p-value with enough data (see <a href="m1-effect-size.html">Effect size</a>).</li>
+<li>A p-value just above 0.05 doesn't mean "no effect" — it might just mean the study didn't have enough power to detect a real, smaller effect.</li>
+</ul>
+<h2 id="m3-p-values-and-significance--where-a-p-value-is-and-isnt-appropriate">Where a p-value is (and isn't) appropriate</h2>
+<p>A p-value's advertised false-positive guarantee only holds for a single hypothesis decided <em>before</em> looking at the data — ideally one coming out of a well-designed, controlled experiment (see <a href="m2-exploratory-vs-confirmatory.html">Exploratory vs. confirmatory analysis</a>). Outside that setting — exploratory analysis, observational convenience samples, a comparison chosen after seeing the data — a p-value doesn't carry the meaning people assume it does, so skip it rather than report one; this is a question of using the right tool for the data at hand, not of trusting the number more or less.</p>
+<p>Even inside that best-case setting, a p-value is a limited tool: collapsing a result to "significant" or "not" throws away <em>how big</em> the effect is and <em>how uncertain</em> the estimate is. Reporting the effect size with a confidence interval gets more out of the same data than the accept/reject decision does — see the next section.</p>
+<p>Another, somewhat more radical, nuance is the one held by Andrew Gelman, who argues that we may learn more from a non-rejection of a hypothesis than from a rejection. Assuming that no null-effect exists, which is plausible in many fields, reaching statistical significance is only a matter of sample size but failing to reject a hypothesis can teach you that something's off, that your measurements are inaccurate or your design wrong or the effect varies widely across contexts. All this is valuable information.</p>
+<h2 id="m3-p-values-and-significance--significance-level-alpha-and-the-005-convention">Significance level (alpha) and the 0.05 convention</h2>
+<p>Before running a test, you pick a threshold (alpha) — conventionally 0.05 — below which you'll call a result "statistically significant." This is a convention, not a law of nature; there is no meaningful difference between 0.05 and 0.06 as a cutoff. Treating it as a hard boundary between "true" and "not true" is a common misunderstanding.</p>
+<h2 id="m3-p-values-and-significance--confidence-intervals-often-more-useful-than-a-single-p-value">Confidence intervals: often more useful than a single p-value</h2>
+<p>A <strong>confidence interval (CI)</strong> gives a <em>range</em> of plausible values for the true effect, not just a yes/no verdict. "Carriers had LDL cholesterol 0.4 mmol/L higher than non-carriers (95% CI: 0.1 to 0.7)" tells you the likely size of the effect and how uncertain that estimate is — strictly more informative than "p = 0.03." When possible, report both the effect size and its CI, not just the p-value.</p>
+<h2 id="m3-p-values-and-significance--the-takeaway">The takeaway</h2>
+<p>A p-value is only well-calibrated for a single hypothesis decided before seeing the data, ideally from a well-designed experiment — outside that setting, don't compute or quote one. Even inside it, don't let it be the final word: report the effect-size estimate and its confidence interval as the headline, and treat the significant/non-significant verdict as optional extra context, not a substitute for them.</p>
+<aside class="do-it-yourself" aria-label="Hands-on guide"><p class="do-it-yourself-title">Do it yourself</p><p><a href="m3-howto-run-a-common-test.html">How to: run a common test</a> — report the estimate and its confidence interval first, the p-value second.</p>
+</aside>
+<aside class="learn-more" aria-label="Further reading"><p class="learn-more-title">Learn more</p><ul>
+<li><a href="https://avehtari.github.io/ROS-Examples/" target="_blank" rel="noopener">Gelman, Hill &amp; Vehtari (2020)</a>, <em>Regression and Other Stories</em>, §4.4–4.7 "Statistical significance, hypothesis testing, and statistical errors" to "Moving beyond hypothesis testing", pp. 57–67.</li>
+<li>Wasserstein &amp; Lazar (2016), "The ASA statement on p-values: context, process, and purpose," <em>The American Statistician</em> 70(2), 129–133 — six principles in four pages.</li>
+<li>Greenland et al. (2016), "Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations," <em>European Journal of Epidemiology</em> 31(4), 337–350 — a catalogue of common misreadings.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

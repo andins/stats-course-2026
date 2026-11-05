@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo: planificar un tamaño muestral | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m1-howto-plan-a-sample-size.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto active" aria-current="page">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m1-howto-plan-a-sample-size" class="page"><h1 id="m1-howto-plan-a-sample-size--cómo-planificar-un-tamaño-muestral">Cómo: planificar un tamaño muestral</h1>
+<p><strong>Úsalo cuando:</strong> estés diseñando un estudio y necesites decidir cuántas unidades (pacientes, familias, muestras, animales, personas encuestadas) recoger. El razonamiento está en la página <a href="m1-sample-size-and-power.html">Tamaño muestral y potencia</a>.</p>
+<p>Para ver por qué el tamaño del efecto de un piloto pequeño es una mala entrada, y para experimentar con curvas de potencia, usa el <a href="notebooks/power-and-pilot-studies.ipynb" download>cuaderno de potencia y estudios piloto</a> (descárgalo y ábrelo en Jupyter, VS Code o Colab).</p>
+<h2 id="m1-howto-plan-a-sample-size--pasos">Pasos</h2>
+<ol type="1">
+<li><strong>Decide qué pregunta tienes.</strong> Una prueba planificada de una diferencia o de un efecto necesita un cálculo de <em>potencia</em>. Una estimación abierta («¿cuál es el colesterol LDL medio, con un margen del 5%?») necesita un cálculo de <em>precisión</em>.</li>
+<li><strong>Elige las entradas.</strong> Para la potencia: alfa (0.05 por convención), potencia objetivo (0.80 por convención) y un tamaño del efecto. Para el tamaño del efecto, usa la <strong>menor diferencia que importaría en la práctica</strong>, o un valor de la bibliografía. No copies la estimación bruta de un piloto pequeño.</li>
+<li><strong>Expresa el tamaño del efecto como d de Cohen:</strong> la diferencia bruta dividida entre la desviación típica de la variable de respuesta. Necesitas una estimación para planificar esa desviación típica, a partir de datos previos o de la bibliografía.</li>
+<li><strong>Calcula el tamaño muestral para varios tamaños del efecto plausibles</strong>, no solo uno, y observa cuánto cambia la respuesta.</li>
+<li><strong>Si tu análisis no es una prueba t, un ANOVA o una comparación de proporciones simples</strong> (covariables, un GLM, datos agrupados), calcula el tamaño muestral mediante simulación.</li>
+</ol>
+<h2 id="m1-howto-plan-a-sample-size--código-potencia-para-una-comparación-de-dos-grupos">Código: potencia para una comparación de dos grupos</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.power <span class="im">import</span> TTestIndPower</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sd <span class="op">=</span> <span class="fl">0.8</span>   <span class="co"># planning guess for the SD of the outcome (LDL, mmol/L)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>power_calc <span class="op">=</span> TTestIndPower()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> diff <span class="kw">in</span> (<span class="fl">0.3</span>, <span class="fl">0.4</span>, <span class="fl">0.6</span>, <span class="fl">0.8</span>):   <span class="co"># sensitivity table: raw differences worth detecting (mmol/L)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    d <span class="op">=</span> diff <span class="op">/</span> sd                    <span class="co"># Cohen&#39;s d</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> power_calc.solve_power(effect_size<span class="op">=</span>d, alpha<span class="op">=</span><span class="fl">0.05</span>, power<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;difference </span><span class="sc">{</span>diff<span class="sc">:.1f}</span><span class="ss"> mmol/L (d = </span><span class="sc">{</span>d<span class="sc">:.2f}</span><span class="ss">): </span><span class="sc">{</span>math<span class="sc">.</span>ceil(n)<span class="sc">}</span><span class="ss"> patients per group&quot;</span>)</span></code></pre></div>
+<p>¿Ya sabes cuántas unidades puedes permitirte? Da la vuelta a la pregunta y averigua qué potencia te dan:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;power with 20 patients per group for d = 0.5: </span><span class="sc">{</span>power_calc<span class="sc">.</span>power(effect_size<span class="op">=</span><span class="fl">0.5</span>, nobs1<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.05</span>)<span class="sc">:.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>Otros diseños tienen un equivalente en el mismo módulo: <code>TTestPower</code> (una muestra o datos apareados), <code>FTestAnovaPower</code> (ANOVA de un factor, con la f de Cohen como tamaño del efecto) y <code>NormalIndPower</code> con <code>proportion_effectsize(p1, p2)</code> (dos proporciones).</p>
+<h2 id="m1-howto-plan-a-sample-size--código-precisión-para-una-encuesta-o-una-estimación">Código: precisión para una encuesta o una estimación</h2>
+<p>Cuando no hay una única prueba, planifica en su lugar la anchura del intervalo de confianza:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> stats.norm.ppf(<span class="fl">0.975</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>sd, margin <span class="op">=</span> <span class="fl">0.8</span>, <span class="fl">0.1</span>            <span class="co"># estimate a mean LDL to within +/- 0.1 mmol/L</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;mean:&quot;</span>, math.ceil((z <span class="op">*</span> sd <span class="op">/</span> margin) <span class="op">**</span> <span class="dv">2</span>), <span class="st">&quot;patients&quot;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>p_guess, margin <span class="op">=</span> <span class="fl">0.5</span>, <span class="fl">0.03</span>      <span class="co"># estimate a proportion to within +/- 3 points; 0.5 is the most cautious guess</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;proportion:&quot;</span>, math.ceil(z<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> p_guess <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> p_guess) <span class="op">/</span> margin<span class="op">**</span><span class="dv">2</span>), <span class="st">&quot;respondents&quot;</span>)</span></code></pre></div>
+<h2 id="m1-howto-plan-a-sample-size--código-potencia-por-simulación-para-cualquier-otro-caso">Código: potencia por simulación, para cualquier otro caso</h2>
+<p>Simula tu estudio muchas veces con el efecto que quieres detectar, ejecuta tu análisis planificado en cada conjunto de datos simulado y cuenta con qué frecuencia detecta el efecto. Aquí el análisis es una regresión que ajusta por la edad:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">0</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power_by_simulation(n_per_group, effect<span class="op">=</span><span class="fl">0.4</span>, sd<span class="op">=</span><span class="fl">0.8</span>, n_sims<span class="op">=</span><span class="dv">500</span>, alpha<span class="op">=</span><span class="fl">0.05</span>):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    hits <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_sims):</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        group <span class="op">=</span> np.repeat([<span class="dv">0</span>, <span class="dv">1</span>], n_per_group)          <span class="co"># 0 = non-carrier, 1 = carrier</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        age <span class="op">=</span> rng.normal(<span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">2</span> <span class="op">*</span> n_per_group)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> <span class="fl">0.02</span> <span class="op">*</span> age <span class="op">+</span> effect <span class="op">*</span> group <span class="op">+</span> rng.normal(<span class="dv">0</span>, sd, <span class="dv">2</span> <span class="op">*</span> n_per_group)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        fit <span class="op">=</span> smf.ols(<span class="st">&quot;y ~ group + age&quot;</span>, data<span class="op">=</span>pd.DataFrame({<span class="st">&quot;y&quot;</span>: y, <span class="st">&quot;group&quot;</span>: group, <span class="st">&quot;age&quot;</span>: age})).fit()</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        hits <span class="op">+=</span> fit.pvalues[<span class="st">&quot;group&quot;</span>] <span class="op">&lt;</span> alpha</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> hits <span class="op">/</span> n_sims</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> (<span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">60</span>):</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> per group: power = </span><span class="sc">{</span>power_by_simulation(n)<span class="sc">:.2f}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>Cambia las líneas que generan los datos para que coincidan con tu diseño (agrupamiento, grupos desiguales, una variable de respuesta binaria con <code>smf.logit</code>) y la línea <code>smf.ols</code> para que coincida con el análisis que vayas a ejecutar de verdad.</p>
+<h2 id="m1-howto-plan-a-sample-size--cómo-leer-el-resultado">Cómo leer el resultado</h2>
+<p>Ejemplo de salida (debería ser parecida a esta):</p>
+<pre class="text"><code>difference 0.3 mmol/L (d = 0.37): 113 patients per group
+difference 0.4 mmol/L (d = 0.50): 64 patients per group
+difference 0.6 mmol/L (d = 0.75): 29 patients per group
+difference 0.8 mmol/L (d = 1.00): 17 patients per group</code></pre>
+<ul>
+<li><strong>El tamaño muestral crece rápido a medida que el efecto se reduce.</strong> Reducir el efecto a la mitad multiplica la muestra aproximadamente por cuatro, así que la elección del tamaño del efecto importa más que la de alfa o la de la potencia.</li>
+<li><strong>Presenta la tabla, no un único número.</strong> Elige el tamaño muestral que puedas defender para el menor efecto que te interese, e indica qué puedes detectar si el efecto real es mayor.</li>
+<li><strong>La respuesta de la simulación tiene error de Monte Carlo</strong> de un par de puntos porcentuales con 500 simulaciones; aumenta <code>n_sims</code> si la potencia está cerca de tu objetivo.</li>
+<li><strong>Añade un margen para las pérdidas.</strong> Si esperas que el 10% de las unidades abandone o falle, divide el tamaño muestral entre 0.9.</li>
+</ul>
+<h2 id="m1-howto-plan-a-sample-size--si-algo-sale-mal">Si algo sale mal</h2>
+<ul>
+<li><strong>Solo tienes el tamaño del efecto de un piloto:</strong> probablemente esté inflado, así que el estudio resultante tendrá poca potencia (véase el cuaderno). Usa en su lugar el menor efecto útil, o una estimación publicada, y muestra la tabla de sensibilidad.</li>
+<li><strong>El tamaño muestral necesario es mayor del que puedes recoger:</strong> tienes tres opciones honestas. Aceptar una potencia menor y decirlo, fijar un efecto mínimo de interés mayor, o reducir el ruido (mejor medición, una covariable, un diseño apareado o por bloques). No ajustes los supuestos hasta que el número encaje.</li>
+<li><strong>Nunca calcules la «potencia observada» después del estudio.</strong> Reformula el valor p. Mira en su lugar la anchura del intervalo de confianza.</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

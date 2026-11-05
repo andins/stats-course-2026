@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effect size | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m1-effect-size.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link  active" aria-current="page">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m1-effect-size" class="page"><h1 id="m1-effect-size--effect-size">Effect Size</h1>
+<p><strong>In plain terms:</strong> effect size answers "how big," as opposed to a p-value, which only answers "how sure."</p>
+<h2 id="m1-effect-size--why-is-there-a-difference-isnt-the-useful-question">Why "is there a difference" isn't the useful question</h2>
+<p>With enough data, almost <em>any</em> real-world difference becomes "statistically significant" — even a trivially small one. If Theo's new blood-pressure drug lowers blood pressure by an average of 0.1 mmHg, a large enough trial will find that "significant," even though it is medically meaningless. Effect size is what tells you whether a result is significant <em>and</em> large enough to matter.</p>
+<h2 id="m1-effect-size--some-common-effect-size-measures">Some common effect-size measures</h2>
+<ul>
+<li><strong>Difference in means</strong> (in the outcome's natural units, e.g. "lowered blood pressure by 8 mmHg") — the most interpretable when the units mean something to your audience.</li>
+<li><strong>Standardized difference (Cohen's d)</strong> — the difference in means divided by the data's spread (standard deviation). Useful for comparing effect sizes across studies that measured things differently, or when the outcome's raw units aren't intuitive. Conventionally, d≈0.2 is "small," d≈0.5 is "medium," d≈0.8 is "large" — but treat these as rough conventions, not laws of nature; what counts as a meaningful effect depends on the subject matter.</li>
+<li><strong>Correlation (r)</strong> — strength of a linear relationship between two continuous variables, from -1 to 1.</li>
+<li><strong>Odds ratio / risk ratio</strong> — for yes/no outcomes (e.g. "treated patients were 2x as likely to recover").</li>
+</ul>
+<h2 id="m1-effect-size--where-effect-size-shows-up">Where effect size shows up</h2>
+<ul>
+<li><strong>Before data collection</strong>: you need a <em>guess</em> at the effect size to plan sample size (see <a href="m1-sample-size-and-power.html">Sample size and power</a>).</li>
+<li><strong>After data collection</strong>: report the effect size (with a confidence interval) alongside — or instead of — a bare p-value. "Carriers had 6% higher LDL cholesterol (95% CI: 1–11%)" says much more than "p = 0.03."</li>
+<li><strong>Combining studies</strong>: effect sizes (and their standard errors) are what a <a href="m7-meta-analysis.html">meta-analysis</a> pools, which is why all studies must report on the same scale.</li>
+</ul>
+<h2 id="m1-effect-size--common-mistake">Common mistake</h2>
+<p>Treating a "significant" result as automatically important, or a "non-significant" result as automatically meaning "no effect." A small study can easily produce a non-significant result even for a real, meaningful effect — that's a power problem, not evidence of "no effect." Always ask about the size and the uncertainty around it, not just the p-value.</p>
+<aside class="do-it-yourself" aria-label="Hands-on guide"><p class="do-it-yourself-title">Do it yourself</p><p><a href="m1-howto-plan-a-sample-size.html">How to: plan a sample size</a> — turn a raw difference and an SD into Cohen's d and a sample size.</p>
+</aside>
+<aside class="learn-more" aria-label="Further reading"><p class="learn-more-title">Learn more</p><ul>
+<li><a href="https://lakens.github.io/statistical_inferences/" target="_blank" rel="noopener">Lakens (2022)</a>, <em>Improving Your Statistical Inferences</em>, Ch. 6 "Effect Sizes" — how to compute, interpret and report common effect sizes.</li>
+<li>Sullivan &amp; Feinn (2012), "Using effect size — or why the P value is not enough," <em>Journal of Graduate Medical Education</em> 4(3), 279–282 — a short, readable primer.</li>
+<li>Cohen (1988), <em>Statistical Power Analysis for the Behavioral Sciences</em> (2nd ed.), Ch. 2 "The t Test for Means" — origin of the small/medium/large conventions for d; treat them as conventions, not laws.</li>
+</ul>
+</aside>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

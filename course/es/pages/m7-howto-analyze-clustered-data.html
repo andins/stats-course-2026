@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo: analizar datos agrupados | Explicaciones de estadística</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Mostrar u ocultar la navegación">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expandir todos los grupos de navegación">Expandir todo</button>
+  <button id="collapse-all" title="Contraer todos los grupos de navegación">Contraer todo</button>
+  <button id="theme-toggle" title="Cambiar entre tema oscuro y claro">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Explicaciones de estadística</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../en/pages/m7-howto-analyze-clustered-data.html" hreflang="en" lang="en"><svg viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#c8102e" stroke-width="7"/></svg>English</a></p>
+    <input type="search" id="search-box" placeholder="Buscar temas..." aria-label="Buscar temas">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Inicio</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Prepara tu ordenador</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organiza tu proyecto</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Trabaja con un agente de IA</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Guía rápida del flujo de trabajo</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planificar tu estudio</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Mostrar u ocultar los temas de 1. Planificar tu estudio"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Tamaño muestral y potencia</a></li><li><a href="m1-effect-size.html" class="toc-link ">Tamaño del efecto</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Consideraciones de diseño</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">Cómo: planificar un tamaño muestral</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Explorar tus datos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Mostrar u ocultar los temas de 2. Explorar tus datos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratorio vs. confirmatorio</a></li><li><a href="m2-eda-basics.html" class="toc-link ">Fundamentos del EDA</a></li><li><a href="m2-missing-data.html" class="toc-link ">Datos faltantes</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">Cómo: explorar un conjunto de datos</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Contraste de hipótesis</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Mostrar u ocultar los temas de 3. Contraste de hipótesis"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">Valores p y significación</a></li><li><a href="m3-common-tests.html" class="toc-link ">Pruebas habituales</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Comprobar los supuestos</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Comparaciones múltiples</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">Cómo: ejecutar una prueba habitual</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">Cómo: comprobar los supuestos de una prueba</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Fundamentos de regresión</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Mostrar u ocultar los temas de 4. Fundamentos de regresión"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">Qué es la regresión</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Pruebas como regresiones</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Modelos lineales generalizados</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">Cómo: ejecutar una prueba como regresión</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Predicción vs. causalidad</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Mostrar u ocultar los temas de 5. Predicción vs. causalidad"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Predicción vs. explicación</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experimentos vs. datos observacionales</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Diagramas causales</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">Cómo: dibujar un diagrama causal</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Construir modelos</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Mostrar u ocultar los temas de 6. Construir modelos"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Sobreajuste y regularización</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Validación cruzada y revisión del modelo</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicolinealidad</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Error de medición</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">Cómo: validar un modelo predictivo</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">Cómo: comprobar la multicolinealidad</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">Cómo: corregir el error de medición</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Estructuras de datos especiales</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Mostrar u ocultar los temas de 7. Estructuras de datos especiales"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Datos agrupados y jerárquicos</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Series temporales</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Metaanálisis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Metaanálisis: sesgos y trampas</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Métodos bayesianos</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto active" aria-current="page">Cómo: analizar datos agrupados</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">Cómo: realizar un metaanálisis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glosario</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-howto-analyze-clustered-data" class="page"><h1 id="m7-howto-analyze-clustered-data--cómo-analizar-datos-agrupados">Cómo: analizar datos agrupados</h1>
+<p><strong>Úsalo cuando:</strong> tus observaciones vienen en grupos (familiares dentro de una familia, pacientes dentro de una clínica, medidas repetidas en el mismo paciente), de modo que las filas de un mismo grupo se parecen entre sí. Las ideas están en la página <a href="m7-clustered-and-hierarchical-data.html">Datos agrupados y jerárquicos</a>.</p>
+<p>Para ver cuánto puede engañarte un análisis simple y qué hace el agrupamiento parcial con los grupos pequeños, usa el <a href="notebooks/clustered-data-overconfidence.ipynb" download>cuaderno sobre datos agrupados</a> (descárgalo y ábrelo en Jupyter, VS Code o Colab).</p>
+<h2 id="m7-howto-analyze-clustered-data--pasos">Pasos</h2>
+<ol type="1">
+<li><strong>Identifica la columna de grupo y el nivel de cada predictor.</strong> ¿El predictor de interés varía <em>entre</em> grupos (una variante que portan familias enteras) o <em>dentro</em> de ellos (una medida en cada familiar, como la edad)? Esto determina qué opciones tienes.</li>
+<li><strong>Mide cuánto importa la agrupación:</strong> la correlación intraclase (ICC) y el efecto de diseño (<em>design effect</em>). Una ICC cercana a 0 significa que la agrupación apenas importa; una ICC alta significa que 300 filas pueden contener la información de muchas menos observaciones independientes.</li>
+<li><strong>Ajusta el modelo por defecto:</strong> la regresión simple con <strong>errores estándar robustos a los grupos</strong> (agrupamiento completo). Deja la estimación como está y corrige el intervalo.</li>
+<li><strong>Compáralo con una alternativa</strong> que se adapte a tu situación (tabla más abajo): medias por grupo, efectos fijos de familia (sin agrupamiento) o un modelo multinivel (agrupamiento parcial).</li>
+<li><strong>Presenta la estimación con su intervalo e indica cuántos grupos había.</strong> El número de grupos, no de filas, es lo que determina la precisión para un predictor a nivel de grupo.</li>
+</ol>
+<h2 id="m7-howto-analyze-clustered-data--código-cuánto-importa-la-agrupación">Código: ¿cuánto importa la agrupación?</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>outcome, predictor, cluster <span class="op">=</span> <span class="st">&quot;ldl_mmol&quot;</span>, <span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;family&quot;</span>   <span class="co"># in this simplified example the variant is carried by whole families</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> smf.mixedlm(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ 1&quot;</span>, data<span class="op">=</span>df, groups<span class="op">=</span>df[cluster]).fit()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>between, within <span class="op">=</span> empty.cov_re.iloc[<span class="dv">0</span>, <span class="dv">0</span>], empty.scale</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>icc <span class="op">=</span> between <span class="op">/</span> (between <span class="op">+</span> within)                                  <span class="co"># share of variance that lies between clusters</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>cluster_size <span class="op">=</span> df.groupby(cluster).size().mean()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>design_effect <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> (cluster_size <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> icc</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>df[cluster]<span class="sc">.</span>nunique()<span class="sc">}</span><span class="ss"> clusters, </span><span class="sc">{</span>cluster_size<span class="sc">:.0f}</span><span class="ss"> rows each; ICC = </span><span class="sc">{</span>icc<span class="sc">:.2f}</span><span class="ss">; design effect = </span><span class="sc">{</span>design_effect<span class="sc">:.1f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss"> rows carry about as much information as </span><span class="sc">{</span><span class="bu">len</span>(df) <span class="op">/</span> design_effect<span class="sc">:.0f}</span><span class="ss"> independent ones (for a cluster-level predictor)&quot;</span>)</span></code></pre></div>
+<h2 id="m7-howto-analyze-clustered-data--código-un-predictor-que-varía-entre-grupos">Código: un predictor que varía entre grupos</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>naive <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df).fit()          <span class="co"># ignores clusters: too confident</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>robust <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df).fit(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    cov_type<span class="op">=</span><span class="st">&quot;cluster&quot;</span>, cov_kwds<span class="op">=</span>{<span class="st">&quot;groups&quot;</span>: df[cluster]}, use_t<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)                                                                   <span class="co"># same estimate, honest interval</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mixed <span class="op">=</span> smf.mixedlm(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df, groups<span class="op">=</span>df[cluster]).fit()   <span class="co"># multilevel</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>cluster_means <span class="op">=</span> df.groupby([cluster, predictor], as_index<span class="op">=</span><span class="va">False</span>)[outcome].mean()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>means_model <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>cluster_means).fit()           <span class="co"># one row per cluster</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> {}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, model <span class="kw">in</span> [(<span class="st">&quot;ignoring clusters&quot;</span>, naive), (<span class="st">&quot;cluster-robust SE&quot;</span>, robust),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                     (<span class="st">&quot;multilevel model&quot;</span>, mixed), (<span class="st">&quot;analysis of cluster means&quot;</span>, means_model)]:</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    low, high <span class="op">=</span> model.conf_int().loc[predictor]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    rows[label] <span class="op">=</span> {<span class="st">&quot;estimate&quot;</span>: model.params[predictor], <span class="st">&quot;ci_low&quot;</span>: low, <span class="st">&quot;ci_high&quot;</span>: high}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame(rows).T.<span class="bu">round</span>(<span class="dv">2</span>))</span></code></pre></div>
+<h2 id="m7-howto-analyze-clustered-data--código-un-predictor-que-varía-dentro-de-los-grupos">Código: un predictor que varía dentro de los grupos</h2>
+<p>Cuando el predictor varía de un familiar a otro dentro de cada familia (aquí <code>age</code>), puedes dar a cada familia su propia ordenada en el origen:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>within <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ age + C(</span><span class="sc">{</span>cluster<span class="sc">}</span><span class="ss">)&quot;</span>, data<span class="op">=</span>df).fit()      <span class="co"># no pooling</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>within_robust <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ age&quot;</span>, data<span class="op">=</span>df).fit(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    cov_type<span class="op">=</span><span class="st">&quot;cluster&quot;</span>, cov_kwds<span class="op">=</span>{<span class="st">&quot;groups&quot;</span>: df[cluster]}, use_t<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)                                                                        <span class="co"># complete pooling</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, model <span class="kw">in</span> [(<span class="st">&quot;family fixed effects&quot;</span>, within), (<span class="st">&quot;cluster-robust SE&quot;</span>, within_robust)]:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    low, high <span class="op">=</span> model.conf_int().loc[<span class="st">&quot;age&quot;</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>label<span class="sc">:21s}</span><span class="ss"> </span><span class="sc">{</span>model<span class="sc">.</span>params[<span class="st">&#39;age&#39;</span>]<span class="sc">:.3f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>low<span class="sc">:.3f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.3f}</span><span class="ss">)&quot;</span>)</span></code></pre></div>
+<p>Los efectos fijos de familia comparan familiares <em>dentro</em> de la misma familia, lo que elimina de la comparación todo lo que es propio de las familias (genes compartidos, dieta, hogar). No pueden estimar el efecto de algo que es constante dentro de una familia, como el estado de portador de arriba: las variables ficticias (<em>dummies</em>) de familia lo absorben por completo.</p>
+<h2 id="m7-howto-analyze-clustered-data--cómo-leer-el-resultado">Cómo leer el resultado</h2>
+<p>Resultado de ejemplo con datos inventados (15 familias de 20 familiares, la variante portada por familias enteras, efecto verdadero 0.3 mmol/L):</p>
+<pre class="text"><code>15 clusters, 20 rows each; ICC = 0.52; design effect = 10.8
+300 rows carry about as much information as 28 independent ones (for a cluster-level predictor)
+                           estimate  ci_low  ci_high
+ignoring clusters              0.47    0.30     0.64
+cluster-robust SE              0.47   -0.12     1.06
+multilevel model               0.47   -0.09     1.03
+analysis of cluster means      0.47   -0.15     1.09
+family fixed effects  0.020 (95% CI 0.015 to 0.025)
+cluster-robust SE     0.023 (95% CI 0.015 to 0.031)</code></pre>
+<ul>
+<li><strong>Las estimaciones coinciden; los intervalos no.</strong> «Ignoring clusters» trata a los 300 pacientes como independientes y da un intervalo que excluye el cero. Los tres análisis honestos dan intervalos más de tres veces más anchos, que incluyen el cero. Con solo 15 familias, los datos no permiten precisar el efecto del estado de portador, y el análisis ingenuo lo ocultaba.</li>
+<li><strong>La ICC y el efecto de diseño</strong> te dicen cuán grave habría sido. Un efecto de diseño de aproximadamente 11 significa que las 300 filas contienen aproximadamente la información de 28 observaciones independientes.</li>
+<li><strong>Con grupos del mismo tamaño, las medias por grupo y el modelo multinivel dan la misma estimación;</strong> difieren cuando los tamaños de grupo son desiguales, porque el modelo multinivel pondera los grupos según lo bien medido que está cada uno.</li>
+<li><strong>Para el predictor intrafamiliar,</strong> el intervalo de los efectos fijos de familia (0.015 a 0.025) es más estrecho que el del modelo agrupado (0.015 a 0.031), porque comparar familiares dentro de la misma familia elimina de la comparación la variación entre familias.</li>
+</ul>
+<h2 id="m7-howto-analyze-clustered-data--qué-enfoque-usar-en-cada-caso">Qué enfoque usar en cada caso</h2>
+<table>
+<thead>
+<tr>
+<th>Tu situación</th>
+<th>Usa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Los grupos son una molestia; hay muchos (unas pocas decenas o más)</td>
+<td>Agrupamiento completo con errores estándar robustos a los grupos</td>
+</tr>
+<tr>
+<td>Predictor asignado a grupos enteros; pocos grupos</td>
+<td>Análisis de medias por grupo o un modelo multinivel. Los errores estándar robustos a los grupos son demasiado optimistas con pocos grupos, incluso con <code>use_t=True</code></td>
+</tr>
+<tr>
+<td>Pocos grupos que son el centro de interés (estas 4 clínicas), predictor que varía dentro de ellos</td>
+<td>Efectos fijos de familia/clínica (sin agrupamiento)</td>
+</tr>
+<tr>
+<td>Muchos grupos de tamaño desigual, o quieres generalizar a grupos nuevos</td>
+<td>Modelo multinivel (agrupamiento parcial)</td>
+</tr>
+<tr>
+<td>Medidas repetidas en el tiempo sobre la misma unidad</td>
+<td>Las mismas ideas; comprueba también la dependencia temporal, véase <a href="m7-time-series-data.html">Series temporales</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="m7-howto-analyze-clustered-data--si-algo-sale-mal">Si algo sale mal</h2>
+<ul>
+<li><strong>El modelo multinivel avisa de un problema de convergencia o de un ajuste singular:</strong> probablemente la varianza entre grupos es casi nula (ICC cercana a 0), así que no hace falta la complejidad adicional; vuelve a la regresión robusta a los grupos.</li>
+<li><strong>Muy pocos grupos (menos de unos 10):</strong> ningún método salva una comparación a nivel de grupo. Indica cuán pocos grupos había y trata el intervalo como aproximado.</li>
+<li><strong>Quieres un modelo multinivel bayesiano:</strong> véase <a href="m7-bayesian-methods.html">Métodos bayesianos</a>; es una maquinaria más pesada y no hace falta para los casos anteriores.</li>
+<li><strong>Un desenlace binario o de recuentos:</strong> se aplica la misma estructura con <code>smf.logit</code> / <code>smf.glm</code> y errores estándar robustos a los grupos; un GLM multinivel necesita una herramienta específica (<code>BinomialBayesMixedGLM</code> de <code>statsmodels</code>, o <code>lme4</code>/<code>glmmTMB</code> de R).</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Volver arriba">↑</button>
+</body>
+</html>

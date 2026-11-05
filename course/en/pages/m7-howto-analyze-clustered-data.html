@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to: analyze clustered data | Statistics Explainers</title>
+
+<link rel="stylesheet" href="course.css">
+<script src="course.js" defer></script>
+</head>
+<body>
+<button id="sidebar-toggle" aria-label="Toggle navigation">☰</button>
+<div id="top-controls">
+  <button id="expand-all" title="Expand all navigation groups">Expand all</button>
+  <button id="collapse-all" title="Collapse all navigation groups">Collapse all</button>
+  <button id="theme-toggle" title="Toggle dark/light theme">🌓</button>
+</div>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h2>Statistics Explainers</h2>
+    <p class="lang-links"><a class="lang-switch" href="../../es/pages/m7-howto-analyze-clustered-data.html" hreflang="es" lang="es"><svg viewBox="0 0 3 2" aria-hidden="true" focusable="false"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>Español</a></p>
+    <input type="search" id="search-box" placeholder="Search topics..." aria-label="Search topics">
+  </div>
+  <ul class="toc">
+  <li><a href="../index.html" class="toc-link toc-top">Home</a></li>
+<li><a href="setup-environment.html" class="toc-link toc-top">Set up your computer</a></li>
+<li><a href="project-structure.html" class="toc-link toc-top">Organize your project</a></li>
+<li><a href="use-an-agent.html" class="toc-link toc-top">Work with an AI agent</a></li>
+<li><a href="workflow.html" class="toc-link toc-top">Workflow Cheatsheet</a></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m1.html" class="toc-link toc-module-link">1. Planning Your Study</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m1" aria-label="Toggle 1. Planning Your Study topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m1"><li><a href="m1-sample-size-and-power.html" class="toc-link ">Sample size and power</a></li><li><a href="m1-effect-size.html" class="toc-link ">Effect size</a></li><li><a href="m1-design-considerations.html" class="toc-link ">Design considerations</a></li><li><a href="m1-howto-plan-a-sample-size.html" class="toc-link toc-howto">How to: plan a sample size</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m2.html" class="toc-link toc-module-link">2. Exploring Your Data</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m2" aria-label="Toggle 2. Exploring Your Data topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m2"><li><a href="m2-exploratory-vs-confirmatory.html" class="toc-link ">Exploratory vs. confirmatory</a></li><li><a href="m2-eda-basics.html" class="toc-link ">EDA basics</a></li><li><a href="m2-missing-data.html" class="toc-link ">Missing data</a></li><li><a href="m2-howto-explore-a-dataset.html" class="toc-link toc-howto">How to: explore a dataset</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m3.html" class="toc-link toc-module-link">3. Hypothesis Testing</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m3" aria-label="Toggle 3. Hypothesis Testing topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m3"><li><a href="m3-p-values-and-significance.html" class="toc-link ">P-values and significance</a></li><li><a href="m3-common-tests.html" class="toc-link ">Common tests</a></li><li><a href="m3-checking-assumptions.html" class="toc-link ">Checking assumptions</a></li><li><a href="m3-multiple-comparisons.html" class="toc-link ">Multiple comparisons</a></li><li><a href="m3-howto-run-a-common-test.html" class="toc-link toc-howto">How to: run a common test</a></li><li><a href="m3-howto-check-test-assumptions.html" class="toc-link toc-howto">How to: check test assumptions</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m4.html" class="toc-link toc-module-link">4. Regression Basics</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m4" aria-label="Toggle 4. Regression Basics topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m4"><li><a href="m4-what-is-regression.html" class="toc-link ">What is regression</a></li><li><a href="m4-tests-as-regressions.html" class="toc-link ">Tests as regressions</a></li><li><a href="m4-generalized-linear-models.html" class="toc-link ">Generalized linear models</a></li><li><a href="m4-howto-run-a-test-as-a-regression.html" class="toc-link toc-howto">How to: run a test as a regression</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m5.html" class="toc-link toc-module-link">5. Prediction vs. Causation</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m5" aria-label="Toggle 5. Prediction vs. Causation topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m5"><li><a href="m5-prediction-vs-explanation.html" class="toc-link ">Prediction vs. explanation</a></li><li><a href="m5-experiments-vs-observational-data.html" class="toc-link ">Experiments vs. observational data</a></li><li><a href="m5-causal-diagrams.html" class="toc-link ">Causal diagrams</a></li><li><a href="m5-howto-draw-and-use-a-causal-diagram.html" class="toc-link toc-howto">How to: draw a causal diagram</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m6.html" class="toc-link toc-module-link">6. Building Models</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m6" aria-label="Toggle 6. Building Models topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m6"><li><a href="m6-overfitting-and-regularization.html" class="toc-link ">Overfitting and regularization</a></li><li><a href="m6-cross-validation-and-model-checking.html" class="toc-link ">Cross-validation and model checking</a></li><li><a href="m6-multicollinearity.html" class="toc-link ">Multicollinearity</a></li><li><a href="m6-measurement-error.html" class="toc-link ">Measurement error</a></li><li><a href="m6-howto-validate-a-predictive-model.html" class="toc-link toc-howto">How to: validate a predictive model</a></li><li><a href="m6-howto-check-multicollinearity.html" class="toc-link toc-howto">How to: check multicollinearity</a></li><li><a href="m6-howto-handle-measurement-error.html" class="toc-link toc-howto">How to: correct measurement error</a></li></ul></li>
+<li class="toc-module"><div class="toc-module-heading"><a href="m7.html" class="toc-link toc-module-link">7. Special Data Structures</a><button class="module-toggle" aria-expanded="true" aria-controls="nav-m7" aria-label="Toggle 7. Special Data Structures topics"><span class="chev" aria-hidden="true">▾</span></button></div><ul class="submenu" id="nav-m7"><li><a href="m7-clustered-and-hierarchical-data.html" class="toc-link ">Clustered and hierarchical data</a></li><li><a href="m7-time-series-data.html" class="toc-link ">Time series data</a></li><li><a href="m7-meta-analysis.html" class="toc-link ">Meta-analysis</a></li><li><a href="m7-meta-analysis-pitfalls.html" class="toc-link ">Meta-analysis: bias and pitfalls</a></li><li><a href="m7-bayesian-methods.html" class="toc-link ">Bayesian methods</a></li><li><a href="m7-howto-analyze-clustered-data.html" class="toc-link toc-howto active" aria-current="page">How to: analyze clustered data</a></li><li><a href="m7-howto-run-a-meta-analysis.html" class="toc-link toc-howto">How to: run a meta-analysis</a></li></ul></li>
+<li><a href="glossary.html" class="toc-link toc-top">Glossary</a></li>
+  </ul>
+</nav>
+<main id="content">
+<section id="m7-howto-analyze-clustered-data" class="page"><h1 id="m7-howto-analyze-clustered-data--how-to-analyze-clustered-data">How to: analyze clustered data</h1>
+<p><strong>Use this when:</strong> your observations come in groups (relatives within families, patients within clinics, repeated measurements on the same patient), so rows from the same group resemble each other. The ideas are on the <a href="m7-clustered-and-hierarchical-data.html">Clustered and hierarchical data</a> page.</p>
+<p>To see how much a plain analysis can mislead you, and what partial pooling does to small groups, use the <a href="notebooks/clustered-data-overconfidence.ipynb" download>clustered data notebook</a> (download it and open it in Jupyter, VS Code or Colab).</p>
+<h2 id="m7-howto-analyze-clustered-data--steps">Steps</h2>
+<ol type="1">
+<li><strong>Identify the cluster column and the level of each predictor.</strong> Does the predictor of interest vary <em>between</em> clusters (a variant carried by whole families) or <em>within</em> them (a measurement on each relative, such as age)? This determines which options are available.</li>
+<li><strong>Measure how much the clustering matters:</strong> the intraclass correlation (ICC) and the design effect. An ICC near 0 means clustering hardly matters; a high ICC means 300 rows may carry the information of far fewer independent observations.</li>
+<li><strong>Fit the default model:</strong> the plain regression with <strong>cluster-robust standard errors</strong> (complete pooling). It leaves the estimate alone and corrects the interval.</li>
+<li><strong>Compare with one alternative</strong> that suits your situation (table below): cluster means, family fixed effects (no pooling), or a multilevel model (partial pooling).</li>
+<li><strong>Report the estimate with its interval and say how many clusters there were.</strong> The number of clusters, not rows, drives the precision for a cluster-level predictor.</li>
+</ol>
+<h2 id="m7-howto-analyze-clustered-data--code-how-much-does-clustering-matter">Code: how much does clustering matter?</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;my_data.csv&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>outcome, predictor, cluster <span class="op">=</span> <span class="st">&quot;ldl_mmol&quot;</span>, <span class="st">&quot;carrier&quot;</span>, <span class="st">&quot;family&quot;</span>   <span class="co"># in this simplified example the variant is carried by whole families</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> smf.mixedlm(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ 1&quot;</span>, data<span class="op">=</span>df, groups<span class="op">=</span>df[cluster]).fit()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>between, within <span class="op">=</span> empty.cov_re.iloc[<span class="dv">0</span>, <span class="dv">0</span>], empty.scale</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>icc <span class="op">=</span> between <span class="op">/</span> (between <span class="op">+</span> within)                                  <span class="co"># share of variance that lies between clusters</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>cluster_size <span class="op">=</span> df.groupby(cluster).size().mean()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>design_effect <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> (cluster_size <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> icc</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>df[cluster]<span class="sc">.</span>nunique()<span class="sc">}</span><span class="ss"> clusters, </span><span class="sc">{</span>cluster_size<span class="sc">:.0f}</span><span class="ss"> rows each; ICC = </span><span class="sc">{</span>icc<span class="sc">:.2f}</span><span class="ss">; design effect = </span><span class="sc">{</span>design_effect<span class="sc">:.1f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss"> rows carry about as much information as </span><span class="sc">{</span><span class="bu">len</span>(df) <span class="op">/</span> design_effect<span class="sc">:.0f}</span><span class="ss"> independent ones (for a cluster-level predictor)&quot;</span>)</span></code></pre></div>
+<h2 id="m7-howto-analyze-clustered-data--code-a-predictor-that-varies-between-clusters">Code: a predictor that varies between clusters</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>naive <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df).fit()          <span class="co"># ignores clusters: too confident</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>robust <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df).fit(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    cov_type<span class="op">=</span><span class="st">&quot;cluster&quot;</span>, cov_kwds<span class="op">=</span>{<span class="st">&quot;groups&quot;</span>: df[cluster]}, use_t<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)                                                                   <span class="co"># same estimate, honest interval</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mixed <span class="op">=</span> smf.mixedlm(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>df, groups<span class="op">=</span>df[cluster]).fit()   <span class="co"># multilevel</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>cluster_means <span class="op">=</span> df.groupby([cluster, predictor], as_index<span class="op">=</span><span class="va">False</span>)[outcome].mean()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>means_model <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ </span><span class="sc">{</span>predictor<span class="sc">}</span><span class="ss">&quot;</span>, data<span class="op">=</span>cluster_means).fit()           <span class="co"># one row per cluster</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> {}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, model <span class="kw">in</span> [(<span class="st">&quot;ignoring clusters&quot;</span>, naive), (<span class="st">&quot;cluster-robust SE&quot;</span>, robust),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                     (<span class="st">&quot;multilevel model&quot;</span>, mixed), (<span class="st">&quot;analysis of cluster means&quot;</span>, means_model)]:</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    low, high <span class="op">=</span> model.conf_int().loc[predictor]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    rows[label] <span class="op">=</span> {<span class="st">&quot;estimate&quot;</span>: model.params[predictor], <span class="st">&quot;ci_low&quot;</span>: low, <span class="st">&quot;ci_high&quot;</span>: high}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame(rows).T.<span class="bu">round</span>(<span class="dv">2</span>))</span></code></pre></div>
+<h2 id="m7-howto-analyze-clustered-data--code-a-predictor-that-varies-within-clusters">Code: a predictor that varies within clusters</h2>
+<p>When the predictor varies from relative to relative inside each family (here <code>age</code>), you can give each family its own intercept:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>within <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ age + C(</span><span class="sc">{</span>cluster<span class="sc">}</span><span class="ss">)&quot;</span>, data<span class="op">=</span>df).fit()      <span class="co"># no pooling</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>within_robust <span class="op">=</span> smf.ols(<span class="ss">f&quot;</span><span class="sc">{</span>outcome<span class="sc">}</span><span class="ss"> ~ age&quot;</span>, data<span class="op">=</span>df).fit(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    cov_type<span class="op">=</span><span class="st">&quot;cluster&quot;</span>, cov_kwds<span class="op">=</span>{<span class="st">&quot;groups&quot;</span>: df[cluster]}, use_t<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)                                                                        <span class="co"># complete pooling</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label, model <span class="kw">in</span> [(<span class="st">&quot;family fixed effects&quot;</span>, within), (<span class="st">&quot;cluster-robust SE&quot;</span>, within_robust)]:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    low, high <span class="op">=</span> model.conf_int().loc[<span class="st">&quot;age&quot;</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>label<span class="sc">:21s}</span><span class="ss"> </span><span class="sc">{</span>model<span class="sc">.</span>params[<span class="st">&#39;age&#39;</span>]<span class="sc">:.3f}</span><span class="ss"> (95% CI </span><span class="sc">{</span>low<span class="sc">:.3f}</span><span class="ss"> to </span><span class="sc">{</span>high<span class="sc">:.3f}</span><span class="ss">)&quot;</span>)</span></code></pre></div>
+<p>Family fixed effects compare relatives <em>within</em> the same family, which removes everything about families (shared genes, diet, household) from the comparison. They can't estimate the effect of something that is constant within a family, like the carrier status above: the family dummies absorb it entirely.</p>
+<h2 id="m7-howto-analyze-clustered-data--reading-the-output">Reading the output</h2>
+<p>Example output on made-up data (15 families of 20 relatives, the variant carried by whole families, true effect 0.3 mmol/L):</p>
+<pre class="text"><code>15 clusters, 20 rows each; ICC = 0.52; design effect = 10.8
+300 rows carry about as much information as 28 independent ones (for a cluster-level predictor)
+                           estimate  ci_low  ci_high
+ignoring clusters              0.47    0.30     0.64
+cluster-robust SE              0.47   -0.12     1.06
+multilevel model               0.47   -0.09     1.03
+analysis of cluster means      0.47   -0.15     1.09
+family fixed effects  0.020 (95% CI 0.015 to 0.025)
+cluster-robust SE     0.023 (95% CI 0.015 to 0.031)</code></pre>
+<ul>
+<li><strong>The estimates agree; the intervals don't.</strong> "Ignoring clusters" treats 300 patients as independent and reports an interval that excludes zero. The three honest analyses give intervals more than three times as wide, which include zero. With only 15 families, the data can't pin the carrier effect down, and the naive analysis hid that.</li>
+<li><strong>The ICC and design effect</strong> tell you how bad it would have been. A design effect of about 11 means the 300 rows carry about the information of 28 independent ones.</li>
+<li><strong>With equal-sized clusters, cluster means and the multilevel model give the same estimate;</strong> they differ when cluster sizes are uneven, because the multilevel model weights clusters by how well each is measured.</li>
+<li><strong>For the within-family predictor,</strong> the family fixed-effects interval (0.015 to 0.025) is narrower than the pooled one (0.015 to 0.031), because comparing relatives inside the same family removes family-to-family variation from the comparison.</li>
+</ul>
+<h2 id="m7-howto-analyze-clustered-data--which-approach-when">Which approach when</h2>
+<table>
+<thead>
+<tr>
+<th>Your situation</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clusters are a nuisance; many of them (a few dozen or more)</td>
+<td>Complete pooling with cluster-robust standard errors</td>
+</tr>
+<tr>
+<td>Predictor assigned to whole clusters; few clusters</td>
+<td>Analysis of cluster means, or a multilevel model. Cluster-robust SEs are too optimistic with few clusters, even with <code>use_t=True</code></td>
+</tr>
+<tr>
+<td>Few clusters that are the point of interest (these 4 clinics), predictor varies within them</td>
+<td>Family/clinic fixed effects (no pooling)</td>
+</tr>
+<tr>
+<td>Many unevenly sized clusters, or you want to generalize to new clusters</td>
+<td>Multilevel model (partial pooling)</td>
+</tr>
+<tr>
+<td>Repeated measures over time on the same unit</td>
+<td>Same ideas; also check time dependence, see <a href="m7-time-series-data.html">Time series data</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="m7-howto-analyze-clustered-data--if-it-goes-wrong">If it goes wrong</h2>
+<ul>
+<li><strong>The multilevel model warns about convergence or a singular fit:</strong> the variance between clusters is probably near zero (ICC close to 0), so the extra complexity is not needed; fall back to the cluster-robust regression.</li>
+<li><strong>Very few clusters (fewer than about 10):</strong> no method rescues a cluster-level comparison. Say how few clusters there were and treat the interval as approximate.</li>
+<li><strong>You want a Bayesian multilevel model:</strong> see <a href="m7-bayesian-methods.html">Bayesian methods</a>; it is heavier machinery and not needed for the cases above.</li>
+<li><strong>A binary or count outcome:</strong> the same structure applies with <code>smf.logit</code> / <code>smf.glm</code> and cluster-robust standard errors; a multilevel GLM needs a dedicated tool (<code>statsmodels</code> <code>BinomialBayesMixedGLM</code>, or R's <code>lme4</code>/<code>glmmTMB</code>).</li>
+</ul>
+</section>
+</main>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+</body>
+</html>
