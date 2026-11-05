@@ -10,10 +10,8 @@ This repository holds two things that work together but can be used separately:
 
 ## Quick start for students
 
-1. **Read the course.** Open `course/index.html` in a browser (no server or internet needed) and pick a language, or open `course/en/index.html` directly. Start with "Set up your computer" if you want to run the code.
+1. **Read the course.** Open `course/index.html` in a browser (no server or internet needed) and pick a language. The reference version is in English. Spanish version is provisional and translation quality poor. Start with "Set up your computer" if you want to run the code.
 2. **Optionally, add the skill to your AI agent.** The course page "Work with an AI agent" explains the details.
-
-**¿Prefieres español?** Abre `course/index.html` y elige "Español", abre `course/es/index.html`, o pulsa "Español" (con su bandera) en la barra lateral de cualquier página.
 
 The skill does not need the course and the course does not need the skill.
 
@@ -38,7 +36,7 @@ English is the reference version. Each language has the same layout inside `cour
 | English | `course/en/markdown/` | `course/en/index.html` |
 | Spanish | `course/es/markdown/` | `course/es/index.html` |
 
-The scripts are shared and pick the language with `--lang` (or the `COURSE_LANG` environment variable); the default is English. UI texts and page titles of each language live in `course/scripts/course_i18n.py`, with the flag shown next to the language name in the language switch.
+The scripts are shared and pick the language with `--lang` (or the `COURSE_LANG` environment variable); the default is English. UI texts and page titles of each language live in `course/scripts/course_i18n.py`.
 
 - Rebuild Spanish: `cd course/scripts && python3 build_explainers_html.py --lang es`
 - Spanish figures: `python3 make_figures.py --lang es` (Spanish texts are in `figure_strings_es.py`)
